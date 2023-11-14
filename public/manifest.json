@@ -1,5 +1,5 @@
 {
-  "background_color": "#101010",
+  "background_color": "#FAF6F0",
   "categories": [
     "Financial Services",
     "Investment Solutions",
@@ -20,8 +20,8 @@
       "sizes": "48x48"
     },
     {
-      "src": "android-chrome-196x196.png",
-      "sizes": "196x196",
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
       "type": "image/png"
     },
     {
@@ -30,7 +30,7 @@
       "type": "image/png"
     },
     {
-      "src": "apple-180x180-touch-icon.png",
+      "src": "apple-touch-icon-180x180.png",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
