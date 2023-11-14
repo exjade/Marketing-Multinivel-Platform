@@ -1,0 +1,134 @@
+/* CONTACTS / TOTAL USERS / SORT USERS / SEARCH USERS */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 8rem;
+}
+
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.Headerleft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+}
+
+.Sort {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem;
+}
+
+.Headerright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.SearchBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.SearchBar>svg {
+    margin-left: -2rem;
+    color: darkgray;
+}
+
+.input {
+    outline: none;
+    background: transparent;
+    border-bottom-width: 1px;
+    border-bottom-color: darkgray;
+    font-size: 1rem;
+    color: white;
+    font-weight: 300;
+    width: 90%;
+}
+
+.TableContainer {}
+
+
+.table {}
+
+@media (max-width: 640px) {
+
+    /* Adjust font size for table headers and cells */
+    .table th,
+    .table td {
+        font-size: 0.75rem;
+        /* Adjust this value as needed */
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+    /* Adjust font size for table headers and cells */
+    .table th,
+    .table td {
+        font-size: 0.875rem;
+        /* Adjust this value as needed */
+    }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1025px) {
+
+    /* Adjust font size for table headers and cells */
+    .table th,
+    .table td {
+        font-size: 1rem;
+        /* Adjust this value as needed */
+    }
+}
+
+/* Extra small devices (devices below 320px) */
+@media (max-width: 319px) {
+
+    /* Adjust font size for table headers and cells */
+    .table th,
+    .table td {
+        font-size: 0.625rem;
+        /* Adjust this value as needed */
+    }
+}

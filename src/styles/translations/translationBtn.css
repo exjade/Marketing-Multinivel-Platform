@@ -1,0 +1,41 @@
+
+.dropdown\:block:focus-within > ul {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+
+  .translation_globe_icon {
+    color: #ffffff;
+  }
+
+  .translation_btn_dropdown_item{
+    color: #ffffff;
+    font-weight: 300;
+  }
+  .translation_dropdown_item_text{
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .Translation_Btn_Login{
+    margin: 1em;
+    padding: 2em 0 0 1em;
+    
+}
+
+  /* .translatio_ul{
+    
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      width: 100%;
+      gap: 10px;
+      flex-direction: column;
+      margin-top: 1em;
+      align-items: flex-start;
+    
+  } */

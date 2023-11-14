@@ -1,0 +1,56 @@
+.background_smartrading_landing {
+    background-image: url('https://i.giphy.com/media/l5JbspfwZ0yjHjlJ0K/giphy.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media  (max-width: 600px) {
+    .landing_smartrading {
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem !important;
+    }
+    .image_smartrading_landing {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 65%;
+        margin-top: -10rem;
+    } 
+}
+@media  (max-width: 500px) {
+    .landing_smartrading {
+        padding: 2rem;
+    }
+    .image_smartrading_landing {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 73%;
+        margin-top: -10rem;
+    }   
+}
+
+/*============================================ SCROLLBAR ============================================*/
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

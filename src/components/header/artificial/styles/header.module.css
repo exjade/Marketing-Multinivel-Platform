@@ -1,0 +1,155 @@
+.container {
+    font-family: Biryani, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: #1A202C;
+    width: 100%;
+    height: 6rem;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+}
+
+.wrapper {
+    width: 95%;
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.navigation {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.branding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 1rem;
+}
+
+.branding>p {
+    color: #EBE8E6;
+}
+
+.divider {
+    width: 1px;
+    background: #80808073;
+    height: 30px;
+}
+
+.links {
+    color: #EBE8E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.wrapActive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.active {
+    color: #19BC85;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    background: #2B3747;
+    color: white;
+    padding: 6px 40px 6px 30px;
+    border-radius: 99px;
+}
+
+.profile {
+    margin-left: -2rem;
+    margin-bottom: 6px;
+}
+
+/*   MENU DROPDOWN   */
+
+.dropdownContainer {
+    display: flex;
+    margin: 40rem 0rem 0rem -4rem;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 50;
+}
+
+.dropdownWrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdownNavigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    padding: 0.5rem;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.dropdownDivider {
+    width: 30px;
+    background: #80808073;
+    height: 1px;
+}
+
+
+.icons>svg>path {
+    fill: transparent;
+    stroke: rgb(0 0 0);
+    stroke-width: 1px;
+}
+
+
+/* ====================  MEDIA QUERIES  ==================== */
+@media (max-width: 640px) {
+    .navigation {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}

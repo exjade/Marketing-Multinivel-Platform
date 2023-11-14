@@ -1,0 +1,29 @@
+@media (max-width: 600px) {
+    .coinLoader {
+        width: 3rem;
+    }
+}
+@media (max-width: 500px) {
+    .coinLoader {
+        width: 3rem;
+    }
+    .hidden {
+        display: none;
+    }
+}
+@media (max-width: 300px) {
+    .coinLoader {
+        width: 2rem;
+    }
+    .hidden {
+        display: none;
+    }
+}
+@media (max-width: 200px) {
+    .coinLoader {
+        width: 2rem;
+    }
+    .hidden {
+        display: none;
+    }
+}

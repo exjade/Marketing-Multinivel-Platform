@@ -1,0 +1,1025 @@
+:root {
+    --black-card: #252530;
+    --black-background: #17171F;
+    --purple-background-header: #262633;
+    --green-background-header: #566B6A;
+    --gray-border: #75757B;
+    --gray-paragraph: #77777C;
+    --gray-modal-text: #E9EAF8;
+    --white-text: #FBFBFB;
+    --color-light: #FBFBFB;
+    --green-stats: #B5E7BD;
+    --purple-stats: #A465D3;
+    --black-dark: #0D0D0D;
+}
+
+
+body {
+    background: var(--black-card);
+}
+
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    gap: 3rem;
+    height: 100vh;
+    background: var(--black-background)
+}
+
+/* ===========  Component HEADER   =========== */
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 15rem;
+    background: var(--green-background-header);
+    background: linear-gradient(295deg, var(--green-background-header) 24%, var(--purple-background-header) 75%);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.headerWrapper {
+    width: 98%;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.headerTxtStat {
+    color: var(--green-stats);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* ===========  Component MENU   =========== */
+.menuContainer {
+    position: fixed;
+    bottom: 0;
+    z-index: 200;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.menuWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 6rem;
+    background: var(--black-background);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    align-content: center;
+    border-top-width: 1px;
+    border-top-color: var(--gray-border);
+    border-top-style: solid;
+}
+
+.menuIcons {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.isActive {
+    color: var(--green-stats);
+}
+
+.noActive {
+    color: var(--gray-paragraph);
+}
+
+
+@media only screen and (max-width: 1850px) and (min-width: 1550px) {
+    .menuWrapper {
+        display: flex;
+        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
+        -content: center;
+        align-items: center;
+        width: 60%;
+        height: 6rem;
+        background: var(--black-background);
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-top-width: 1px;
+        border-top-color: var(--gray-border);
+        border-top-style: solid;
+    }
+}
+
+@media only screen and (max-width: 1550px) and (min-width: 1200px) {
+    .menuWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        height: 6rem;
+        background: var(--black-background);
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-top-width: 1px;
+        border-top-color: var(--gray-border);
+        border-top-style: solid;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 900px) {
+    .menuWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        height: 6rem;
+        background: var(--black-background);
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-top-width: 1px;
+        border-top-color: var(--gray-border);
+        border-top-style: solid;
+    }
+}
+
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+    .menuWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 6rem;
+        background: var(--black-background);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-top-width: 1px;
+        border-top-color: var(--gray-border);
+        border-top-style: solid;
+    }
+}
+
+/* ===========  Component STAKING   =========== */
+.WalletStakingContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 10rem;
+    background: var(--black-background);
+}
+
+.WalletStakingForm {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.WalletStakingWrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.WalletStakingInputUSDT {
+    background: var(--black-card);
+    color: white;
+    text-align: center;
+    outline: none;
+    font-weight: 300;
+    padding: 0.5rem;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+}
+
+.WalletStakingInput {
+    background: var(--black-card);
+    color: white;
+    text-align: center;
+    outline: none;
+    font-weight: 900;
+    padding: 0.5rem;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+}
+
+.WalletStakingButton {
+    background: var(--green-stats);
+    width: 50%;
+    padding: 10px;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+}
+
+.WalletStakingButtonERROR {
+    background: rgb(170, 47, 47);
+    color: white;
+    width: 50%;
+    padding: 10px;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    cursor: not-allowed
+}
+
+.WalletStakingButton:hover {
+    background: rgb(44, 109, 44);
+    color: white;
+}
+
+.WalletStakingCard {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--black-card);
+    border-radius: 20px;
+}
+
+.WalletStakingCard:hover {
+    box-shadow: -3px -4px 30px 7px rgba(181, 231, 189, 0.77);
+    -webkit-box-shadow: -3px -4px 30px 7px rgba(181, 231, 189, 0.77);
+    -moz-box-shadow: -3px -4px 30px 7px rgba(181, 231, 189, 0.77);
+}
+
+.WalletStakingPercentaje {
+    color: var(--green-stats);
+
+}
+
+/* =========================  STAKE Crypto Banner ========================= */
+.WalletActionsContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.WalletActionsWrapper {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 50%;
+}
+
+.WalletActionsButton {
+    display: flex;
+    background: var(--green-stats);
+    padding: 1.5rem;
+    border-radius: 99px;
+    box-shadow: 2px 5px 60px 6px rgba(86, 107, 106, 0.75);
+    -webkit-box-shadow: 2px 5px 60px 6px rgba(86, 107, 106, 0.75);
+    -moz-box-shadow: 2px 5px 60px 6px rgba(86, 107, 106, 0.75);
+}
+
+.WalletActionsButton:hover {
+    background: var(--green-stats);
+}
+
+/* =========================  STAKE CRYPTO SELECT & FORM ======================= */
+.WalletStakingSelectCrypto {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.WalletStakingSelectLabel {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 8.7rem;
+}
+
+.WalletStakingOptions {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.StakingFormContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background: var(--black-dark);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.StakingFormWrapper {
+    width: 90%;
+}
+
+.StakingCryptoCards {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+
+.StakingAPRContain {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.StakingFormAPR>p {
+    color: var(--green-stats);
+    font-weight: 400;
+}
+
+.StakingFormAPRDays>p {
+    color: var(--white-text);
+    font-weight: 400;
+}
+
+.StakingFormButton {
+    background: var(--green-stats);
+    padding: 8px;
+    width: 8rem;
+    border-radius: 6px;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.CardLoader {
+    background: #707070;
+}
+
+/*====================== CONCLUSION ======================*/
+
+.StakingModalConclusionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #141212b2;
+    align-content: center;
+}
+
+.StakingModalConclusionWrapper {
+    background: var(--black-dark);
+    z-index: 9999;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: auto;
+    bottom: 2rem;
+    top: 2rem;
+    align-content: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* LEFT MODAL */
+.StakingModalConclusionLeft {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-right-color: rgba(240, 255, 255, 0.151);
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+
+.StakingModalLeftWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.ModalTypeLeftWrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.ModalTypeLeft {
+    border-color: var(--green-stats);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ModalTypeLeftDuration {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.ModalTypeLeftDuration>button {
+    border-color: var(--green-stats);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-modal-text);
+    width: 100%;
+}
+
+.ModalTypeLeftDuration>button:visited {
+    background: green;
+}
+
+.ModalTypeLeftDuration>button:focus {
+    background-color: var(--green-background-header);
+}
+
+.ModalTypeLeftDuration>button:visited {
+    background-color: var(--green-background-header);
+}
+
+.StakingModalInput {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: var(--green-stats);
+    padding: 10px;
+}
+
+.StakingModalInput>input {
+    background: var(--black-dark);
+    color: white;
+    width: 50%;
+    outline: none;
+}
+
+.StakingModalLimitsText {
+    color: var(--color-light);
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* RIGHT MODAL WRAPPER */
+.StakingModalConclusionRight {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.StakingModalRightWrapper {
+    width: 100%;
+}
+
+.smrwWrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+}
+
+.smrw {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.smrwprogress {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.smrwprogress1 {
+    box-sizing: border-box;
+    margin: 7px 12px 4px 0px;
+    min-width: 0px;
+    display: flex;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    background-color: rgb(240, 185, 11);
+    flex: 0 0 auto;
+}
+
+.smrwprogress2 {
+    box-sizing: border-box;
+    margin: 0px 0px 0px 2px;
+    min-width: 0px;
+    display: flex;
+    flex: 0 0 auto;
+    background-color: rgb(234, 236, 239);
+    width: 2px;
+    height: 28px;
+    position: relative;
+    overflow: hidden;
+}
+
+.smrwprogress2child {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 2px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -1px;
+    left: 0px;
+}
+
+.smrwprogress2secondchild {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 2px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+}
+
+.smrwText {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.smrwprogress2green {
+    box-sizing: border-box;
+    margin: 0px 0px 0px 2px;
+    min-width: 0px;
+    display: flex;
+    flex: 0 0 auto;
+    background-color: green;
+    width: 2px;
+    height: 28px;
+    position: relative;
+    overflow: hidden;
+}
+
+.smrwTextGreen {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+    margin-left: 15px;
+    width: 100%;
+}
+
+.aprcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.aprwrapper {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    color: var(--color-light);
+}
+
+.aprinformationwrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba(128, 128, 128, 0.123);
+    padding: 20px;
+    gap: 1.5rem;
+    margin-top: 6rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.aprinformation {
+    color: var(--color-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    gap: 15px;
+}
+
+.aprbuttonwrapper {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.aprbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 100%;
+    /* background: var(--green-stats); */
+    padding: 0.8rem;
+    color: var(--black-dark);
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.walletWithdrawals {
+    background: cadetblue;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 10px;
+    height: 30px;
+    width: 8rem;
+    margin-top: 2rem;
+    box-shadow: 3px 3px 5px 0px rgba(212, 212, 212, 0.75);
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(212, 212, 212, 0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(212, 212, 212, 0.75);
+}
+
+
+/* =============================== Withdrawal Wallet ============================================== */
+.withdrawalWalletContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* =============================== END Withdrawal Wallet ============================================== */
+
+
+@media only screen and (max-width: 1850px) and (min-width: 1550px) {
+    .StakingModalConclusionWrapper {
+        background: var(--black-dark);
+        z-index: 9999;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 55%;
+        height: auto;
+        bottom: 2rem;
+        top: 2rem;
+        align-content: center;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 1550px) and (min-width: 1200px) {
+    .StakingModalConclusionWrapper {
+        background: var(--black-dark);
+        z-index: 9999;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: auto;
+        bottom: 2rem;
+        top: 2rem;
+        align-content: center;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 900px) {
+    .StakingModalConclusionWrapper {
+        background: var(--black-dark);
+        z-index: 9999;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        height: auto;
+        bottom: 2rem;
+        top: 2rem;
+        align-content: center;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+    .StakingModalConclusionWrapper {
+        background: var(--black-dark);
+        z-index: 9999;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: auto;
+        bottom: 2rem;
+        top: 2rem;
+        align-content: center;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        overflow: scroll;
+    }
+}
+
+
+/* ==============================  ==============   ============================== */
+/* ==============================  @MEDIA QUERIES   ============================== */
+/* ==============================  ==============   ============================== */
+
+
+@media screen and (max-width: 600px) {
+    .mainWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        background: var(--black-background)
+    }
+
+    .headerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        height: 15rem;
+        background: var(--green-background-header);
+        background: linear-gradient(295deg, var(--green-background-header) 24%, var(--purple-background-header) 75%);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .WalletStakingWrapper {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        gap: 1rem;
+        cursor: pointer;
+    }
+
+    .WalletActionsWrapper {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 71%;
+        flex-wrap: wrap;
+    }
+
+    .StakingModalConclusionWrapper {
+        background: var(--black-dark);
+        z-index: 9999;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100vh;
+        bottom: 0rem;
+        top: 0rem;
+        align-content: center;
+        overflow: scroll;
+
+    }
+
+    .ModalTypeLeftDuration {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .StakingModalConclusionLeft {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        border-right-width: 0px;
+        padding-top: 3rem;
+        margin-bottom: 12rem;
+    }
+
+    .StakingModalConclusionRight {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .WalletStakingButton {
+        background: var(--green-stats);
+        width: 50%;
+        padding: 10px;
+        border-radius: 60px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 653) {
+    .StakingModalConclusionRight {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin-top: 10rem;
+    }
+}

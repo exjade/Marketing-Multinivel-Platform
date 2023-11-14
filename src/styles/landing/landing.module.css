@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Background {
+    background: #0D0D0D;
+}
+
+.Content {
+    background: #0D0D0D;
+
+}
+
+.BoxShadow {
+    background: rgb(48, 89, 119);
+    background: linear-gradient(205deg, rgba(48, 89, 119, 1) 10%, rgba(31, 65, 103, 1) 60%, rgba(12, 39, 94, 1) 100%);
+}
+
+.topBoxShadow {
+    box-shadow: -3px -54px 45px 36px rgba(2, 5, 14, 0.8);
+    -webkit-box-shadow: -3px -54px 45px 36px rgba(2, 5, 14, 0.8);
+    -moz-box-shadow: -3px -54px 45px 36px rgba(2, 5, 14, 0.8);
+}
+
+
+.transition {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.visible {
+    opacity: 1;
+}
+
+
+
+.translationFixed {
+    position: fixed;
+    right: 1em;
+    bottom: 0.5em;
+    background: #0000008a;
+    border-radius: 6%;
+    padding: 1em;
+    top: auto;
+    height: auto;
+    left: auto;
+}

@@ -1,0 +1,48 @@
+{
+  "background_color": "#101010",
+  "categories": [
+    "Financial Services",
+    "Investment Solutions",
+    "Utility Investments",
+    "Comprehensive Financial Services",
+    "Strategic Capital Management",
+    "Assets Management",
+    "Integrated Financial Services",
+    "Profitable Ventures"
+  ],
+  "description": "Capital Traders Corp: Leading financial services for strategic growth.",
+  "dir": "ltr",
+  "display_override": ["standalone", "fullscreen"],
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48"
+    },
+    {
+      "src": "android-chrome-196x196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-180x180-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "name": "Capital Trader Corp",
+  "short_name": "CT Corp",
+  "theme_color": "black",
+  "id": "/v1",
+  "lang": "en",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "scope": "/",
+  "start_url": "https://capitaltraderscorp.com"
+}

@@ -1,0 +1,19 @@
+@media (max-width: 500px) { 
+    .percentage {
+        display: none;
+    }
+    .chart {
+        display: none;
+    }
+}
+
+.border {
+    border-bottom:  4px solid rgb(71, 7, 234);
+}
+
+.color {
+    color: rgb(71, 7, 234);
+}
+#myChart {
+    color: red;
+}

@@ -1,0 +1,81 @@
+.investmentprogressbarcontainer {
+  width: 100%;
+  height: 30px;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.investmentprogressbarfill {
+  height: 100%;
+  background-color: rgba(37, 150, 130, 0.75);
+  border-radius: 15px;
+  transition: width 1s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.investmentprogresslabel {
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.IphoneContainer {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.iphonecard {
+  width: 253px;
+  height: 222px;
+  background-color: #1E1F21;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.iphonecard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 90px;
+  height: 10px;
+  background-color: #1E1F21;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.iphonecard::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 60px;
+  height: 8px;
+  background-color: #1E1F21;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 95%;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 1rem 2rem 1rem 3rem;
+}
+
+/* @media (max-width: 1640px) {
+  .iphonecard {
+    display: none;
+  }
+} */

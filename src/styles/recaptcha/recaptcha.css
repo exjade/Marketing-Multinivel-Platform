@@ -1,0 +1,18 @@
+.recaptcha{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.error_captcha {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: red;
+
+}

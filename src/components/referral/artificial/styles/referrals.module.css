@@ -1,0 +1,687 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.ReferralDashboardContainer {
+    width: 100%;
+    overflow: scroll;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: rgb(16, 27, 34);
+    background: linear-gradient(233deg, rgba(16, 27, 34, 0.8407738095238095) 18%, rgba(9, 34, 43, 0.7959558823529411) 25%, rgba(9, 10, 14, 0.8155637254901961) 40%, rgba(9, 20, 28, 0.7763480392156863) 60%, rgba(26, 60, 85, 0.804359243697479) 85%, rgba(27, 30, 55, 0.7875525210084033) 92%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#101b22", endColorstr="#1b1e37", GradientType=1);
+}
+
+.ReferralDashboardWrapper {
+    background: url('https://firebasestorage.googleapis.com/v0/b/artificialtech4u-d99e3.appspot.com/o/background-referral.png?alt=media&token=14f6c0c0-f3db-46a6-9f0d-5aa5ee32ad84');
+    /* margin-top: 12rem; */
+    background-color: initial;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+}
+
+.ReferralDashboardHero {
+    width: 100%;
+    /* margin-top: 13rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* .ReferralDashboardHero {
+    width: 100%;
+    margin-top: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 10rem;
+} */
+
+.ReferralDashboarTitle {
+    font-weight: 800;
+    font-size: xxx-large;
+    font-family: 'BIRYANI';
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: -22rem; */
+}
+
+.ReferralDashboardH1Container {
+    width: 100%;
+    margin-top: 24rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ReferralDashboardH1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+}
+
+.ReferralDashboardSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.subWrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.buttonReferNow {
+    background: #10C6AF;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    display: flex;
+    border-radius: 16px;
+    height: 3rem;
+    padding: 0px 52px 0px 52px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonMyReferrals {
+    border-color: #0D938A;
+    border-width: thin;
+    color: #0EAB9F;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    border-radius: 16px;
+    height: 3rem;
+    padding: 0px 52px 0px 52px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ReferralDashboardLinksContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.ReferralDashboardLinksWrapper {
+    width: 63%;
+    height: 8rem;
+    display: flex;
+    background: #0F1C24;
+    border-radius: 15px;
+    border-bottom: ridge;
+    border-color: #0F1C24;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.ReferralDashboardLinksLinks {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.ReferralWrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.link {
+    width: 26rem;
+    border-radius: 10px;
+}
+
+.ReferralGroup {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ReferralButton {
+    z-index: 50;
+    color: white;
+    margin-left: -4rem;
+    text-align: center;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 2rem;
+}
+
+.ReferralDashboardLinksDivider {
+    background: gray;
+    width: 1px;
+    height: 3rem;
+}
+
+@media (max-width: 1800px) and (min-width: 1280px) {
+    .link {
+        width: 17rem;
+        border-radius: 10px;
+    }
+
+}
+
+@media (max-width: 1279px) and (min-width: 769px) {
+    .link {
+        border-radius: 10px;
+        width: 9rem;
+    }
+
+    .ReferralDashboardHero {
+        width: 100%;
+        margin-top: 9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
+
+    .ReferralDashboarTitle {
+        font-weight: 800;
+        font-size: 36px;
+        font-family: 'BIRYANI';
+        color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .subtitle {
+        width: 100%;
+        color: white;
+    }
+
+    .ReferralDashboardH1Container {}
+
+    .ReferralDashboardH1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 1rem;
+        -webkit-text-stroke: 1px #00000094;
+    }
+
+    .buttonReferNow {
+        background: #0D938A;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        display: flex;
+        border-radius: 16px;
+        height: 3rem;
+        padding: 0px 23px 0px 23px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttonMyReferrals {
+        border-color: #10C6AF;
+        border-width: thin;
+        background: transparent;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        border-radius: 16px;
+        height: 3rem;
+        padding: 0px 24px 0px 24px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ReferralDashboardLinksWrapper {
+        width: 63%;
+        height: 8rem;
+        display: flex;
+        background: #0F1C24;
+        border-radius: 15px;
+        border-bottom: ridge;
+        border-color: #0F1C24;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-top: -2rem;
+    }
+
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    /* .ReferralDashboardWrapper {
+        background: none;
+        background-color: initial;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+    } */
+
+    .link {
+        border-radius: 10px;
+        width: 7rem;
+    }
+
+    .ReferralDashboardHero {
+        width: 100%;
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ReferralDashboarTitle {
+        font-weight: 800;
+        font-size: 24px;
+        font-family: 'BIRYANI';
+        color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 0rem;
+    }
+
+    .subtitle {
+        width: 60%;
+        color: white;
+    }
+    .ReferralDashboardH1Container {
+        width: 100%;
+        margin-top: 0rem !important;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ReferralDashboardH1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 1rem;
+    }
+
+    .buttonReferNow {
+        border-color: #10C6AF;
+        border-width: thin;
+        background: transparent;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        display: flex;
+        border-radius: 16px;
+        height: 3rem;
+        padding: 0px 23px 0px 23px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttonMyReferrals {
+        border-color: #0D938A;
+        border-width: thin;
+        background: #10C6AF;
+        /* background: #0D938A; */
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: 600;
+        display: flex;
+        border-radius: 16px;
+        height: 3rem;
+        padding: 0px 28px 0px 28px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ReferralDashboardLinksWrapper {
+        width: 63%;
+        height: 8rem;
+        display: flex;
+        background: #0F1C24;
+        border-radius: 15px;
+        border-bottom: ridge;
+        border-color: #0F1C24;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+}
+
+
+@media (max-width: 480px) and (min-width: 391px) {
+    /* .ReferralDashboardWrapper {
+        background: none;
+        background-color: initial;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+    } */
+
+    .link {
+        border-radius: 10px;
+        width: 5rem;
+    }
+
+    .ReferralDashboardHero {
+        width: 100%;
+        margin-top: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .ReferralDashboarTitle {
+        font-weight: 800;
+        font-size: 18px;
+        font-family: 'BIRYANI';
+        color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .ReferralDashboardH1>p {
+        color: white;
+        font-weight: bolder;
+    }
+
+    .subtitle {
+        width: 60%;
+        color: white;
+    }
+    .ReferralDashboardH1Container {
+        width: 100%;
+        margin-top: 0rem !important;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ReferralDashboardH1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 1rem;
+    }
+
+    .buttonReferNow {
+        border-color: #10C6AF;
+        border-width: thin;
+        background: transparent;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        display: flex;
+        border-radius: 16px;
+        height: 3rem;
+        padding: 0px 23px 0px 23px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttonMyReferrals {
+        border-color: #0D938A;
+        border-width: thin;
+        background: #10C6AF;
+        /* background: #0D938A; */
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: 600;
+        display: flex;
+        border-radius: 16px;
+        height: 3rem;
+        padding: 0px 28px 0px 28px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ReferralDashboardLinksWrapper {
+        width: 63%;
+        height: 8rem;
+        display: flex;
+        background: #0F1C24;
+        border-radius: 15px;
+        border-bottom: ridge;
+        border-color: #0F1C24;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 390px) and (min-width: 0px) {
+    .ReferralDashboardWrapper {
+        background: none;
+        background-color: initial;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .link {
+        border-radius: 10px;
+        width: 5rem;
+    }
+
+    .ReferralDashboardHero {
+        width: 90%;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ReferralDashboardContainer {
+        width: 100%;
+        background: linear-gradient(41deg, rgba(16, 27, 34, 1) 18%, rgba(9, 34, 43, 1) 25%, rgba(9, 10, 14, 1) 40%, rgba(9, 20, 28, 1) 60%, rgba(26, 60, 85, 1) 85%, rgba(27, 30, 55, 1) 92%, rgba(38, 36, 65, 1) 97%);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .ReferralDashboardWrapper {
+        background: url('https://firebasestorage.googleapis.com/v0/b/artificialtech4u-d99e3.appspot.com/o/background-referral.png?alt=media&token=14f6c0c0-f3db-46a6-9f0d-5aa5ee32ad84');
+        background-color: initial;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .ReferralDashboardHero {
+        width: 90%;
+        margin-top: 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .ReferralDashboarTitle {
+        font-weight: 800;
+        font-size: 13px;
+        font-family: 'BIRYANI';
+        color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin-top: -3rem;
+    }
+
+    .subtitle {
+        width: 60%;
+        font-size: 15px;
+        color: white;
+    }
+
+    .ReferralDashboardH1Container {
+        width: 100%;
+        margin-top: 0rem !important;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .buttonReferNow {
+        border-color: #10C6AF;
+        border-width: thin;
+        background: transparent;
+        color: white;
+        font-size: 11px;
+        font-weight: 800;
+        display: flex;
+        border-radius: 16px;
+        height: 3rem;
+        padding: 0px 20px 0px 20px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttonMyReferrals {
+        border-color: #0D938A;
+        border-width: thin;
+        background: #10C6AF;
+        color: #ffffff;
+        font-size: 9px;
+        font-weight: 600;
+        display: flex;
+        border-radius: 16px;
+        height: 3rem;
+        padding: 0px 12px 0px 12px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ReferralDashboardLinksWrapper {
+        width: 90%;
+        height: 8rem;
+        display: flex;
+        background: #0F1C24;
+        border-radius: 15px;
+        border-bottom: ridge;
+        border-color: #0F1C24;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+}

@@ -1,0 +1,83 @@
+/* REFERRAL SECTION */
+
+.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.users {
+    margin-top: -4rem;
+}
+
+.count {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 77px;
+    text-align: center;
+
+}
+
+.counttitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.referraltitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18x;
+    line-height: 24px;
+    text-align: center;
+}
+
+/* REFERRAL LINK  */
+
+.titleLink {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+.border {
+    border-bottom-left-radius: 50px;
+}
+
+.hover:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on no-scroll */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
