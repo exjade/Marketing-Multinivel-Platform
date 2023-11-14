@@ -18,38 +18,184 @@ module.exports = {
   theme: {
     colors: {
       white: {
-        background: "#FAF6F0"
+        primary: '#e3e3e3',
+        normal: '#ffffff',
+        placeholder: '#e3e3e3',
+        login_button: '#CFCFCF',
+        referralList: '#F0EFF5',
+
       },
       black: {
-        primary: '#000000',       
+        normal: '#000000',
+        background: '#181818',
+        border: '#ffffff0f',
+        login_button: '#434343',
+        btnicon: '#313131',
+        referralList: '#27282F',
+        default: '#101010',
+        textBg: '#121717',
+        balanceCard: '#222224',
+        backg: "#0D0D0D",
+        breadcrums: "#222223"
       },
       gray: {
-        primary: '#9F9F9F',        
+        background: '#9F9F9F',
+        primary: '#9D9DAA',
+        button: '#696969',
+        info: '#6A757A',
+        border: '#72757e',
+        loader: '#707070',
+        withdrawal: '#e3e3e3',
+        login_input_bg: '#171717',
+        landing_download: '#111827',
+        landing_feature: '#E9EAF8',
+        cancel: '#6A757A',
+        input: '#8080802e',
+        branding: '#CFCFCF',
+        adminParagraph: '#374151',
+        apr: '#7D8891',
+        textLoader: '#56555e52',
       },
       brown: {
-        primary: '#776A49',
+        button: '#776A49',
       },
       red: {
         warning: '#fd2525e3',
+        logo: '#FE2E5F',
+        card: '#FF4336',
+        parrafo: '#F57374',
+
       },
       blue: {
         primary: '#1B74BA',
+        emblema: '#003BB6',
+        platino: '#677478',
+        logo: '#00C9DB',
+        placeholder: '#A6C9F2',
+        landingBackground: '#050915',
+        teal: '#01A99E',
+        feedback: "#0D4262",
+        auth: "#202124",
+        input: "#12297D"
+
       },
       green: {
-        primary: '#00473e',
+        button: '#00473e',
+        success: '#22ca4c',
+        card: '#DFF9E1',
+        parrafo: '#16481B',
+        radored: '#26A27C',
+        header: '#16481B',
+        landingButton: '#99E39E',
+        amount: '#168E83',
+        graph: "#5A5F3C"
       },
       orange: {
-        primary: '#E27220',
+        leftCard: '#E27220',
+        rightCard: '#E858C8',
+      },
+      badges: {
+        diamond: '#3FA4B4',
+        platinum: '#677478',
+        gold: '#FE8200',
+        admin: '#8D1717',
+        model: '#6469E3',
+      },
+      button: {
+        primary: 'rgb(71, 7, 234)',
+        secondary: '#661FFF',
       },
       yellow: {
-        primary: '#E9A000',
+        pending: '#E9A000',
       },
+      orange: {
+        status: '#D36800',
+      },
+      //=====================================//
+      artificial: {
+        theme: {
+          dark: {
+            primary: "#1E1F21",
+            secondary: "#272729",
+            black: "#17171F"
+          },
+          white: {
+            primary: "#EAEAEA",
+            secondary: "#FFFFFF",
+          },
+          gray: {
+            primary: "#252530",
+            secondary: "#AAAAAA",
+          },
+          cream: {
+            primary: "#F5F5F5",
+          },
+          purple: {
+            primary: "#C277FD",
+          },
+          green: {
+            primary: "#19BC85"
+          },
+          blue: {
+            primary: "#4298E0"
+          }
+        },
+        main: {
+          blue: {
+            primary: "#4956FC",
+            secondary: "#6D78FD"
+          },
+        },
+        text: {
+          blue: {
+            primary: "#9D9D9D",
+            secondary: "#C2C2C3",
+            third: "#2D3132",
+            fourth: '#E0EBE7'
+          },
+          additional: {
+              primary: "#5E38C0",
+              secondary: "#259681",
+              third: "#F5B300",
+              sponsorCard: '#876932'
+          },
+          card: {
+            primary: "#259682",
+            secondary: "#3DD0B4",
+            red: "#A75A40",
+            yellow: "#ABD648",
+            white: "#FFFBFF",
+            orangeLight: '#F9D3C6',
+            orange: '#FF503F',
+            gray: '#E3E3E3'
+          }
+        },
+      }
+
     },
     // FONTS
     fontFamily: {
+      // lato
       'lato-300': ['Lato', 'sans-serif;'],
       'lato-100': ['Lato', 'sans-serif;'],
       'lato-bold-700': ['Lato', 'sans-serif;'],
+      'lato-900': ['Lato', 'sans-serif;'],
+      // oswald
+      'oswald-300': ['Oswald', 'sans-serif;'],
+      'oswald-700': ['Oswald', 'sans-serif;'],
+      // Poppins
+      'poppins-300': ['Poppins', 'sans-serif;'],
+      'poppins-400': ['Poppins', 'sans-serif;'],
+      'poppins-500': ['Poppins', 'sans-serif;'],
+      'poppins-600': ['Poppins', 'sans-serif;'],
+      // Inter
+      'Inter-300': ['Inter', 'sans-serif;'],
+      'Inter-400': ['Inter', 'sans-serif;'],
+      'Inter-500': ['Inter', 'sans-serif;'],
+      'Inter-600': ['Inter', 'sans-serif;'],
+      // Biryani
+      'Biryani': ['Biryani', 'sans-serif;'],
+
     }
   },
   variants: {
