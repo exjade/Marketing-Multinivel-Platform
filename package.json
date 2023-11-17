@@ -34,6 +34,7 @@
     "react-select": "^5.7.3",
     "recharts": "^2.7.2",
     "shortid": "^2.2.16",
+    "swiper": "^11.0.4",
     "tailwindcss-dropdown": "^1.0.0",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.0",

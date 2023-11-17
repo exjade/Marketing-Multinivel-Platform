@@ -1,4 +1,4 @@
-export const LOGIN = '/login';
+export const LOGIN = '/signin';
 export const SIGN_UP = '/signup';
 export const REFERRAL_SIGN_UP = '/ref=/:referralCode';
 export const RECOVERPASSWORD = '/recover-password';

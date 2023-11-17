@@ -1,0 +1,162 @@
+:root {
+    --color-white: #ffff;
+    --color-white-h1: #D7D9EA;
+    --color-white-h3: #CAD4E1;
+    --color-black-button: #202739;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 48rem;
+    gap: 2rem;
+}
+
+.hero-paragraph{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    text-align: center;
+    gap: 2rem;
+    align-content: center;
+}
+
+.hero-paragraph  > h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+.hero-paragraph > h3 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.hero-buttons-firts-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    background: white;
+    color: #13182F;
+    padding: 0.8rem;
+    border-radius: 10px;
+}
+
+.hero-illustration-container {
+    border-bottom-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-bottom.svg?alt=media&token=7696150a-dc9e-4e02-aaa4-e54a490ff873');
+    /* margin-left: -7rem; */
+    background-position: top;
+    overflow: hidden;
+    /* margin-right: -7rem; */
+    --tw-translate-x: -50%;
+    z-index: -10;
+    height: 100%;
+    inset: 0px;
+    position: fixed;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.hero-illustration-wrapper {
+    position: absolute;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-bottom.svg?alt=media&token=7696150a-dc9e-4e02-aaa4-e54a490ff873');
+    bottom: 0px;
+    background-repeat: no-repeat;
+    /* left: 28%; */
+    display: flex;
+    z-index: -10;
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    border-bottom-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: contain;
+    align-content: center;
+    height: 100%;
+    
+}
+.hero-illustration-image {
+    display: block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    overflow: hidden;
+}
+
+/*
+.hero-illustration-container {
+    overflow: hidden;
+    z-index: -10;
+    height: 100%;
+    inset: 0px;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.hero-illustration-wrapper {
+    position: absolute;
+    display: flex;
+    z-index: -10;
+    border-bottom-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: contain;
+    align-content: center;
+    height: 100%;
+    
+}
+.hero-illustration-image {
+    display: block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    overflow: hidden;
+}
+
+*/

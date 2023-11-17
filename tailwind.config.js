@@ -154,10 +154,10 @@ module.exports = {
             fourth: '#E0EBE7'
           },
           additional: {
-              primary: "#5E38C0",
-              secondary: "#259681",
-              third: "#F5B300",
-              sponsorCard: '#876932'
+            primary: "#5E38C0",
+            secondary: "#259681",
+            third: "#F5B300",
+            sponsorCard: '#876932'
           },
           card: {
             primary: "#259682",
@@ -173,29 +173,8 @@ module.exports = {
       }
 
     },
-    // FONTS
     fontFamily: {
-      // lato
-      'lato-300': ['Lato', 'sans-serif;'],
-      'lato-100': ['Lato', 'sans-serif;'],
-      'lato-bold-700': ['Lato', 'sans-serif;'],
-      'lato-900': ['Lato', 'sans-serif;'],
-      // oswald
-      'oswald-300': ['Oswald', 'sans-serif;'],
-      'oswald-700': ['Oswald', 'sans-serif;'],
-      // Poppins
-      'poppins-300': ['Poppins', 'sans-serif;'],
-      'poppins-400': ['Poppins', 'sans-serif;'],
-      'poppins-500': ['Poppins', 'sans-serif;'],
-      'poppins-600': ['Poppins', 'sans-serif;'],
-      // Inter
-      'Inter-300': ['Inter', 'sans-serif;'],
-      'Inter-400': ['Inter', 'sans-serif;'],
-      'Inter-500': ['Inter', 'sans-serif;'],
-      'Inter-600': ['Inter', 'sans-serif;'],
-      // Biryani
-      'Biryani': ['Biryani', 'sans-serif;'],
-
+      'roboto': ['Roboto Mono', 'monospace', 'sans-serif;'],
     }
   },
   variants: {

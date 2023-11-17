@@ -1,0 +1,5 @@
+export {default as Header} from './header/header'
+export {default as Hero} from './hero/hero'
+export {default as HeroTwo} from './hero/hero-2.js'
+export {default as Swipper} from './swipper/'
+export {default as Footer} from './footer/'

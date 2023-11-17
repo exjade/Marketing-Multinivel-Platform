@@ -3,46 +3,90 @@
     padding: 0;
 }
 
-.Background {
-    background: #0D0D0D;
+:root {
+    --bg-opacity: 1;
+    --background-color: rgb(15 23 42/var(--bg-opacity));
+    --paragraph-gray: #ACB6C3;
+    --paragraph-white: #ffffff;
+    --border-color: #334155;
+    --font-weight: 500;
+    --font-size: 0.875rem;
+    --line-height: 1.5715;
+    --text-decoration: inherit;
 }
 
-.Content {
-    background: #0D0D0D;
+body {
 
+    background-color: var(--background-color);
 }
 
-.BoxShadow {
-    background: rgb(48, 89, 119);
-    background: linear-gradient(205deg, rgba(48, 89, 119, 1) 10%, rgba(31, 65, 103, 1) 60%, rgba(12, 39, 94, 1) 100%);
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    padding: 2rem 2rem 2rem 2rem;
 }
 
-.topBoxShadow {
-    box-shadow: -3px -54px 45px 36px rgba(2, 5, 14, 0.8);
-    -webkit-box-shadow: -3px -54px 45px 36px rgba(2, 5, 14, 0.8);
-    -moz-box-shadow: -3px -54px 45px 36px rgba(2, 5, 14, 0.8);
+.css-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    gap: 2rem;
 }
 
-
-.transition {
-    opacity: 0;
-    transition: opacity 0.5s ease;
+.css-signin-button {
+    color: var(--paragraph-gray);
+    font-size: 0.875rem;
+    line-height: 1.5715;
+    font-weight: 500;
+    text-decoration: inherit;
+}
+.css-signin-button:hover {
+    color: var(--paragraph-white);
+    font-size: 0.875rem;
+    line-height: 1.5715;
+    font-weight: 500;
+    text-decoration: inherit;   
 }
 
-.visible {
-    opacity: 1;
+.css-signup-button {
+    border-color: var(--border-color);
+    border-radius: 15px;
+    border-width: thin;
+    padding: 2px 10px 2px 10px;
+    color: var(--paragraph-gray);
+    font-size: 0.875rem;
+    line-height: 1.5715;
+    font-weight: 500;
+    text-decoration: inherit;
 }
 
+.css-signup-button:hover {
+    border-color: var(--border-color);
+    border-radius: 15px;
+    border-width: thin;
+    padding: 2px 10px 2px 10px;
+    color: var(--paragraph-white);
+    font-size: 0.875rem;
+    line-height: 1.5715;
+    font-weight: 500;
+    text-decoration: inherit;   
+}
 
-
-.translationFixed {
-    position: fixed;
-    right: 1em;
-    bottom: 0.5em;
-    background: #0000008a;
-    border-radius: 6%;
-    padding: 1em;
-    top: auto;
-    height: auto;
-    left: auto;
+@media (max-width: 960px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        width: 100%;
+        padding: 2rem 10px 2rem 10px;
+    }
+    
 }

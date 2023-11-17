@@ -45,9 +45,7 @@ const ReferralHistory = lazy(() => import('./pages/referral-history'))
 const NotFound = lazy(() => import('./pages/not-found'))
 // - Law
 const Landing = lazy(() => import('./pages/landing'))
-const Terms = lazy(() => import('./pages/Law/Terms/terms'))
-const Privacy = lazy(() => import('./pages/Law/Privacy/privacy'))
-const CreatedUser = lazy(() => import('./pages/auth/userCreated'))
+
 
 function App() {
   const { user } = useAuthListener()
@@ -76,17 +74,6 @@ function App() {
               </IsUserLoggedIn>
               <IsUserLoggedIn user={user} loggedInPath={ROUTES.DASHBOARD} path={ROUTES.RECOVERPASSWORD} exact>
                 <ForgotPassword />
-              </IsUserLoggedIn>
-            
-              {/* LAW: TERMS & PRIVACY */}
-              <IsUserLoggedIn user={user} loggedInPath={ROUTES.LOGIN} path={ROUTES.TERMS} exact>
-                <Terms />
-              </IsUserLoggedIn>
-              <IsUserLoggedIn user={user} loggedInPath={ROUTES.LOGIN} path={ROUTES.PRIVACY} exact>
-                <Privacy />
-              </IsUserLoggedIn>
-              <IsUserLoggedIn user={user} loggedInPath={ROUTES.CREATEDUSER} path={ROUTES.CREATEDUSER} exact>
-                <CreatedUser />
               </IsUserLoggedIn>
 
 

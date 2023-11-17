@@ -1,0 +1,74 @@
+:root {
+    --color-blue-background: #0F172A
+}
+
+.swiper-container {
+    background: var(--color-blue-background);
+    height: 161px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: hidden;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.swiper-wrapper {
+    height: auto;
+    width:90%;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+.swiper-wrapper::before {
+    content: none;
+}
+
+.swiper-slide {
+    color: white;
+    margin-right: 64px;
+    box-sizing: border-box;
+}
+/* .swiper-container {
+    background: var(--color-blue-background);
+    height: 161px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: hidden;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.swiper-wrapper {
+    height: auto;
+    width:90%;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+.swiper-wrapper::before {
+    content: none;
+}
+
+.swiper-slide {
+    color: white;
+    margin-right: 64px;
+    box-sizing: border-box;
+} */

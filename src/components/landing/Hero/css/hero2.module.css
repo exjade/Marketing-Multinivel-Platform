@@ -1,0 +1,85 @@
+:root {
+    --color-purple: #7946B6;
+    --color-white: #FFFFFF;
+    --color-white-light: #AFB3C1;
+    --color-gray-light: #91A0B6;
+    --color-blue-background: #0F172A;
+    --height: 390px;
+}
+
+
+.hero-container {
+    height: 390px;
+    background: var(--color-blue-background);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-top.svg?alt=media&token=19bcb82e-3b7f-4ecb-9a48-19521e5bc882);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 48rem;
+    gap: 2rem;
+    margin: 12rem 0rem 0rem 0rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    word-break: break-all;
+    width: 90%;
+    text-align: center;
+    gap: 1rem;
+}
+.hero-text>p {
+    color: var(--color-gray-light);
+    font-weight: 400;
+    text-align-last: center;
+    font-size: 13px;
+    
+}
+.hero-text>h2 {
+    color: var(--color-white-light);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.hero-text>h4 {
+    color: var(--color-purple);
+    font-size: 15px;
+    font-weight: 300;
+    
+}
+
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.hero-buttons-firts-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    background: white;
+    color: #13182F;
+    padding: 0.8rem;
+    border-radius: 10px;
+}

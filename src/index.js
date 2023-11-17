@@ -9,6 +9,7 @@ import './i18n';
 import 'flag-icons/css/flag-icons.min.css'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
+
 ReactDOM.render(
     <FirebaseContext.Provider value={{ firebase, FieldValue }}>
         <App />
