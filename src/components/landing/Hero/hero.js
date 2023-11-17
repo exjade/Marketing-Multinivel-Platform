@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './css/hero.module.css'
+import styles from './css/hero.module.css';
+import * as ROUTES from '../../../constants/routes';
 
 const Hero = () => {
   return (
@@ -9,13 +10,6 @@ const Hero = () => {
         {/* Illustration */}
         <div className={`${styles['hero-illustration-container']}`}>
           <div className={`${styles['hero-illustration-wrapper']}`}>
-            {/* <img
-              src='https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-bottom.svg?alt=media&token=7696150a-dc9e-4e02-aaa4-e54a490ff873'
-              alt='Hero illustration'
-              width='2146'
-              height='774'
-              className={`${styles['hero-illustration-image']}`}
-            /> */}
           </div>
         </div>
 
@@ -26,12 +20,14 @@ const Hero = () => {
         </span>
 
         <div className={`${styles['hero-buttons']}`} >
-          <button className={`${styles['hero-buttons-firts-child']}`} >Get Started
+          <a className={`${styles['hero-buttons-firts-child']}`}
+            href={ROUTES.SIGN_UP}
+          >
+            Get Started
             <span className="material-symbols-sharp ">
               arrow_right_alt
             </span>
-          </button>
-          <button className={`${styles['hero-buttons-second-child']}`} ></button>
+          </a>
         </div>
 
       </div>

@@ -1,5 +1,6 @@
 import React from 'react'
-import styles from './css/hero2.module.css'
+import styles from './css/hero2.module.css';
+import * as ROUTES from '../../../constants/routes';
 
 const Hero = () => {
     return (
@@ -16,12 +17,13 @@ const Hero = () => {
                 </span>
 
                 <div className={`${styles['hero-buttons']}`} >
-                    <button className={`${styles['hero-buttons-firts-child']}`} >Get Started
+                    <a className={`${styles['hero-buttons-firts-child']}`}
+                        href={ROUTES.SIGN_UP} >
+                        Get Started
                         <span className="material-symbols-sharp ">
                             arrow_right_alt
                         </span>
-                    </button>
-                    <button className={`${styles['hero-buttons-second-child']}`} ></button>
+                    </a>
                 </div>
 
             </div>
