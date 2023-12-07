@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 //module styles
 import styles from '../styles/modules/auth/auth.module.css'
 //routes
@@ -18,12 +18,12 @@ const ForgotPassword = () => {
     const { t } = useTranslation()
 
 
-    useEffect(() => { document.title = 'Recover Password - Artificial' }, []); //eslint-disable-line
+    useEffect(() => { document.title = 'Recover Password - CapitalTradersCorp' }, []); //eslint-disable-line
     const history = useHistory();
     const [emailAddress, setEmailAddress] = useState('');
     const [success, setSuccess] = useState('');
     const [error, setError] = useState('');
-    const isInvalid = emailAddress === '';
+    const isInvalid = emailAddress.length < 11;
 
     const ForgotPassword = (emailAddress) => {
         return sendPasswordResetEmail(auth, emailAddress, {
@@ -48,67 +48,93 @@ const ForgotPassword = () => {
     return (
         <AnimatePresence>
             <motion.div
-                className={`${styles.bg} container flex mx-auto max-w-screen-lg items-center justify-center h-screen`}
+                className={`${styles['login-container']}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
             >
-                <div className={`flex flex-col justify-center items-center`} >
-                    {/* image */}
 
-                    <div className={`flex flex-col w-5/5 mb-3 ${styles.wrapper}`} >
 
-                        <span className='flex justify-center items-start w-full mb-10'>
-                            <p className=' w-full text-white-normal text-4xl font-medium'>Recover Password</p>
-                        </span>
+                <div className={`${styles['login-wrapper']}`} >
 
-                        <h2 className='text-gray-primary mt-4 mb-4 font-lato-300 text-base'>{t('Write your email address to find your account..')}</h2>
 
-                        {error &&
-                            <p
-                                className='mb-4 text-xs text-red-warning'
-                                value={error}
-                            >
-                                {error}
-                            </p>}
-                        {success &&
-                            <p
-                                className='mb-4 text-xs text-green-success'
-                                value={success}
-                            >
-                                {success}
-                            </p>}
+                    <div className={`${styles['login-branding']}`} >
+                        <div className={`${styles['login-illustration']}`}>
+                            <img 
+                            src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fauth-illustration.svg?alt=media&token=b65343c8-6ab1-4c33-98dc-6b72c3e9728f" 
+                            alt="page illlustration"
+                            width={440}
+                            height={100}
+                            />
+                        </div>
+                        <motion.div
+                            whileHover={{ scale: 1.2, rotate: 90 }}
+                            whileTap={{
+                                scale: 0.8,
+                                rotate: -90,
+                                borderRadius: '100%'
+                            }}
+                            className={`${styles['login-branding-box']}`}>
+                            <img
+                                src="/logo.webp"
+                                alt="ctb-logo"
+                                className='w-12 h-12 object-contain'
+                            />
+                        </motion.div>
+                        <h2>Reset your password</h2>
+                        <p className='text-gray-primary font-lato-300 text-base'>{t('Write your email address to find your account..')}</p>
+                    </div>
 
-                        <form onSubmit={handleOnsubmit} method="POST">
+
+
+                    {error &&
+                        <p
+                            className='mb-4 text-xs text-red-warning'
+                            value={error}
+                        >
+                            {error}
+                        </p>}
+                    {success &&
+                        <p
+                            className='mb-4 text-xs text-green-success'
+                            value={success}
+                        >
+                            {success}
+                        </p>}
+
+                    <form
+                        onSubmit={handleOnsubmit}
+                        method="POST"
+                        className={`${styles['login-form']}`}
+                    >
+                        <div className={`${styles['login-form-container']}`}>
                             <input
                                 type="text"
                                 aria-label="Enter your email address"
                                 placeholder={t('Email')}
-                                className='text-sm text-white-placeholder w-full mr-3 py-5 px-5 h-14  border-white-normal border-b-2 rounded-sm mb-2 mt-3 outline-none bg-black-backg font-inter-100'
+                                className={styles['login-form-input']}
                                 onChange={({ target }) => setEmailAddress(target.value)}
                             />
-                            <motion.button
-                                disabled={isInvalid}
-                                type='submit'
-                                className={`bg-white-login_button w-full text-black-normal hover:bg-blue-feedback hover:text-white-normal rounded h-14 mt-3 font-lato-900 font-bold text-xl
+                        </div>
+                        <motion.button
+                            disabled={isInvalid}
+                            type='submit'
+                            className={`${styles['login-form-button']} 
                         ${isInvalid && 'cursor-not-allowed '}`}
-                                whileTap={{ scale: 0.9 }}
-                            >
-                                {t('Recover account')}
-                            </motion.button>
-                        </form>
-                    </div>
-                    <div className={`flex justify-center items-center flex-col bg-white p-4 ${styles.donthaveaccount}`} >
-                        <p className='text-sm font-lato-900 text-gray-primary'>
-                            {t('Already have an account?')} {``}
-                            <Link
-                                to={ROUTES.LOGIN}
-                                className='text-white-normal font-bold ml-1'
-                            >
-                                {t('Log in')}
-                            </Link>
-                        </p>
-                    </div>
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            Reset Password
+                        </motion.button>
+                    </form>
+
+
+                    <span
+                        className={styles['login-form-action']}
+                    >
+                        <p>Don't have an account?</p>
+                        <a href={ROUTES.SIGN_UP}>Sign up</a>
+                    </span>
+
                 </div>
             </motion.div>
         </AnimatePresence>
