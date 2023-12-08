@@ -48,7 +48,7 @@ const SidebarShow = (props) => {
                             className={`${styles.navigationIcons} bg-artificial-theme-gray-primary`}>
                             <span className={`${styles.navigationIconsWrapper} `}>
                                 <HomeIcon className='w-10 h-10 text-white-normal mb-2 ' />
-                                <p className='font-Biryani font-semibold  text-lg capitalize h-full  w-full text-center '>
+                                <p className='font-roboto font-semibold  text-lg capitalize h-full  w-full text-center '>
                                     Dashboard</p>
                             </span>
                         </a>
@@ -57,7 +57,7 @@ const SidebarShow = (props) => {
                             className={`${styles.navigationIcons} `}>
                             <span className={`${styles.navigationIconsWrapper} `}>
                                 <WalletIcon className='w-10 h-10 text-white-normal mb-2' />
-                                <p className='font-Biryani font-semibold  text-lg capitalize h-full  w-full text-center'>
+                                <p className='font-roboto font-semibold  text-lg capitalize h-full  w-full text-center'>
                                     My Wallet</p>
                             </span>
                         </a>
@@ -66,7 +66,7 @@ const SidebarShow = (props) => {
                             className={`${styles.navigationIcons} `}>
                             <span className={`${styles.navigationIconsWrapper} `}>
                                 <Square2StackIcon className='w-10 h-10 text-white-normal mb-2' />
-                                <p className='font-Biryani font-semibold  text-lg capitalize h-full  w-full text-center'>
+                                <p className='font-roboto font-semibold  text-lg capitalize h-full  w-full text-center'>
                                     Invest</p>
                             </span>
                         </a>
@@ -75,7 +75,7 @@ const SidebarShow = (props) => {
                             className={`${styles.navigationIcons} `}>
                             <span className={`${styles.navigationIconsWrapper} `}>
                                 <BuildingLibraryIcon className='w-10 h-10 text-white-normal mb-2' />
-                                <p className='font-Biryani font-semibold  text-lg capitalize h-full  w-full text-center '>
+                                <p className='font-roboto font-semibold  text-lg capitalize h-full  w-full text-center '>
                                     Balances</p>
                             </span>
                         </a>
@@ -84,7 +84,7 @@ const SidebarShow = (props) => {
                             className={`${styles.navigationIcons} `}>
                             <span className={`${styles.navigationIconsWrapper} `}>
                                 <RectangleGroupIcon className='w-10 h-10 text-white-normal mb-2' />
-                                <p className='font-Biryani font-semibold  text-lg capitalize h-full  w-full text-center '>
+                                <p className='font-roboto font-semibold  text-lg capitalize h-full  w-full text-center '>
                                     Network</p>
                             </span>
                         </a>
@@ -95,7 +95,7 @@ const SidebarShow = (props) => {
                                     className={`${styles.navigationIcons}  `}>
                                     <span className={`${styles.navigationIconsWrapper} `}>
                                         <ShieldCheckIcon className='w-10 h-10 text-white-normal mb-2' />
-                                        <p className='font-Biryani font-semibold  text-lg capitalize h-full  w-full text-center '>
+                                        <p className='font-roboto font-semibold  text-lg capitalize h-full  w-full text-center '>
                                             admin</p>
                                     </span>
                                 </a>
@@ -105,7 +105,7 @@ const SidebarShow = (props) => {
                                         className={`${styles.navigationIcons}  `}>
                                         <span className={`${styles.navigationIconsWrapper} `}>
                                             <ShieldCheckIcon className='w-10 h-10 text-white-normal mb-2' />
-                                            <p className='font-Biryani font-semibold  text-lg capitalize h-full  w-full text-center '>
+                                            <p className='font-roboto font-semibold  text-lg capitalize h-full  w-full text-center '>
                                                 admin</p>
                                         </span>
                                     </a>
@@ -123,7 +123,7 @@ const SidebarShow = (props) => {
                             className={`${styles.navigationIcons} `}>
                             <span className={`${styles.navigationIconsWrapper} `}>
                                 <Cog8ToothIcon className='w-10 h-10 text-white-normal mb-2 ' />
-                                <p className=' font-Biryani font-semibold  text-lg capitalize h-full  w-full text-center
+                                <p className=' font-roboto font-semibold  text-lg capitalize h-full  w-full text-center
                         '>
                                     Settings</p>
                             </span>
@@ -145,7 +145,7 @@ const SidebarShow = (props) => {
                                 }}
                             >
                                 <ArrowLeftOnRectangleIcon className='w-10 h-10 text-white-normal mb-2' />
-                                <p className='font-Biryani font-semibold  text-lg capitalize h-full  w-full text-center'>
+                                <p className='font-roboto font-semibold  text-lg capitalize h-full  w-full text-center'>
                                     Log out</p>
                             </button>
                         </a>

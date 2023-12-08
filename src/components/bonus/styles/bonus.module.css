@@ -16,7 +16,7 @@
 
 
 .container {
-    font-family: 'Biryani', 'sans-serif';
+    font-family: 'roboto', 'sans-serif';
     display: flex;
     flex-direction: column;
     align-items: center;

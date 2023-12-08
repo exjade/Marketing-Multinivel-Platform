@@ -15,7 +15,7 @@ const RecentReferrals = () => {
 
   return (
     <section
-      className={`${styles.contenedor} mt-2 font-Biryani my-10`}>
+      className={`${styles.contenedor} mt-2 font-roboto my-10`}>
       <div className={`${styles.wrapper}`}>
         <div className='flex flex-col justify-center items-start gap-2'>
           <h3 className={`font-semibold text-xl text-white-normal`}>Direct Network</h3>

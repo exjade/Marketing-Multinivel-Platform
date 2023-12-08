@@ -5,7 +5,7 @@ import styles from './progress.module.css';
 const IphoneCard = (props) => {
 
   return (
-    <div className={`${styles.IphoneContainer} font-Biryani`} >
+    <div className={`${styles.IphoneContainer} font-roboto`} >
       <div className={styles.iphonecard}>
         <div className={`${styles.card}`} >
           <span className='flex flex-col justify-start gap-2'>

@@ -15,18 +15,18 @@ const ReferralLink = (props) => {
 
     return (
         <motion.section
-            className={`${styles.ReferralContainer}  text-white-normal py-10 text-xl font-normal font-Biryani `}
+            className={`${styles.ReferralContainer}  text-white-normal py-10 text-xl font-normal font-roboto `}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
         >
             <div className={`${styles.ReferralWrapper}`} >
                 <span className='flexitems-center justify-center'>
                     <h1 className={` text-lg sm:text-2xl`}>
-                        Your network link
+                        Invite Friends
                     </h1>
                 </span>
                 <span className={styles.ReferralGroup}>
-                    <input type="text" placeholder={copyReferralCode} disabled className={`${styles.link} text-start h-14 w-9/12 px-10 text-sm py-2 outline-none  bg-gray-input rounded-xs text-white-normal`} />
+                    <input type="text" placeholder={referralCode} disabled className={`${styles.link} text-start h-14 w-9/12 px-10 text-sm py-2 outline-none  bg-gray-input rounded-xs text-white-normal`} />
                     <CopyToClipboard text={copyReferralCode} >
                         <button
                             className={styles.ReferralButton}

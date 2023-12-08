@@ -15,7 +15,7 @@ const TransactionsPayoutModal = (props) => {
 
   return (
     <motion.div
-      className={`${styles.PayoutContainer}  font-Biryani`}
+      className={`${styles.PayoutContainer}  font-roboto`}
       variants={container}
       initial="hidden"
       animate="visible"

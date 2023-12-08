@@ -37,7 +37,7 @@ const MonthlyChartOverview = () => {
     };
 
     return (
-        <section className={`${styles.contenedor} mt-2 font-Biryani`} >
+        <section className={`${styles.contenedor} mt-2 font-roboto`} >
             <div className={`${styles.wrapper}`} >
                 <h3 className='font-semibold text-xl text-white-normal'>Monthly Earnings</h3>
                 <IncomeChart data={chartData} />

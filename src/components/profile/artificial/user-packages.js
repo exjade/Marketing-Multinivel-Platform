@@ -49,7 +49,7 @@ const UserPackages = () => {
 
 
     return (
-        <section className={`${styles.contenedor} my-10  font-Biryani`} >
+        <section className={`${styles.contenedor} my-10  font-roboto`} >
             <div className={`${styles.referralwrapper}`}>
                 {/* <div className='flex flex-row w-full items-center justify-around gap-2'>
                     <span className='flex flex-col gap-2 w-full'>

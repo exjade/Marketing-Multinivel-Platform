@@ -149,7 +149,7 @@ small {
 
 .title>h1 {
     width: 100%;
-    font-family: 'Biryani';
+    font-family: 'roboto';
      color: white;
     
 }
@@ -157,7 +157,7 @@ small {
 .title>p {
     font-size: 12px;
     width: 76%;
-    font-family: 'Biryani';
+    font-family: 'roboto';
      color: white;
 }
 
@@ -343,7 +343,7 @@ small {
     }
     .title>h1 {
     width: 80%;
-    font-family: 'Biryani';
+    font-family: 'roboto';
      color: white;
     
 }
@@ -369,7 +369,7 @@ small {
     }
     .title>h1 {
     width: 80%;
-    font-family: 'Biryani';
+    font-family: 'roboto';
      color: white;
     
 }

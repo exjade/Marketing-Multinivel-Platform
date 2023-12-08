@@ -20,7 +20,7 @@ const RightSection = ({ theme }) => {
   const { user } = useUser()
   return (
     <>
-      <div className={` sm:px-5 sm:py-4 font-Biryani ${styles.dropshadow} ${theme ? `${styles.darkmain}` : `${styles.main}`}`}>
+      <div className={` sm:px-5 sm:py-4 font-roboto ${styles.dropshadow} ${theme ? `${styles.darkmain}` : `${styles.main}`}`}>
         <Error>
           <RightProfile
             user={user}

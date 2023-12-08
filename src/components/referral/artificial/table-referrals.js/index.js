@@ -12,7 +12,7 @@ const TableReferrals = ({
 
   return (
 
-    <div className={`${styles.container} font-Biryani `} >
+    <div className={`${styles.container} font-roboto `} >
       <div className={`${styles.wrapper} container`} >
         {/* CONTACTS / TOTAL USERS / SORT USERS / SEARCH USERS */}
         <div className={`${styles.Header}`} >

@@ -22,7 +22,7 @@ const TitleDate = (props) => {
     const todayDate = getTodayDate();
 
     return (
-        <section className='w-full flex justify-center items-center  font-Biryani my-10'>
+        <section className='w-full flex justify-center items-center  font-roboto my-10'>
             <div className='flex flex-row items-center justify-between w-11/12 px-5'>
                 <span className='flex flex-col gap-3'>
                     <h2 className='font-semibold text-3xl leading-1 text-white-normal'>Dashboard</h2>

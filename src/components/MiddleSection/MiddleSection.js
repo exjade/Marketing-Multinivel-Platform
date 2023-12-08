@@ -95,7 +95,7 @@ const MiddleSection = (
       </Error>
 
       <div className='flex flex-row w-full items-center justify-center '>
-        <div className='flex flex-col sm:flex-row w-11/12 items-center justify-between  font-Biryani '>
+        <div className='flex flex-col sm:flex-row w-11/12 items-center justify-between  font-roboto '>
           <Error>
             <TotalBalances
               user={user}

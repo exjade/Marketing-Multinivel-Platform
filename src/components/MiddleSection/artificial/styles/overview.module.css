@@ -64,7 +64,7 @@
 }
 
 .link {
-    width: 30rem;
+    width: 12rem;
 
 }
 
@@ -81,7 +81,7 @@
     z-index: 50;
     color: white;
     padding-right: 20px;
-    background: gray;
+    background: #A855F7;
     text-align: center;
     border-radius: 3px;
     display: flex;

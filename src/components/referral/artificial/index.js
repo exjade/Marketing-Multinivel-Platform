@@ -40,7 +40,7 @@ const ReferralDashboard = (props) => {
 
     return (
         <motion.div
-            className={`${styles.ReferralDashboardContainer} font-Biryani`}
+            className={`${styles.ReferralDashboardContainer} font-roboto`}
             variants={container}
             initial="hidden"
             animate="visible"

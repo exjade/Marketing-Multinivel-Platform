@@ -14,10 +14,10 @@ const DashboardOverview = (props) => {
 
     return (
         <div className={styles.main}>
-            <div className={`${styles.container} font-Biryani`}>
+            <div className={`${styles.container} font-roboto`}>
 
                 <div>
-                    <p className='text-white-normal text-xl font-bold'>Building Your Network:</p>
+                    <p className='text-white-normal text-xl font-bold'>Your Referrals:</p>
                 </div>
 
                 <div className={`${styles.cards}`} >
@@ -25,7 +25,9 @@ const DashboardOverview = (props) => {
                     <div className={`${styles.childCard}`}>
                         {/* icono */}
                         <span className={`${styles.cardIcon}`}>
-                            <BanknotesIcon
+                            <img
+                                src='https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Ficons%2F4966306.png?alt=media&token=4e339b04-a5e5-40c2-bea7-5dbd0a065dcc'
+                                alt='moneyIcon'
                                 className={` ${styles.headerIcon} w-12 h-12 text-black-normal mb-2  rounded-full `}
                             />
                         </span>
@@ -59,7 +61,9 @@ const DashboardOverview = (props) => {
                     <div className={`${styles.childCard}`}>
                         {/* icono */}
                         <span className={`${styles.cardIcon}`}>
-                            <UserGroupIcon
+                            <img
+                                src='https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Ficons%2F4223702.png?alt=media&token=1ee46143-b21b-4e9e-9821-99dc58cc464c'
+                                alt='groupIcon'
                                 className={` ${styles.headerIcon} w-12 h-12 text-black-normal mb-2  rounded-full `}
                             />
                         </span>
@@ -84,7 +88,9 @@ const DashboardOverview = (props) => {
                     <div className={`${styles.childCard}`}>
                         {/* icono */}
                         <span className={`${styles.cardIcon}`}>
-                            <ExclamationCircleIcon
+                            <img
+                            src='https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Ficons%2F4516695-200.png?alt=media&token=ea621aae-fadf-49eb-9b26-62a03e436e13'
+                            alt='exclamationIcon'
                                 className={` ${styles.headerIcon} w-12 h-12 text-black-normal mb-2  rounded-full `}
                             />
                         </span>
@@ -109,7 +115,9 @@ const DashboardOverview = (props) => {
                     <div className={`${styles.childCard}`}>
                         {/* icono */}
                         <span className={`${styles.cardIcon}`}>
-                            <HandThumbUpIcon
+                            <img
+                            src='https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Ficons%2F9424639.png?alt=media&token=08cffe9e-132d-4e0c-9cbf-496be4844ee2'
+                            alt='activeIcon'
                                 className={` ${styles.headerIcon} w-12 h-12 text-black-normal mb-2  rounded-full `}
                             />
                         </span>
