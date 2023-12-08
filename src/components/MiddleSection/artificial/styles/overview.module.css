@@ -93,6 +93,12 @@
     width: 4rem;
 }
 
+.illustration {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-bottom.svg?alt=media&token=7696150a-dc9e-4e02-aaa4-e54a490ff873);
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-position: unset;
+}
 
 @media (max-width: 900px) {
     .container {

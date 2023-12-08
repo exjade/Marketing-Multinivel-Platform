@@ -11,14 +11,17 @@
 
 
 .container {
-    width: 0rem;
+    width: 10rem;
     height: 100%;
     font-family: 'roboto';
     position: relative;
-    background: #0F172A;
-    box-shadow: 21px 74px 158px 39px #A855F7;
-    -webkit-box-shadow: 21px 74px 158px 39px #A855F7;
-    -moz-box-shadow: 21px 74px 158px 39px #A855F7;
+    border-right-color: #A855F7;
+    border-right-width: thin;
+    border-right-style: dotted;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fauth-illustration.svg?alt=media&token=b65343c8-6ab1-4c33-98dc-6b72c3e9728f);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .wrapper {
