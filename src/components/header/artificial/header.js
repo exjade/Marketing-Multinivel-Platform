@@ -156,19 +156,12 @@ const Header = () => {
                                         >
                                             Balances
                                         </motion.a>
-                                        <motion.a
-                                            href={ROUTES.EVENTS}
-                                            variants={item}
-                                            className='hidden xl:inline '
-                                        >
-                                            Events
-                                        </motion.a>
                                         <span className={`${styles.wrapActive} hidden xl:inline`}>
                                             <a href={ROUTES.NETWORK} className={`${styles.active} hidden xl:inline`} >
-                                                Network
+                                                Referrals
                                             </a>
                                             <ChevronUpIcon
-                                                className={`h-4 w-4 text-artificial-theme-green-primary hidden xl:inline`} />
+                                                className={`h-4 w-4 text-artificial-theme-purple-primary hidden xl:inline`} />
                                         </span>
                                     </>
                                 ) : dropdown ?
@@ -235,11 +228,6 @@ const Header = () => {
 
                         </p>
                     </motion.span>
-                    <motion.img
-                        src={url}
-                        alt="user profile"
-                        className={`${styles.profile} rounded-full h-10 w-10 object-contain`}
-                        variants={item} />
                 </motion.a>
             </div>
         </div>

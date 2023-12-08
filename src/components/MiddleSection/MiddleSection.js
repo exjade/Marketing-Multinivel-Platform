@@ -120,23 +120,9 @@ const MiddleSection = (
         successAction &&
         (
           <ActionSuccess
-            action={`Link Code`} />
+            action={`Code`} />
         )
       }
-
-      <div className='flex flex-row w-full items-center justify-center my-16'>
-        <div className={`${styles.revenueReferrals} flex flex-col sm:flex-row w-full items-center justify-between font-Biryani `} >
-          <Error>
-            <LatestTransactions />
-          </Error>
-          {/* <Error>
-            <MonthlyChartOverview />
-          </Error>
-          <Error>
-            <RecentReferrals />
-          </Error> */}
-        </div>
-      </div>
 
     </>
   )

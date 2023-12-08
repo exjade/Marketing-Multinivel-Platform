@@ -7,7 +7,6 @@ import {
     WalletIcon,
     Square2StackIcon,
     ShieldCheckIcon,
-    ArrowRightCircleIcon,
     ArrowLeftOnRectangleIcon,
     Cog8ToothIcon,
     RectangleGroupIcon,
@@ -25,25 +24,11 @@ const SidebarHide = (props) => {
         <div className={`${styles.container} `} >
             <div className={`${styles.wrapper}`} >
 
-                <div className={`${styles.header}`} >
-                    <div className={`${styles.headerWrapper}`} >
-                       <div></div>
-                        <button
-                            className={`${styles.headerButton}`}
-                            onClick={(e) => props.showSidebar(e)}
-                        >
-                            <ArrowRightCircleIcon
-                                className={` ${styles.headerIcon} w-12 h-12 text-white-normal mb-2  rounded-full `}
-                            />
-                        </button>
-                    </div>
-                </div>
-
                 <div className={`${styles.navigation}`} >
                     <div className={`${styles.navigationWrapper}`} >
 
                         <a href={ROUTES.DASHBOARD}
-                            className={`${styles.navigationIcons} bg-artificial-theme-gray-primary`}>
+                            className={`${styles.navigationIcons}`}>
                             <span className={`${styles.navigationIconsWrapper} `}>
                                 <HomeIcon className='w-10 h-10 text-white-normal mb-2 ' />
                             </span>

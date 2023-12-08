@@ -11,7 +11,6 @@ import {
   RectangleGroupIcon,
   Cog6ToothIcon,
   ArrowLeftOnRectangleIcon,
-  CalendarDaysIcon,
 } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import FirebaseContext from '../../../context/firebase';
@@ -64,14 +63,6 @@ const Navigation = ({
               className={styles.icons}
             >
               <BuildingLibraryIcon className='w-8 h-8 mb-2 text-artificial-text-blue-third ' />
-            </motion.a>
-
-            <motion.a
-              href={ROUTES.EVENTS}
-              variants={item}
-              className={styles.icons}
-            >
-              <CalendarDaysIcon className='w-8 h-8 mb-2 text-artificial-text-blue-third ' />
             </motion.a>
 
             <div className={styles.dropdownDivider}></div>  {/* DIVIDER */}

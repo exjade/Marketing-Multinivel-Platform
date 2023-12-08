@@ -18,7 +18,7 @@ const ForgotPassword = () => {
     const { t } = useTranslation()
 
 
-    useEffect(() => { document.title = 'Recover Password - CapitalTradersCorp' }, []); //eslint-disable-line
+    useEffect(() => { document.title = 'Recover Password - CapitalTradersBusiness' }, []); //eslint-disable-line
     const history = useHistory();
     const [emailAddress, setEmailAddress] = useState('');
     const [success, setSuccess] = useState('');

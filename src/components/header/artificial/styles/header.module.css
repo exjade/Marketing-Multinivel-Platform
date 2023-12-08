@@ -1,15 +1,18 @@
 .container {
-    font-family: Biryani, sans-serif;
+    font-family: 'Roboto Mono', monospace, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
-    background: #1A202C;
+    background: #0F172A;
     width: 100%;
     height: 6rem;
     position: fixed;
     z-index: 9999;
     top: 0;
+    border-bottom-color: #A855F7;
+    border-bottom-style: inset;
+    border-bottom-width: thin;
 }
 
 .wrapper {
@@ -67,7 +70,7 @@
 }
 
 .active {
-    color: #19BC85;
+    color: #A855F7;
 }
 
 .user {
@@ -85,10 +88,10 @@
     justify-content: center;
     align-content: center;
     gap: 1rem;
-    background: #2B3747;
+    background: #A855F7;
     color: white;
     padding: 6px 40px 6px 30px;
-    border-radius: 99px;
+    border-radius: 4px;
 }
 
 .profile {

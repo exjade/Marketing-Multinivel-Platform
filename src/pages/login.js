@@ -13,7 +13,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Login = () => {
 
-    useEffect(() => { document.title = 'Log In - CapitalTradersCorp' }, []); //eslint-disable-line
+    useEffect(() => { document.title = 'Log In - CapitalTradersBusiness' }, []); //eslint-disable-line
 
     const history = useHistory();
     const { firebase } = useContext(FirebaseContext);

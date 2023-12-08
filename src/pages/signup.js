@@ -19,7 +19,7 @@ import { RecaptchaVerifier } from 'firebase/auth';
 
 const SignUp = () => {
     useEffect(() => {
-        document.title = 'Create an account - CapitalTradersCorp';
+        document.title = 'Create an account - CapitalTradersBusiness';
     }, []); //eslint-disable-line
     const { t } = useTranslation()
     const history = useHistory();

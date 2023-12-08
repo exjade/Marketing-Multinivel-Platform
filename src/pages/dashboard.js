@@ -18,7 +18,7 @@ import Header from '../components/header/artificial/header';
 
 const Dashboard = () => {
 
-  useEffect(() => { document.title = 'Dashboard - Artificial' }, []) //eslint-disable-line
+  useEffect(() => { document.title = 'Dashboard - CapitalTradersBusiness' }, []) //eslint-disable-line
   const { coins, search, setSearch } = useCoin()
   const { theme, setTheme } = useTheme()
   //eslint-disable-next-line no-unused-vars
@@ -72,9 +72,6 @@ const Dashboard = () => {
               setTheme={setTheme}
             />
           </Error>
-          {/* <div className={`${styles.translationFixed}`} >
-            <TranslationBtn />
-          </div> */}
         </motion.div>
       </AnimatePresence>
     </>

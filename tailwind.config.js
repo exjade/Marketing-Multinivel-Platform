@@ -131,7 +131,7 @@ module.exports = {
             primary: "#F5F5F5",
           },
           purple: {
-            primary: "#C277FD",
+            primary: "#A855F7",
           },
           green: {
             primary: "#19BC85"

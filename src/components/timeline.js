@@ -44,10 +44,10 @@ const Timeline = ({
                     theme={theme}
                 />
             </section>
-            <section className='Sidebar_middle_section righsectionbg bg-artificial-theme-dark-primary'>
-                <RightSection
+            <section className='Sidebar_middle_section righsectionbg'>
+                {/* <RightSection
                     theme={theme}
-                />
+                /> */}
             </section>
         </main>
     )

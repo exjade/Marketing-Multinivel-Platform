@@ -11,14 +11,14 @@
 
 
 .container {
-    width: 8rem;
+    width: 0rem;
     height: 100%;
     font-family: 'Biryani';
     position: relative;
-    background: #1A202C;
-    box-shadow: 0px -3px 33px 7px rgba(37,150,130,0.75);
-    -webkit-box-shadow: 0px -3px 33px 7px rgba(37,150,130,0.75);
-    -moz-box-shadow: 0px -3px 33px 7px rgba(37,150,130,0.75);
+    background: #0F172A;
+    box-shadow: 21px 74px 158px 39px #A855F7;
+    -webkit-box-shadow: 21px 74px 158px 39px #A855F7;
+    -moz-box-shadow: 21px 74px 158px 39px #A855F7;
 }
 
 .wrapper {
@@ -126,7 +126,7 @@
     gap: 8px;
     height: 4rem;
     padding-left: 13px;
-    background: var(--color-gray-dark);
+    background: #0f172a00;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -143,7 +143,7 @@
     gap: 8px;
     height: 4rem;
     padding-left: 13px;
-    background: var(--color-gray-light);
+    background: #0f172a00;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
