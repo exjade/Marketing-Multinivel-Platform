@@ -1,5 +1,5 @@
 .main {
-    background: #17171F;
+    background: #0F172A;
     color: #EAEAEA;
     /* border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -99,7 +99,7 @@
 @media (max-width: 1024px) {
 
     .main {
-        background: #17171F;
+        background: #0F172A;
         border-radius: 15px;
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
@@ -135,7 +135,7 @@
 @media (max-width: 600px) {
 
     .main {
-        background: #17171F;
+        background: #0F172A;
         border-radius: 15px;
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;

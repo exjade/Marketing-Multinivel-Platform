@@ -204,7 +204,7 @@ small {
     cursor: pointer;
     color: white;
     border-color: #80808040;
-    background: #17171F;
+    background: #0F172A;
     box-shadow: 0px -3px 33px 7px rgba(37, 150, 130, 0.75);
 }
 
@@ -297,7 +297,7 @@ small {
         padding: var(--card-padding);
         color: white;
         border-color: #80808040;
-        background: #17171F;
+        background: #0F172A;
         box-shadow: 0px -3px 33px 7px rgba(37, 150, 130, 0.75);
     }
 }
@@ -319,7 +319,7 @@ small {
         padding: var(--card-padding);
         color: white;
         border-color: #80808040;
-        background: #17171F;
+        background: #0F172A;
         box-shadow: 0px -3px 33px 7px rgba(37, 150, 130, 0.75);
     }
 }
@@ -338,7 +338,7 @@ small {
         padding: var(--card-padding);
         color: white;
         border-color: #80808040;
-        background: #17171F;
+        background: #0F172A;
         box-shadow: 0px -3px 33px 7px rgba(37, 150, 130, 0.75);
     }
     .title>h1 {
@@ -364,7 +364,7 @@ small {
         padding: var(--card-padding);
         color: white;
         border-color: #80808040;
-        background: #17171F;
+        background: #0F172A;
         box-shadow: 0px -3px 33px 7px rgba(37, 150, 130, 0.75);
     }
     .title>h1 {

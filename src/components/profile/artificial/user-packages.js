@@ -51,18 +51,13 @@ const UserPackages = () => {
     return (
         <section className={`${styles.contenedor} my-10  font-roboto`} >
             <div className={`${styles.referralwrapper}`}>
-                {/* <div className='flex flex-row w-full items-center justify-around gap-2'>
-                    <span className='flex flex-col gap-2 w-full'>
-                        <h3 className='font-light text-md text-black-normal'> assets</h3>
-                    </span>
-                </div> */}
 
                 {
                     currentPosts?.length > 0 ? (
                         <>
                             {orderBy?.map((p, k) => (
                                 <Fragment key={k}>
-                                    <div className={`${styles.wrap} flex flex-row justify-between items-center w-full rounded-lg px-10 py-10 hover:cursor-pointer  bg-artificial-theme-dark-black `}>
+                                    <div className={`${styles.wrap} flex flex-row justify-between items-center w-full rounded-lg px-10 py-10 hover:cursor-pointer  bg-blue-background `}>
                                         <div className='text-white-normal flex flex-row gap-5'>
                                             <span className='flex flex-col justify-center items-start gap-3'>
                                                 <h3 className={`font-medium text-white-normal text-xl capitalize`}>
@@ -74,7 +69,7 @@ const UserPackages = () => {
                                         <div className='flex flex-col gap-2'>
                                             <span className='flex flex-col gap-2 items-center justify-between'>
                                                 <>
-                                                    <p className={`text-white-normal font-medium  text-lg`} >Investment:</p>
+                                                    <p className={`text-white-normal font-medium  text-lg`} >invested:</p>
                                                     <p className={`text-gray-branding font-medium  text-lg sm:text-2xl`} >
                                                         {parseFloat(`${p?.amount}`).toLocaleString('en-US', {
                                                             style: 'currency',
@@ -85,7 +80,7 @@ const UserPackages = () => {
                                             </span>
                                             <span className='flex flex-col gap-2 items-center justify-between'>
                                                 <>
-                                                    <p className={`text-white-normal font-medium  text-lg`} >Initial Date:</p>
+                                                    <p className={`text-white-normal font-medium  text-lg`} >date:</p>
                                                     <p className={`text-gray-branding font-medium  text-md sm:text-lg`} >
                                                         {formatDistance(p?.date, new Date(), { addSuffix: true })}
                                                     </p>
@@ -100,13 +95,13 @@ const UserPackages = () => {
                     ) :
                         (
                             <>
-                                <div className='table p-4 shadow rounded-lg w-full'>
-                                    <div className=' bg-artificial-theme-dark-black '>
+                                <div className=' shadow rounded-lg w-full'>
+                                    <div className=' bg-blue-background'>
                                         <a href={ROUTES.PACKAGES }>
                                             <span className='border p-4 dark:border-gray-info whitespace-nowrap font-semibold text-white-normal uppercase animate-pulse cursor-pointer flex flex-row justify-center items-center gap-1'>
-                                                Invest in your tomorrow, today!
+                                                Halving is coming...!
                                                 <ArrowLongRightIcon 
-                                                className='w-8 h-8 text-black-normal'
+                                                className='w-8 h-8 text-white-primary'
                                                 />
                                             </span>
                                         </a>

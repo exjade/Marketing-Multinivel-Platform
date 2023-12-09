@@ -18,7 +18,7 @@ module.exports = {
   theme: {
     colors: {
       white: {
-        primary: '#e3e3e3',
+        primary: '#D2D7E2',
         normal: '#ffffff',
         placeholder: '#e3e3e3',
         login_button: '#CFCFCF',
@@ -76,7 +76,8 @@ module.exports = {
         teal: '#01A99E',
         feedback: "#0D4262",
         auth: "#202124",
-        input: "#12297D"
+        input: "#12297D",
+        background: "#0F172A"
 
       },
       green: {
@@ -100,6 +101,7 @@ module.exports = {
         gold: '#FE8200',
         admin: '#8D1717',
         model: '#6469E3',
+        primary: "#A855F7",
       },
       button: {
         primary: 'rgb(71, 7, 234)',

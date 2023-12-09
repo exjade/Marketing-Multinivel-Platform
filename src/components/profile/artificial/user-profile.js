@@ -3,10 +3,6 @@ import styles from '../styles/user-profile.module.css'
 import useUser from '../../../hooks/use-user'
 import useUsers from '../../../hooks/use-users'
 import ProfileSkeleton from '../skeleton'
-import RankProgressEarning from './rank-progress-earning'
-import RecentReferrals from './recent-referrals'
-import ReferralInvestments from './referrals-investments'
-import UserPackages from './user-packages'
 import useGetUnilevelBalance from '../../../hooks/use-unilevel-balance'
 import ProfileCard from './re-design/card'
 
@@ -96,16 +92,6 @@ const UserProfile = () => {
     return (
         <div className={`${styles.container}`}>
             <div className={`${styles.wrapper}`}>
-                {/* CARDS CURRENT RANK - YOUR PROGRESS - CURRENT ROLE  */}
-                {/* <RankProgressEarning
-                    user={user}
-                /> */}
-                {/* Earnings: referrals and investments  */}
-                {/* <ReferralInvestments
-                    user={user}
-                    usersReferredByMe={usersReferredByMe}
-                    referralsLength={referralsLength}
-                /> */}
                 <ProfileCard
                     user={user}
                     currentUser={user}
@@ -119,33 +105,6 @@ const UserProfile = () => {
                     nextHandlerPackages={nextHandler}
                     referralsLength={referralsLength}
                 />
-                {/* <div className={`${styles.packagesReferrals}`}> */}
-                {/* Investment Packages */}
-                {/* <UserPackages
-                        currentUser={user}
-                        setSearchUser={setSearchUser}
-                        filteredTransactions={filteredTransactions}
-                        users={users}
-                        usersReferredByMe={usersReferredByMe}
-                        currentPosts={currentPosts}
-                        currentPage={currentPage}
-                        prevHandlerPackages={prevHandler}
-                        nextHandlerPackages={nextHandler}
-                    /> */}
-                {/* REFERRALS SECTION: Full list & Referrals earnings cards*/}
-                {/* <RecentReferrals
-                        currentUser={user}
-                        setSearchUser={setSearchUser}
-                        filteredTransactions={filteredTransactions}
-                        users={users}
-                        usersReferredByMe={usersReferredByMe}
-                        currentPosts={currentPosts}
-                        currentPage={currentPage}
-                        prevHandler={prevHandler}
-                        nextHandler={nextHandler}
-                    /> */}
-                {/* </div> */}
-
             </div>
         </div>
     )

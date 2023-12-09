@@ -1,0 +1,14 @@
+#illustration {
+    --tw-bg-opacity: 1;
+    background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-top.svg?alt=media&token=19bcb82e-3b7f-4ecb-9a48-19521e5bc882);
+    background-position: unset;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: difference;
+}
+
+#illustration-2 {
+    background: fixed;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fauth-illustration.svg?alt=media&token=b65343c8-6ab1-4c33-98dc-6b72c3e9728f);
+}

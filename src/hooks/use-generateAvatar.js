@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react'
-import shortid from 'shortid';
 
 export default function useGenerateAvatar() {
     const [url, setUrl] = React.useState()
 
     useEffect(() => {
-        const id = shortid.generate().trim();
-        const picture = `https://robohash.org/${id}?gravatar=hashed`;
+        const picture = `https://xsgames.co/randomusers/avatar.php?g=pixel`;
         setUrl(picture)
     }, [])
 

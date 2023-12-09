@@ -33,7 +33,7 @@ function CircularProgressBar({ user }) {
             // Path color
             stroke: `rgba(62, 152, 199, ${percentage / 100})`,
             // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
-            strokeLinecap: 'butt',
+            strokeLinecap: 'round',
             // Customize transition animation
             transition: 'stroke-dashoffset 0.5s ease 0s',
             // Rotate the path
@@ -43,9 +43,9 @@ function CircularProgressBar({ user }) {
           // Customize the circle behind the path, i.e. the "total progress"
           trail: {
             // Trail color
-            stroke: '#d6d6d6',
+            stroke: '##A855F7',
             // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
-            strokeLinecap: 'butt',
+            strokeLinecap: 'round',
             // Rotate the trail
             transform: 'rotate(0.25turn)',
             transformOrigin: 'center center',
@@ -53,7 +53,7 @@ function CircularProgressBar({ user }) {
           // Customize the text
           text: {
             // Text color
-            fill: '#000000',
+            fill: '##D2D7E2',
             // Text size
             fontSize: '16px',
           },

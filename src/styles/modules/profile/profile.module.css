@@ -41,7 +41,7 @@ html {
 }
 
 body {
-    background: #17171F;
+    background: #0F172A;
     font-family: 'roboto', sans-serif;
     /* min-height: 100vh; */
     /* color: var(--color-dark) */
@@ -139,7 +139,7 @@ small {
     gap: 2rem;
     width: 100%;
     height: 100vh;
-    background: #17171F;
+    background: #0F172A;
 }
 /* .main {
     display: grid;

@@ -6,7 +6,7 @@ const ReferralsPagination = (props) => {
  
     return (
         <>
-                    <div className="items-center space-y-2 text-xs sm:space-y-0 sm:space-x-3 sm:flex text-black-normal">
+                    <div className="items-center space-y-2 text-xs sm:space-y-0 sm:space-x-3 sm:flex text-white-primary">
                         <span className="block">Page: {props.currentPage}</span>
                         <div className="space-x-1">
                             <button
