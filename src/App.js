@@ -39,7 +39,6 @@ const EventsMacalister =  lazy(() => import('./pages/calendly/macalister-pages.j
 const AdminDashboard = lazy(() => import('./pages/dashboard-admin'))
 const Wallet = lazy(() => import('./pages/wallet'))
 const ReferralHistory = lazy(() => import('./pages/referral-history'))
-// const ManualSignupUsers = lazy(() => import('./pages/manual-signup-users'))
 
 // - Error
 const NotFound = lazy(() => import('./pages/not-found'))
