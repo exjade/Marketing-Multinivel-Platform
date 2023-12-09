@@ -27,11 +27,9 @@ const WalletTimeline = () => {
   // MENU
   const [isActive, setIsActive] = useState({
     home: false,
-    wallet: true,
     buy: false,
     recharge: false,
     settings: false,
-    stake: false,
   })
 
   // Staking: This state  allows you to select the cryptocurrency card, 

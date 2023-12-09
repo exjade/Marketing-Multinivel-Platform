@@ -103,13 +103,15 @@
 
 .dropdownContainer {
     display: flex;
-    margin: 40rem 0rem 0rem -4rem;
+    margin: 0rem 0rem 0rem 0rem;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     z-index: 50;
+    left: 0rem;
+    top: 6rem;
 }
 
 .dropdownWrapper {
@@ -118,6 +120,7 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .dropdownNavigation {
@@ -126,10 +129,20 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-    background: white;
-    padding: 0.5rem;
-    gap: 10px;
-    border-radius: 5px;
+    background: #0F172A;
+    padding: 1.5rem;
+    gap: 4rem;
+    border-right-color: #A855F7;
+    border-right-width: thin;
+    border-right-style: dotted;
+    height: 100vh;
+    border-radius: 0px;
+    width: 10rem;
+    overflow-y: scroll;
+}
+
+.dropdownNavigation::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .dropdownDivider {
@@ -155,4 +168,54 @@
         align-items: center;
         gap: 1.5rem;
     }
+}
+
+@media (max-width: 480px) { 
+
+    .links {
+        color: #EBE8E6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    .dropdownContainer {
+        display: flex;
+        margin: 0rem 0rem 0rem 0rem;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 50;
+        left: 0rem;
+        top: 6rem;
+    }
+    
+    .dropdownWrapper {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .dropdownNavigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        background: #0F172A;
+        padding: 1.5rem;
+        gap: 4rem;
+        border-radius: 0px;
+        width: 20rem;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    
 }

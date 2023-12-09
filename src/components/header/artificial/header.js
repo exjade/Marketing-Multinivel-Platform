@@ -8,20 +8,15 @@ import {
 import { motion } from 'framer-motion'
 import Navigation from './navigation';
 import useUser from '../../../hooks/use-user';
-import useGenerateAvatar from '../../../hooks/use-generateAvatar';
 import useDropDown from '../../../hooks/use-dropdown';
-// import useSidebarHidden from '../../../hooks/use-sidebarHidden';
 
 const Header = () => {
 
     const { user } = useUser()
-    const { url } = useGenerateAvatar()
     const { dropdown, setDropdown } = useDropDown()
-    // const { sidebarHidden } = useSidebarHidden()
 
     const [navigation, setNavigation] = useState(true)
-    // const [dropdown, setDropdown] = useState(false)
-
+                   
     const displayNavigation = () => {
         setNavigation(true)
     }
@@ -88,7 +83,7 @@ const Header = () => {
                                 borderRadius: '100%'
                             }}
                         />
-                        <motion.img
+                        {/* <motion.img
                             src="/logotipo.png"
                             alt="logotipo"
                             className='rounded-full h-24 w-24 object-contain'
@@ -97,12 +92,7 @@ const Header = () => {
                                 rotate: -90,
                                 borderRadius: '100%'
                             }}
-                        />
-                        {/* <motion.p
-                            className='hidden sm:inline'
-                            variants={item}>
-                            <b>A</b>TECH4U
-                        </motion.p> */}
+                        /> */}
                     </motion.span>
                     <div className={styles.divider}></div>
                     {/* links */}
@@ -133,14 +123,7 @@ const Header = () => {
                                             variants={item}
                                             className='hidden xl:inline '
                                         >
-                                            Dashboard
-                                        </motion.a>
-                                        <motion.a
-                                            href={ROUTES.WALLET}
-                                            variants={item}
-                                            className='hidden xl:inline '
-                                        >
-                                            Wallet
+                                            Home
                                         </motion.a>
                                         <motion.a
                                             href={ROUTES.PACKAGES}
@@ -158,7 +141,7 @@ const Header = () => {
                                         </motion.a>
                                         <span className={`${styles.wrapActive} hidden xl:inline`}>
                                             <a href={ROUTES.NETWORK} className={`${styles.active} hidden xl:inline`} >
-                                                Referrals
+                                                Network
                                             </a>
                                             <ChevronUpIcon
                                                 className={`h-4 w-4 text-artificial-theme-purple-primary hidden xl:inline`} />

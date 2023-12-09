@@ -28,16 +28,10 @@ const SuccessfulPayment = lazy(() => import('./pages/successful-payment'))
 const Withdrawal = lazy(() => import('./pages/withdrawal'))
 const ReferralProgram = lazy(() => import('./pages/referrals/referral-program'))
 const ReferralUsers= lazy(() => import('./pages/referrals/referral-network'))
-const BonusPage= lazy(() => import('./pages/bonus/bonus-page'))
 
-// Events
-const Events =  lazy(() => import('./pages/calendly/calendly-pages'))
-const EventsRedPill =  lazy(() => import('./pages/calendly/redpill-pages.js'))
-const EventsMacalister =  lazy(() => import('./pages/calendly/macalister-pages.js'))
 
 // - Admin
 const AdminDashboard = lazy(() => import('./pages/dashboard-admin'))
-const Wallet = lazy(() => import('./pages/wallet'))
 const ReferralHistory = lazy(() => import('./pages/referral-history'))
 
 // - Error
@@ -107,20 +101,8 @@ function App() {
               <ProtectedRoute user={user} path={ROUTES.NETWORK_USERS} exact>
                 <ReferralUsers />
               </ProtectedRoute>
-              <ProtectedRoute user={user} path={ROUTES.BONUS} exact>
-                <BonusPage />
-              </ProtectedRoute>
 
-              {/* events */}
-              <ProtectedRoute user={user} path={ROUTES.EVENTS} exact>
-                <Events />
-              </ProtectedRoute>
-              <ProtectedRoute user={user} path={ROUTES.EVENTS_REDPILL} exact>
-                <EventsRedPill />
-              </ProtectedRoute>
-              <ProtectedRoute user={user} path={ROUTES.EVENTS_MACALISTER} exact>
-                <EventsMacalister />
-              </ProtectedRoute>
+
 
               {/* ADMIN */}
               <ProtectedRoute user={user} path={ROUTES.ADMIN_DASHBOARD} exact>
@@ -128,9 +110,6 @@ function App() {
               </ProtectedRoute>
 
               {/* FUNCTIONALITIES */}
-              <ProtectedRoute user={user} path={ROUTES.WALLET} exact>
-                <Wallet />
-              </ProtectedRoute>
               <ProtectedRoute user={user} path={ROUTES.REFERRAL_HISTORY} exact>
                 <ReferralHistory />
               </ProtectedRoute>

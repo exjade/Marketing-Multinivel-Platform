@@ -430,7 +430,7 @@ canvas#chart {
 }
 
 .rightsection_investment:hover {
-    background: var(--color-light);
+    background: #0F172A;
     cursor: pointer;
 }
 

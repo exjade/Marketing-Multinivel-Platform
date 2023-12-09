@@ -8,7 +8,7 @@ import useUser from '../../../hooks/use-user'
 import * as ROUTES from '../../../constants/routes'
 import FirebaseContext from '../../../context/firebase'
 
-const SidebarHide = (props) => {
+const SidebarHide = () => {
 
     const { user } = useUser()
     const { firebase } = useContext(FirebaseContext)
@@ -27,17 +27,6 @@ const SidebarHide = (props) => {
                                 src='https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Ficons%2Fnavigation%2Fhome-removebg-preview.png?alt=media&token=ac843213-eb3e-4fa2-988d-a6004f7fa002'
                                 alt='homeIcon'
                                 className='w-10 h-10 text-white-normal mb-2 ' />
-                            </span>
-                        </a>
-
-                        <a href={ROUTES.WALLET}
-                            className={`${styles.navigationIcons} `}>
-                            <span className={`${styles.navigationIconsWrapper} `}>
-                                <img
-                                src='https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Ficons%2Fnavigation%2Fwallet-removebg-preview.png?alt=media&token=7b1c013c-089a-470d-a837-ad6b09542957'
-                                alt='walletIcon'
-                                className='w-10 h-10 text-white-normal mb-2' />
-                                <p></p>
                             </span>
                         </a>
 

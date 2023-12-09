@@ -23,12 +23,7 @@ const WalletMenuScreens = (props) => {
     return (
         <>
             {
-                props.isActive.wallet ?
-                    (
-                        <WalletStakingCards
-                            stakingCrypto={props.stakingCrypto}
-                        />
-                    ) : props.isActive.recharge ?
+                props.isActive.recharge ?
                         (
                             <WalletRechargeBalanceSteps
                                 isActive={props.isActive}
@@ -46,26 +41,6 @@ const WalletMenuScreens = (props) => {
                                 error={error}
                             />
                         )
-                            : props.isActive.stake ?
-                                (
-                                    <WalletStakingSimulator
-                                        stakingCrypto={props.stakingCrypto}
-                                        selectCurrency={props.selectCurrency}
-                                        setSelectCurrency={props.setSelectCurrency}
-                                        modal={props.modal}
-                                        openModal={props.openModal}
-                                        closeModal={props.closeModal}
-                                        bitcoin={props.bitcoin}
-                                        setBitcoin={props.setBitcoin}
-                                        handleOnChangeInitialInvestment={props.handleOnChangeInitialInvestment}
-                                        AnnualPercentageRate={props.AnnualPercentageRate}
-                                        stakeDate={props.stakeDate}
-                                        timestamp={props.timestamp}
-                                        timestampSixteen={props.timestampSixteen}
-                                        timestampHundredTwenty={props.timestampHundredTwenty}
-                                        activeUser={props.activeUser}
-                                    />
-                                )
                                 : null
             }
 

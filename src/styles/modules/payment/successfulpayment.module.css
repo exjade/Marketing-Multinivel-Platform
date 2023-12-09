@@ -120,7 +120,7 @@
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    background: var(--color-light);
+    background: #0F172A;
   }
   
   .centeredcontent {

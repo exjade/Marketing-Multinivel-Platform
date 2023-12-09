@@ -7,12 +7,8 @@ import useSidebarHidden from '../../../hooks/use-sidebarHidden'
 export default function SidebarNav() {
 
     const { sidebarHidden, setSidebarHidden } = useSidebarHidden()
-    // const [sidebarHidden, setSidebarHidden] = useState(true)
 
-    const hideSidebar = (e) => {
-        e.preventDefault()
-        setSidebarHidden(true);
-    }
+ 
     const showSidebar = (e) => {
         e.preventDefault()
         setSidebarHidden(false);
