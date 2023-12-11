@@ -15,7 +15,7 @@ html {
 
 body {
     background: #0F172A;
-    font-family: poppins, sans-serif;
+    font-family: Roboto Mono, sans-serif;
     min-height: 100vh;
     color: var(--color-dark)
 }
@@ -110,7 +110,11 @@ small {
     display: flex;
     width: 100%;
     margin: 0rem 0rem 0rem;
-    background: linear-gradient(230deg, rgba(16, 27, 34, 1) 18%, rgba(9, 34, 43, 1) 25%, rgba(9, 10, 14, 1) 40%, rgba(9, 20, 28, 1) 60%, rgba(26, 60, 85, 1) 85%, rgba(27, 30, 55, 1) 92%, rgba(38, 36, 65, 1) 97%);
+    background: #0F172A;
+    flex-direction: row;
+    overflow-y: hidden;
+    align-items: center;
+    align-content: center;
 }
 
 /* .main {
@@ -122,18 +126,33 @@ small {
 } */
 
 .section {
-    display: grid;
+    display: flex;
+    width: 100%;
     gap: 1rem;
+    overflow-x: scroll;
+    overflow-x: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .container {
-    margin-top: 6rem;
+    margin-top: 8rem;
     width: 100%;
-    background: linear-gradient(230deg, rgba(16, 27, 34, 1) 18%, rgba(9, 34, 43, 1) 25%, rgba(9, 10, 14, 1) 40%, rgba(9, 20, 28, 1) 60%, rgba(26, 60, 85, 1) 85%, rgba(27, 30, 55, 1) 92%, rgba(38, 36, 65, 1) 97%);
+    display: flex;
+    height: 100vh;
+    background: #0F172A;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .wraper {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -141,6 +160,9 @@ small {
     align-content: center;
     gap: 6rem;
     margin-bottom: 15rem;
+    position: fixed;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .title {
@@ -177,35 +199,41 @@ small {
 }
 
 .packages {
-    width: 100%;
     display: flex;
+    position: absolute;
+    left: 0;
     align-items: center;
     justify-content: center;
     align-content: center;
-    /* flex-direction: row; */
+    flex-direction: row;
     gap: 1rem;
+    background: #0F172A;
     word-break: break-word;
-    flex-wrap: wrap;
     box-shadow: var(--border-radius-1);
 }
 
 .package {
-    width: 31%;
+    width: 50rem;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: 4rem;
     word-break: break-word;
     padding: var(--card-padding);
     border-width: 1px;
-    border-style: inset;
+    border-style: revert-layer;
     cursor: pointer;
     color: white;
-    border-color: #80808040;
-    background: #0F172A;
-    box-shadow: 0px -3px 33px 7px rgba(37, 150, 130, 0.75);
+    border-color: #00000000;
+    background: #a855f708;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-bottom.svg?alt=media&token=7696150a-dc9e-4e02-aaa4-e54a490ff873);
+    box-shadow: 0px -3px 33px 7px rgb(0 0 0 / 14%);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .package:hover {
@@ -230,19 +258,18 @@ small {
 }
 
 .packageButton {
-    background: #4438CA;
+    background: #2D394C;
     color: white;
     padding: 1rem;
     font-size: 1rem;
     font-weight: 900;
     text-transform: uppercase;
-    border-radius: 5px;
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
 .packageButton:hover {
-    background: #0b8f0b;
+    background: #A855F7;
     color: white;
     padding: 1rem;
     font-size: 1rem;
@@ -255,8 +282,8 @@ small {
 
 .packageContainerInfo {
     display: flex;
-    width: 80%;
-    flex-direction: column;
+    width: 90%;
+    flex-direction: row;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -264,15 +291,16 @@ small {
 
 .packageInformation {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    border-style: dotted;
-    border-width: 1px;
-    border-color: white;
-    padding: 1rem;
+    background: #131C2F;
+    border-style: inherit;
+    border-width: 5px;
+    border-color: #131C2F;
+    padding: 0.5rem;
 }
 
 .packageInformation>p {
@@ -286,19 +314,27 @@ small {
 @media screen and (max-width: 1248px) {
 
     .package {
-        width: 80%;
+        width: 50rem;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         align-content: center;
         flex-direction: column;
-        gap: 1rem;
+        gap: 4rem;
         word-break: break-word;
         padding: var(--card-padding);
+        border-width: 1px;
+        border-style: revert-layer;
+        cursor: pointer;
         color: white;
-        border-color: #80808040;
-        background: #0F172A;
-        box-shadow: 0px -3px 33px 7px rgba(37, 150, 130, 0.75);
+        border-color: #00000000;
+        background: #a855f708;
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-bottom.svg?alt=media&token=7696150a-dc9e-4e02-aaa4-e54a490ff873);
+        box-shadow: 0px -3px 33px 7px rgb(0 0 0 / 14%);
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
@@ -308,38 +344,54 @@ small {
     }
 
     .package {
-        width: 32%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        gap: 1rem;
-        word-break: break-word;
-        padding: var(--card-padding);
-        color: white;
-        border-color: #80808040;
-        background: #0F172A;
-        box-shadow: 0px -3px 33px 7px rgba(37, 150, 130, 0.75);
+        width: 50rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 4rem;
+    word-break: break-word;
+    padding: var(--card-padding);
+    border-width: 1px;
+    border-style: revert-layer;
+    cursor: pointer;
+    color: white;
+    border-color: #00000000;
+    background: #a855f708;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-bottom.svg?alt=media&token=7696150a-dc9e-4e02-aaa4-e54a490ff873);
+    box-shadow: 0px -3px 33px 7px rgb(0 0 0 / 14%);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
     }
 }
 
 @media screen and (max-width: 700px) {
 
     .package {
-        width: 45%;
+        width: 50rem;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         align-content: center;
         flex-direction: column;
-        gap: 1rem;
+        gap: 4rem;
         word-break: break-word;
         padding: var(--card-padding);
+        border-width: 1px;
+        border-style: revert-layer;
+        cursor: pointer;
         color: white;
-        border-color: #80808040;
-        background: #0F172A;
-        box-shadow: 0px -3px 33px 7px rgba(37, 150, 130, 0.75);
+        border-color: #00000000;
+        background: #a855f708;
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-bottom.svg?alt=media&token=7696150a-dc9e-4e02-aaa4-e54a490ff873);
+        box-shadow: 0px -3px 33px 7px rgb(0 0 0 / 14%);
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .title>h1 {
     width: 80%;
@@ -353,19 +405,28 @@ small {
 @media screen and (max-width: 500px) {
 
     .package {
-        width: 95%;
+        width: 24rem;
+        margin-top: 5rem;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         align-content: center;
         flex-direction: column;
-        gap: 1rem;
+        gap: 4rem;
         word-break: break-word;
         padding: var(--card-padding);
+        border-width: 1px;
+        border-style: revert-layer;
+        cursor: pointer;
         color: white;
-        border-color: #80808040;
-        background: #0F172A;
-        box-shadow: 0px -3px 33px 7px rgba(37, 150, 130, 0.75);
+        border-color: #00000000;
+        background: #a855f708;
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-bottom.svg?alt=media&token=7696150a-dc9e-4e02-aaa4-e54a490ff873);
+        box-shadow: 0px -3px 33px 7px rgb(0 0 0 / 14%);
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .title>h1 {
     width: 80%;

@@ -107,17 +107,17 @@ const Packages = () => {
 
 
     const packageNames = {
-        package1: 'StockBroker',
-        package2: 'NoviceTrader',
-        package3: 'Trader',
-        package4: 'ProTrader',
-        package5: 'MasterTrader',
-        package6: 'Expert',
-        package7: 'ProExpert',
-        package8: 'CryptoTrader',
-        package9: 'CryptoExpert',
-        package10: 'GoldCrypto',
-        package11: 'DiamondCrypto',
+        package1: 'Quantitative Investment 1',
+        package2: 'Quantitative Investment 2',
+        package3: 'Quantitative Investment 3',
+        package4: 'Quantitative Investment 4',
+        package5: 'Quantitative Investment 5',
+        package6: 'Quantitative Investment 6',
+        package7: 'Quantitative Investment 7',
+        package8: 'Quantitative Investment 8',
+        package9: 'Quantitative Investment 9',
+        package10: 'Quantitative Investment 10',
+        package11: 'Quantitative Investment 11',
     }
 
     const packagePrice = {
@@ -321,16 +321,8 @@ const Packages = () => {
     if (isLoading) { return loader(); }
     else {
         return (
-            <div className={`${styles.container} font-Inter-500`}>
+            <div className={`${styles.container} font-roboto`}>
                 <div className={`${styles.wraper}`}>
-                    <div className={`flex flex-col justify-center items-center mt-16 gap-4 ${styles.title}`} >
-                        <h1 className='font-bold text-center text-5x1 uppercase'>{t('Empower Your Future: The Path of Smart Investing')}</h1>
-                        <p className='text-md'>
-                            Our trained neural network analyzes behavioral patterns to make intelligent decisions in real-time.
-                            With a focus on precision and risk management, we offer a secure path to optimized returns.
-                            Join us and take the next step towards financial success!
-                        </p>
-                    </div>
 
                     {
                         selectPage.paymentOptions &&
@@ -389,9 +381,9 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
@@ -400,21 +392,17 @@ const Packages = () => {
 
 
                             <q className='font-medium italic text-center w-9/12'>
-                                Our investment plan offers you the opportunity to be courageous and make the most of every opportunity.
+                            In quantitative trading, emotions are replaced by algorithms, enabling objective decision-making based on data
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package1}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package1}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package1}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
@@ -437,14 +425,6 @@ const Packages = () => {
                                     <p className='text-xl text-red-logo'>Try again later</p>
                                 </>)}
 
-                            {/* <motion.button
-                                type='button'
-                                whileTap={{ scale: 0.9 }}
-                                className={`${styles.packageButton}`}
-                                onClick={() => setPackageOne()}
-                            >
-                                Invest Now
-                            </motion.button> */}
                             <motion.button
                                 type='button'
                                 whileTap={{ scale: 0.9 }}
@@ -466,30 +446,26 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
                                 <h3 className='font-bold text-2xl'>{packageNames.package2}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                                Our investment plan is designed for those who dare to dream big and achieve greatness. Together, we can reach new heights of financial success."
+                            The ability to analyze large amounts of data in real-time is key to success in quantitative trading
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package2}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package2}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package2}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
@@ -532,30 +508,26 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
                                 <h3 className='font-bold text-2xl'>{packageNames.package3}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                                Invest in yourself, invest in your future. Our investment plan is not just about financial returns; it's about investing in your own potential.
+                            Automation in quantitative trading allows for 24/7 strategy execution, seizing opportunities in the global market at any time
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package3}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package3}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package3}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
@@ -600,30 +572,26 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
                                 <h3 className='font-bold text-2xl'>{packageNames.package4}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                                Our investment plan empowers you with knowledge, expertise, and guidance to make informed decisions. Take control of your financial journey today
+                            Quantitative trading aims to identify patterns and trends in historical data to predict future movements in asset prices
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package4}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package4}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package4}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
@@ -668,30 +636,26 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
                                 <h3 className='font-bold text-2xl'>{packageNames.package5}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                                Our investment plan opens the doors to exclusive opportunities that can change your financial future.
+                            Diversifying strategies in quantitative trading helps mitigate risks and provides stability over time
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package5}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package5}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package5}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
@@ -736,30 +700,26 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
                                 <h3 className='font-bold text-2xl'>{packageNames.package6}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                                Start investing today and let compound interest work its magic.
+                            Discipline and consistency in applying quantitative models are essential for long-term success in trading
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package6}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package6}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package6}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
@@ -804,30 +764,26 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
                                 <h3 className='font-bold text-2xl'>{packageNames.package7}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                                Step outside your comfort zone and let the magic happen.
+                            Quantitative trading is based on logic and statistics, enabling informed decision-making backed by empirical evidence
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package7}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package7}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package7}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
@@ -872,30 +828,26 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
                                 <h3 className='font-bold text-2xl'>{packageNames.package8}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                                Our investment plan empowers you to dream beyond limits and invest in your vision. Dare to dream, and let our plan turn those dreams into reality.
+                            Speed of execution and adaptability are critical in quantitative trading, where markets can change in seconds
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package8}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package8}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package8}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
@@ -939,30 +891,26 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
                                 <h3 className='font-bold text-2xl'>{packageNames.package9}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                                Don't wait for opportunities to find you; seize them with our investment plan. Time waits for no one, so make every second count.
+                            Quantitative strategies can identify arbitrage opportunities and exploit inefficiencies in asset prices
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package9}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package9}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package9}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
@@ -1007,30 +955,26 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
                                 <h3 className='font-bold text-2xl'>{packageNames.package10}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                                Our investment plan challenges you to step out of your comfort zone and explore new possibilities. Be the architect of your own financial success!
+                            Continuous improvement of models and algorithms is crucial in quantitative trading to stay ahead in a dynamic market environment
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package10}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package10}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package10}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
@@ -1074,30 +1018,26 @@ const Packages = () => {
                             <div className='flex flex-col justify-center gap-2 items-center'>
                                 <span className='flex flex-col  justify-center items-center'>
                                     <img
-                                        src="assets/trade-bot.webp"
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
                                         alt="package 500"
-                                        className='w-32 h-32 object-contain '
+                                        className='w-48 h-48 object-contain '
                                         loading='lazy'
                                     />
                                 </span>
                                 <h3 className='font-bold text-2xl'>{packageNames.package11}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                                Our investment plan challenges you to step out of your comfort zone and explore new possibilities. Be the architect of your own financial success!
+                            Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Trade Size</p>
-                                    <p>{packagePrice.package11}</p>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package11}</p>
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
-                                    <p>Revenue share</p>
-                                    <p>{packagePrice.package11}</p>
-                                </span>
-                                <span className={`${styles.packageInformation}`}>
-                                    <p>Daily Earnings</p>
-                                    <p>1.8%</p>
+                                    <p>ROI</p>
+                                    <p>7%</p>
                                 </span>
                             </div>
 
