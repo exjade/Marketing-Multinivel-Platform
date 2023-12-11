@@ -18,22 +18,13 @@ const TableReferrals = ({
         <div className={`${styles.Header}`} >
           <div className={`${styles.Headerleft}`}>
             <span className={`${styles.contacts}`}>
-              <h1 className={`text-artificial-theme-green-primary text-2xl font-medium`} >
+              <h1 className={`text-badges-primary text-2xl font-medium`} >
                 Contacts
               </h1>
-              <p className={`text-artificial-theme-gray-secondary text-2xl font-extralight hidden sm:inline`} >
+              <p className={`text-gray-background text-2xl font-extralight hidden sm:inline`} >
                 {filterSearchbar?.length}
               </p>
             </span>
-            {/* <div className={`${styles.Sort}`} >
-              <p className={`text-artificial-theme-gray-secondary text-md font-extralight hidden md:inline`} >
-                Sort by:
-              </p>
-              <p className={`text-artificial-theme-white-secondary  text-sm font-extralight hidden md:inline`}>
-                Date Created
-              </p>
-            </div> */}
-
           </div>
           <div className={`${styles.Headerright}`}>
             <div className={`${styles.SearchBar}`}>
