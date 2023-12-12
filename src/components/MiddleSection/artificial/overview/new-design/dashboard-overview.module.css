@@ -70,7 +70,6 @@
     -o-border-radius: 10px;
 }
 
-.headerIcon {}
 
 .verticalDivider {
     width: 1px;
@@ -79,6 +78,17 @@
 }
 
 @media (max-width: 1028px) and (min-width: 714px) {
+    .main {
+        align-items: center;
+        background: #0F172A !important;
+        display: flex;
+        flex-direction: column;
+        font-family: Roboto Mono, "sans-serif";
+        justify-content: center;
+        padding: 2rem;
+        width: 100%;
+    }
+
     .container {
         display: flex;
         gap: 2rem;
@@ -90,25 +100,29 @@
     }
 
     .cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        flex-wrap: wrap;
+        grid-gap: 1rem;
+        align-content: center;
         align-items: center;
-        justify-content: space-between;
-        background-color: #17171F;
-        color: white;
+        background: #17171f00;
+        border-color: gray;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+        border-width: .5rem;
+        color: #fff;
+        display: grid;
+        flex-wrap: wrap;
+        gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-between;
+        justify-items: center;
         padding: 2rem;
         width: 100%;
-        gap: 1rem;
-        border-width: 0.5rem;
-        border-color: gray;
-        align-content: center;
-        justify-items: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-top.svg?alt=media&token=19bcb82e-3b7f-4ecb-9a48-19521e5bc882);
     }
 
     .verticalDivider {
@@ -140,15 +154,15 @@
 
 @media (max-width: 713px) {
     .main {
+        align-items: center;
+        background: #0F172A !important;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        font-family: Roboto Mono, "sans-serif";
         justify-content: center;
-        align-items: center;
-        font-family: 'roboto', 'sans-serif';
         padding: 2rem;
-        background: rgb(16, 27, 34);
-}
+        width: 100%;
+    }
 
     .container {
         display: flex;
@@ -161,25 +175,29 @@
     }
 
     .cards {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        flex-wrap: wrap;
+        grid-gap: 1rem;
+        align-content: center;
         align-items: center;
-        justify-content: space-between;
-        background-color: #17171F;
-        color: white;
+        background-color: #17171f00;
+        border-color: gray;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+        border-width: .5rem;
+        color: #fff;
+        display: grid;
+        flex-wrap: wrap;
+        gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-between;
+        justify-items: center;
         padding: 2rem;
         width: 100%;
-        gap: 1rem;
-        border-width: 0.5rem;
-        border-color: gray;
-        align-content: center;
-        justify-items: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-top.svg?alt=media&token=19bcb82e-3b7f-4ecb-9a48-19521e5bc882);
     }
 
     .verticalDivider {
@@ -207,5 +225,11 @@
         width: 80%;
         height: 1px;
         background: gray;
+    }
+}
+
+@media (max-width: 713px) and (min-width: 0px) { 
+    .verticalDivider {
+        display: none;
     }
 }

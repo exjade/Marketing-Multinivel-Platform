@@ -1,19 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './dashboard-overview.module.css'
-import {
-    BanknotesIcon,
-    UserGroupIcon,
-    ExclamationCircleIcon,
-    HandThumbUpIcon
-} from '@heroicons/react/24/outline';
+
 
 const DashboardOverview = (props) => {
 
     const yourEarnings = props.user?.referral?.ReferralBalance;
 
     return (
-        <div className={styles.main}>
+        <div className={`${styles.main} bg-blue-background`}>
             <div className={`${styles.container} font-roboto`}>
 
                 <div>
@@ -55,7 +50,6 @@ const DashboardOverview = (props) => {
 
 
                     <div className={styles.verticalDivider}></div> {/* verticalDivider */}
-                    <div className={styles.horizontalDivider}></div> {/* horizontalDivider */}
 
 
                     <div className={`${styles.childCard}`}>
@@ -83,7 +77,6 @@ const DashboardOverview = (props) => {
                     </div>
 
                     <div className={styles.verticalDivider}></div> {/* verticalDivider */}
-                    <div className={styles.horizontalDivider}></div> {/* horizontalDivider */}
 
                     <div className={`${styles.childCard}`}>
                         {/* icono */}
@@ -110,7 +103,6 @@ const DashboardOverview = (props) => {
                     </div>
 
                     <div className={styles.verticalDivider}></div> {/* verticalDivider */}
-                    <div className={styles.horizontalDivider}></div> {/* horizontalDivider */}
 
                     <div className={`${styles.childCard}`}>
                         {/* icono */}
