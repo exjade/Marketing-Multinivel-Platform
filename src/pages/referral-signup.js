@@ -131,7 +131,7 @@ const ReferralSignUp = () => {
                         id: uuidv4(),
                         email: emailAddress.toLowerCase().trim(),
                         referrerBy: referralCode,
-                        referralCode: `${username.toLowerCase().trim()}_${shortid.generate().trim()}`,
+                        referralCode: `${username.toLowerCase().trim()}_000${shortid.generate().trim()}`,
                         userReferrals: [],
                         joinDate: Date.now(),
                         ReferralBalance: 0,

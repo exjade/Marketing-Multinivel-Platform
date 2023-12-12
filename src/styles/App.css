@@ -2440,6 +2440,10 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -2447,10 +2451,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 .text-3xl {
   font-size: 1.875rem;
@@ -2467,9 +2467,6 @@ video {
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
-}
-.text-\[3px\] {
-  font-size: 3px;
 }
 .font-bold {
   font-weight: 700;
@@ -2579,6 +2576,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-white-primary {
+  --tw-text-opacity: 1;
+  color: rgb(210 215 226 / var(--tw-text-opacity));
+}
 .text-white-placeholder {
   --tw-text-opacity: 1;
   color: rgb(227 227 227 / var(--tw-text-opacity));
@@ -2586,10 +2587,6 @@ video {
 .text-black-normal {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-.text-white-primary {
-  --tw-text-opacity: 1;
-  color: rgb(210 215 226 / var(--tw-text-opacity));
 }
 .text-red-logo {
   --tw-text-opacity: 1;
@@ -2965,10 +2962,6 @@ video {
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
-.hover\:bg-blue-feedback:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(13 66 98 / var(--tw-bg-opacity));
-}
 .hover\:bg-black-login_button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(67 67 67 / var(--tw-bg-opacity));
@@ -3120,10 +3113,6 @@ video {
   .dark\:text-white-normal {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-  .dark\:text-black-textBg {
-    --tw-text-opacity: 1;
-    color: rgb(18 23 23 / var(--tw-text-opacity));
   }
   .dark\:text-white-placeholder {
     --tw-text-opacity: 1;
@@ -3476,12 +3465,6 @@ video {
   }
   .xl\:w-11\/12 {
     width: 91.666667%;
-  }
-  .xl\:w-10\/12 {
-    width: 83.333333%;
-  }
-  .xl\:w-2\/6 {
-    width: 33.333333%;
   }
   .xl\:w-4\/12 {
     width: 33.333333%;

@@ -1,6 +1,6 @@
 export const LOGIN = '/signin';
 export const SIGN_UP = '/signup';
-export const REFERRAL_SIGN_UP = '/ref=/:referralCode';
+export const REFERRAL_SIGN_UP = '/create-account/:referralCode';
 export const RECOVERPASSWORD = '/recover-password';
 export const LANDING = '/';
 export const DASHBOARD = '/home';
