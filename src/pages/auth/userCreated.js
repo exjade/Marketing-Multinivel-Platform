@@ -6,7 +6,7 @@ import * as ROUTES from '../../constants/routes';
 const UserCreated = () => {
     const history = useHistory();
     useEffect(() => {
-        document.title = 'Account Created Successfully - Artificial Business'
+        document.title = 'Account Created | CapitalTradersBusiness'
     }, [])
 
     const redirectToLogin = () => {

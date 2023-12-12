@@ -29,7 +29,7 @@ import useActionSuccess from '../hooks/action-status/action-success';
 
 const ReferralSignUp = () => {
     useEffect(() => {
-        document.title = 'Create referral account - Artificial';
+        document.title = 'Create referral account - CapitalTradersBusiness';
     }, []); //eslint-disable-line
 
     const { successAction, handleActiveActión } = useActionSuccess()
@@ -114,7 +114,7 @@ const ReferralSignUp = () => {
                     secretWord: secretWord.trim(),
                     profile: {
                         location: 'Earth',
-                        description: 'Artificial Investor'
+                        description: 'CapitalTradersBusiness Investor'
                     },
                     rol: 'investor',
                     userId: createdUserResult.user.uid,
@@ -244,7 +244,7 @@ const ReferralSignUp = () => {
                                     photoURL: '',
                                     profile: {
                                         location: 'Somewhere',
-                                        description: 'Artificial Investor'
+                                        description: 'CapitalTradersBusiness '
                                     },
                                     pin: '',
                                     secretWord: secretWord.trim(),

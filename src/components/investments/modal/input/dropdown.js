@@ -166,7 +166,7 @@ const InputDropdown = (props) => {
                                             className='w-6 h-6 object-contain'
                                         />
                                         <span className="block ml-3 font-normal truncate">
-                                            USDT (BSC)
+                                            USDT (BEP20)
                                         </span>
                                     </div>
                                     {

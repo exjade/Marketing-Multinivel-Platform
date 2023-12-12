@@ -50,18 +50,6 @@ const SelectPayment = ({
                         >
                             QR Payment
                         </motion.button>
-                        <motion.button
-                            className={`${styles.SelectBordersSelected}`}
-                            whileTap={{ scale: 0.9 }}
-                            variants={item}
-                            onClick={() => setSelectPage({
-                                walletBalance: true,
-                                qrpayment: false,
-                                crypto: false,
-                            })}
-                        >
-                            Wallet Balance
-                        </motion.button>
                     </div>
 
                 </div>

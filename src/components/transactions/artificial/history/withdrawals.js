@@ -85,7 +85,7 @@ const Withdrawals = ({
                       value.WithdrawalURL !== '' ?
                         (
                           <a href={value.WithdrawalURL}
-                            className='flex flex-col justify-center items-center my-4 text-artificial-text-card-primary'
+                            className='flex flex-col justify-center items-center my-4 text-colorSecondary-text-card-primary'
                             target='_blank'
                             rel="noreferrer">
                             <span className="material-symbols-sharp">

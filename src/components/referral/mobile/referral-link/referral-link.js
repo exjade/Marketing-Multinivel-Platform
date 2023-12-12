@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 const ReferralLink = ({ user }) => {
   const { t } = useTranslation()
   const referralCode = user?.referral?.referralCode?.trim()
-  const copyReferralCode = `https://artificialtech4u.com/invite/${referralCode}`
+  const copyReferralCode = `https://capitaltradersbusiness.com/code/${referralCode}`
 
   return (
     <motion.section

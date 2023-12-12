@@ -39,9 +39,9 @@ export default function useCreateCustomPayment({
         'price_amount': parseFloat(customPriceAmount),
         'price_currency': 'usd',
         'pay_currency': 'usdttrc20',
-        'ipn_callback_url': 'https://artificialtech4u.com/account/wallet',
+        'ipn_callback_url': 'https://CapitalTradersBusiness.com/account/wallet',
         'order_id': customOrderId,
-        'order_description': 'Artificial Top Up Balance',
+        'order_description': 'CapitalTradersBusiness Top Up Balance',
     });
 
     var requestOptions = {

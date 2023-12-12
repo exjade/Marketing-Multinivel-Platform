@@ -77,7 +77,7 @@ const UserProfile = () => {
 
     // TITULO DE PAGINA
     useEffect(() => {
-        document.title = 'Profile - Artificial'
+        document.title = 'Profile - CapitalTradersBusiness'
 
         setTimeout(() => {
 

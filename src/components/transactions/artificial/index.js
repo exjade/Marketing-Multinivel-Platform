@@ -99,7 +99,7 @@ const ArtificialTransactionsWithdrawal = () => {
 
 
     const transactionsFeeLess = parseInt(withdrawalAmount) - parseInt(withdrawalAmount) + 2.5;
-    const transactionsFeeMore = parseInt(withdrawalAmount) * 0.05;
+    const transactionsFeeMore = parseInt(withdrawalAmount) * 0.025;
     const FeeCondition = transactionsFeeLess ? transactionsFeeLess : transactionsFeeMore;
 
     const data = {
@@ -139,7 +139,7 @@ const ArtificialTransactionsWithdrawal = () => {
                 if (data?.CustomerId === user?.userId) {
                     if (data?.CustomerId !== '') {
                         if (parseInt(withdrawalAmount) <= parseInt(user?.Withdrawal)) {
-                            if (parseInt(user?.Withdrawal) >= 10 && parseInt(withdrawalAmount) >= 10) {
+                            if (parseInt(user?.Withdrawal) >= 50  && parseInt(withdrawalAmount) >= 50) {
                                 //eslint-disable-next-line no-unused-vars
                                 const docRef = await addDoc(collection(firestore, 'Withdrawals'), data);
                                 //eslint-disable-next-line no-unused-vars
@@ -153,23 +153,23 @@ const ArtificialTransactionsWithdrawal = () => {
                                     })
                                 }
                             } else {
-                                setWithdrawalAmountError('ERROR: minimum withdrawal is $10 USD')
+                                setWithdrawalAmountError('Minimum withdrawal is $50 USD')
                             }
                         } else {
-                            setWithdrawalAmountError('ERROR: You cannot withdraw more than available')
+                            setWithdrawalAmountError('You cannot withdraw more than available')
                         }
                     }
                 }
             } else {
-                setPinError('Wrong security pin')
+                setPinError('Bad PIN')
             }
             setTimeout(() => {
                 setLoaderError('')
                 setWithdrawalAmountError('')
                 setLoader(false)
-                // setTimeout(() => {
-                //     window.location.reload()
-                // }, 50)
+                setTimeout(() => {
+                    window.location.reload()
+                }, 800)
             }, 1000)
         } catch (err) {
             console.log(err)
@@ -183,12 +183,12 @@ const ArtificialTransactionsWithdrawal = () => {
                 if (data?.CustomerId === user?.userId) {
                     if (data?.CustomerId !== '') {
                         if (parseInt(withdrawalAmount) <= parseInt(user?.Withdrawal)) {
-                            if (parseInt(user?.Withdrawal) >= 10 && parseInt(withdrawalAmount) >= 10) {
+                            if (parseInt(user?.Withdrawal) >= 50 && parseInt(withdrawalAmount) >= 50) {
                                 //eslint-disable-next-line no-unused-vars
                                 setIsInvalid(true)
                                 const userRef = doc(firestore, 'users', user.docId);
                                 setLoader(true)
-                                if (parseInt(user?.Withdrawal) >= 10) {
+                                if (parseInt(user?.Withdrawal) >= 50) {
                                     await updateDoc(userRef, {
                                         Withdrawal: parseInt(withdrawalAmount) === parseInt(user?.Withdrawal) ? 0 : parseInt(user?.Withdrawal) - parseInt(withdrawalAmount),
                                     })
@@ -197,15 +197,15 @@ const ArtificialTransactionsWithdrawal = () => {
                                     })
                                 }
                             } else {
-                                setWithdrawalAmountError('ERROR: minimum withdrawal is $10 USD')
+                                setWithdrawalAmountError('Minimum withdrawal is $50 USD')
                             }
                         } else {
-                            setWithdrawalAmountError('ERROR: You cannot withdraw more than available')
+                            setWithdrawalAmountError('You cannot withdraw more than available')
                         }
                     }
                 }
             } else {
-                setPinError('Wrong security pin')
+                setPinError('Bad PIN')
             }
             setTimeout(() => {
                 setLoaderError('')
@@ -213,7 +213,7 @@ const ArtificialTransactionsWithdrawal = () => {
                 setLoader(false)
                 setTimeout(() => {
                     window.location.reload()
-                }, 50)
+                }, 800)
             }, 1000)
         } catch (err) {
             console.log(err)

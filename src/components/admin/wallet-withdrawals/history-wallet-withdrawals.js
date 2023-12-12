@@ -7,7 +7,7 @@ import TableWithdrawals from './table-wallet-withdrawals';
 const WalletWithdrawalHistory = ({ withdrawals }) => {
   const { t } = useTranslation()
   useEffect(() => {
-    document.title = 'Admin Withdrawal Activation - Artificial'
+    document.title = 'Admin Withdrawal -  CapitalTradersBusiness'
   }, [])
 
   return (

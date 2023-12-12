@@ -43,7 +43,7 @@ const Landing = lazy(() => import('./pages/landing'))
 function App() {
   const { user } = useAuthListener()
 
-  useEffect(() => { document.title = 'Welcome to Artificial' }, [])
+  useEffect(() => { document.title = 'Welcome | CapitalTradersBusiness' }, [])
 
   return (
     <UserContext.Provider value={{ user }}>

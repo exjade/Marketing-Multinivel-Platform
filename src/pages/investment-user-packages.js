@@ -6,7 +6,7 @@ import useMenu from '../hooks/use-menu'
 
 const InvestmentUserPackages = () => {
 
-  useEffect(() => { document.title = 'Investments - Artificial'}, [])
+  useEffect(() => { document.title = 'Investments | CapitalTradersBusiness'}, [])
 
   const { user, user: { username, photoURL } } = useUser()
   const { openMenu, toggleOpen, toggleClose } = useMenu()

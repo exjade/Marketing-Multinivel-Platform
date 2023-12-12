@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 //Proptypes
 import PropTypes from 'prop-types'
 //components
-import SidebarComponent from '../Sidebar/sidebar'
 import styles from '../../styles/modules/settings/settings.module.css'
-import Header from '../header/header-second'
 //styles
 import '../../styles/sidebar/sidebar.css'
 //error

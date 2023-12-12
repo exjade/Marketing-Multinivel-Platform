@@ -52,7 +52,7 @@ const TableContacts = ({
                     variants={container}
                     initial="hidden"
                     animate="visible">
-                    <h2 className="mb-4 text-2xl font-semibold leadi text-artificial-theme-white-primary">Members</h2>
+                    <h2 className="mb-4 text-2xl font-semibold leadi text-colorSecondary-theme-white-primary">Members</h2>
                     <div className="overflow-x-auto">
                         <table className={`${styles.table} w-full p-6 text-xs text-left whitespace-nowrap`} >
 
@@ -103,10 +103,10 @@ const TableContacts = ({
                                                             >
                                                                 <tr>
                                                                     <td className="px-3 text-2xl font-medium text-gray-600">{i + 1}</td>
-                                                                    <td className="px-3 py-2  text-artificial-theme-white-primary  ">
+                                                                    <td className="px-3 py-2  text-colorSecondary-theme-white-primary  ">
                                                                         <p>{user.username}</p>
                                                                     </td>
-                                                                    <td className="px-3 py-2  text-artificial-theme-white-primary  ">
+                                                                    <td className="px-3 py-2  text-colorSecondary-theme-white-primary  ">
                                                                         <p className="text-gray-600">
                                                                             {
                                                                                 user?.nivel === 1 ?
@@ -135,10 +135,10 @@ const TableContacts = ({
                                                                             }
                                                                         </p>
                                                                     </td>
-                                                                    <td className="px-3 py-2  text-artificial-theme-white-primary  ">
+                                                                    <td className="px-3 py-2  text-colorSecondary-theme-white-primary  ">
                                                                         <p>{user.inversion}</p>
                                                                     </td>
-                                                                    <td className="px-3 py-2  text-artificial-theme-white-primary  ">
+                                                                    <td className="px-3 py-2  text-colorSecondary-theme-white-primary  ">
                                                                         <p>
                                                                             {
                                                                                 user?.nivel === 1 ?
@@ -167,7 +167,7 @@ const TableContacts = ({
                                                                             }
                                                                         </p>
                                                                     </td>
-                                                                    <td className="px-3 py-2  text-artificial-theme-white-primary  ">
+                                                                    <td className="px-3 py-2  text-colorSecondary-theme-white-primary  ">
                                                                         <p>{referralsCount}</p>
                                                                     </td>
                                                                   
@@ -212,21 +212,21 @@ const TableContacts = ({
                                                                     variants={item}>
                                                                     <tr>
                                                                         <td className="px-3 text-2xl font-medium text-gray-600">{i + 1}</td>
-                                                                        <td className="px-3 py-2  text-artificial-theme-white-primary  ">
+                                                                        <td className="px-3 py-2  text-colorSecondary-theme-white-primary  ">
                                                                             <p>{user.username}</p>
                                                                         </td>
-                                                                        <td className="px-3 py-2  text-artificial-theme-white-primary  ">
+                                                                        <td className="px-3 py-2  text-colorSecondary-theme-white-primary  ">
                                                                             <p className="text-gray-600">--</p>
                                                                         </td>
-                                                                        <td className="px-3 py-2  text-artificial-theme-white-primary  ">
+                                                                        <td className="px-3 py-2  text-colorSecondary-theme-white-primary  ">
                                                                             <p>--</p>
                                                                         </td>
-                                                                        <td className="px-3 py-2  text-artificial-theme-white-primary  ">
+                                                                        <td className="px-3 py-2  text-colorSecondary-theme-white-primary  ">
                                                                             <p>
                                                                                 {calcularPorcentaje()}
                                                                             </p>
                                                                         </td>
-                                                                        <td className="px-3 py-2  text-artificial-theme-white-primary  ">
+                                                                        <td className="px-3 py-2  text-colorSecondary-theme-white-primary  ">
                                                                             <p>0</p>
                                                                         </td>
 
@@ -241,22 +241,22 @@ const TableContacts = ({
                                         (
                                             <Fragment >
                                                 <tr>
-                                                    <td className="px-3 text-2xl font-medium text-artificial-theme-white-primary  animate-pulse">...</td>
-                                                    <td className="px-3 py-2  text-artificial-theme-white-primary   animate-pulse">
+                                                    <td className="px-3 text-2xl font-medium text-colorSecondary-theme-white-primary  animate-pulse">...</td>
+                                                    <td className="px-3 py-2  text-colorSecondary-theme-white-primary   animate-pulse">
                                                         <p>...</p>
                                                     </td>
-                                                    <td className="px-3 py-2  text-artificial-theme-white-primary   animate-pulse">
-                                                        <p className="text-artificial-theme-white-primary  ">...</p>
+                                                    <td className="px-3 py-2  text-colorSecondary-theme-white-primary   animate-pulse">
+                                                        <p className="text-colorSecondary-theme-white-primary  ">...</p>
                                                     </td>
-                                                    <td className="px-3 py-2  text-artificial-theme-white-primary   animate-pulse">
+                                                    <td className="px-3 py-2  text-colorSecondary-theme-white-primary   animate-pulse">
                                                         <p>...</p>
                                                     </td>
-                                                    <td className="px-3 py-2  text-artificial-theme-white-primary   animate-pulse">
+                                                    <td className="px-3 py-2  text-colorSecondary-theme-white-primary   animate-pulse">
                                                         <p>
                                                             ...
                                                         </p>
                                                     </td>
-                                                    <td className="px-3 py-2  text-artificial-theme-white-primary   animate-pulse">
+                                                    <td className="px-3 py-2  text-colorSecondary-theme-white-primary   animate-pulse">
                                                         <p>...</p>
                                                     </td>
 

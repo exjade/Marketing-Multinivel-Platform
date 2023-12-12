@@ -59,7 +59,7 @@ const TotalBalances = (props) => {
 
             <button
               type='button'
-              className='text-artificial-theme-purple-primary'>
+              className='text-colorSecondary-theme-purple-primary'>
               Funds Invested
             </button>
           </span>

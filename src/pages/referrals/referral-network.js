@@ -23,7 +23,7 @@ const ReferralNetwork = () => {
     const usersReferredByMe = users?.filter(user => user?.referral?.referrerBy === currentUser?.referral?.referralCode)
 
     useEffect(() => {
-        document.title = 'Network - Artificial'
+        document.title = 'Network - CapitalTradersBusiness'
         setTimeout(() => {
             setIsLoading(false)
         }, 1000);

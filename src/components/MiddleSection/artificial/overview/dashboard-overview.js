@@ -12,7 +12,7 @@ const DashboardOverview = (props) => {
                 {/* TOTAL REVENUE */}
                 <div className={`${styles.cards}`} >
                     <div className='flex flex-row gap-5 w-full justify-between px-4 items-center'>
-                        <h3 className=' font-normal text-xl text-artificial-theme-white-primary text-start'>Total Revenue</h3>
+                        <h3 className=' font-normal text-xl text-colorSecondary-theme-white-primary text-start'>Total Revenue</h3>
                         <span className="material-symbols-sharp">
                             attach_money
                         </span>
@@ -21,7 +21,7 @@ const DashboardOverview = (props) => {
 
                         {
                             !isNaN(yourEarnings) ?
-                                (< p className='font-semibold text-3xl  text-artificial-theme-white-primary text-start'>
+                                (< p className='font-semibold text-3xl  text-colorSecondary-theme-white-primary text-start'>
                                     {
                                         parseFloat(yourEarnings).toLocaleString('en-US', {
                                             style: 'currency',
@@ -32,7 +32,7 @@ const DashboardOverview = (props) => {
                                 </p>)
                                 :
                                 (
-                                    <p className="font-semibold text-3xl text-artificial-theme-white-primary text-start">0</p>
+                                    <p className="font-semibold text-3xl text-colorSecondary-theme-white-primary text-start">0</p>
                                 )
                         }
 
@@ -41,21 +41,21 @@ const DashboardOverview = (props) => {
                 {/* REFERRALS */}
                 <div className={`${styles.cards}`} >
                     <div className='flex flex-row gap-5 w-full justify-between px-4 items-center'>
-                        <h3 className=' font-normal text-xl text-artificial-theme-white-primary text-start'>Referrals</h3>
+                        <h3 className=' font-normal text-xl text-colorSecondary-theme-white-primary text-start'>Referrals</h3>
                         <span className="material-symbols-sharp">
                             group
                         </span>
                     </div>
                     <span className='flex flex-col w-full justify-between px-4 items-start gap-1'>
-                        <div className='font-semibold text-4xl text-artificial-theme-white-primary text-start'>
+                        <div className='font-semibold text-4xl text-colorSecondary-theme-white-primary text-start'>
                             {
                                 props.filterReferrals.length > 0 ?
-                                    (< p className='font-semibold text-3xl text-artificial-theme-white-primary text-start'>
+                                    (< p className='font-semibold text-3xl text-colorSecondary-theme-white-primary text-start'>
                                         +{props.filterReferrals.length}
                                     </p>)
                                     :
                                     (
-                                        <p className="font-semibold text-3xl text-artificial-theme-white-primary text-start">0</p>
+                                        <p className="font-semibold text-3xl text-colorSecondary-theme-white-primary text-start">0</p>
                                     )
                             }
                         </div>
@@ -64,7 +64,7 @@ const DashboardOverview = (props) => {
                 {/* INACTIVE REFERRALS */}
                 <div className={`${styles.cards}`} >
                     <div className='flex flex-row gap-5 w-full justify-between px-4 items-center'>
-                        <h3 className=' font-normal text-xl text-artificial-theme-white-primary text-start'>Inactive</h3>
+                        <h3 className=' font-normal text-xl text-colorSecondary-theme-white-primary text-start'>Inactive</h3>
                         <span className="material-symbols-sharp">
                             money_off
                         </span>
@@ -72,12 +72,12 @@ const DashboardOverview = (props) => {
                     <span className='flex flex-col w-full justify-between px-4 items-start gap-1'>
                         {
                             props.filterReferralsWithoutInvestment.length > 0 ?
-                                (< p className='font-semibold text-3xl text-artificial-theme-white-primary text-start'>
+                                (< p className='font-semibold text-3xl text-colorSecondary-theme-white-primary text-start'>
                                     +{props.filterReferralsWithoutInvestment.length}
                                 </p>)
                                 :
                                 (
-                                    <p className="font-semibold text-3xl text-artificial-theme-white-primary text-start">0</p>
+                                    <p className="font-semibold text-3xl text-colorSecondary-theme-white-primary text-start">0</p>
                                 )
                         }
                     </span>
@@ -85,22 +85,22 @@ const DashboardOverview = (props) => {
                 {/* ACTIVE NOW */}
                 <div className={`${styles.cards}`} >
                     <div className='flex flex-row gap-5 w-full justify-between px-4 items-center'>
-                        <h3 className=' font-normal text-xl text-artificial-theme-white-primary text-start'>Active</h3>
+                        <h3 className=' font-normal text-xl text-colorSecondary-theme-white-primary text-start'>Active</h3>
                         <span className="material-icons-sharp">
                             attach_money
                         </span>
                     </div>
                     <span className='flex flex-col w-full justify-between px-4 items-start gap-1'>
-                        <div className='font-semibold text-3xl text-artificial-theme-white-primary text-start'>
+                        <div className='font-semibold text-3xl text-colorSecondary-theme-white-primary text-start'>
 
                             {
                                 props.filterReferralsWithInvestment.length > 0 ?
-                                    (< p className='font-semibold text-3xl text-artificial-theme-white-primary text-start'>
+                                    (< p className='font-semibold text-3xl text-colorSecondary-theme-white-primary text-start'>
                                         +{props.filterReferralsWithInvestment.length}
                                     </p>)
                                     :
                                     (
-                                        <p className="font-semibold text-3xl text-artificial-theme-white-primary text-start">0</p>
+                                        <p className="font-semibold text-3xl text-colorSecondary-theme-white-primary text-start">0</p>
                                     )
                             }
                         </div>

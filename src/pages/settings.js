@@ -17,7 +17,7 @@ import Header from '../components/header/artificial/header'
 
 const AccountSettings = () => {
 
-    useEffect(() => { document.title = 'Account Settings - CapitalTradersBusiness' }, []) //eslint-disable-line
+    useEffect(() => { document.title = 'Settings - CapitalTradersBusiness' }, []) //eslint-disable-line
     const { theme, setTheme } = useTheme()
     // menu functionality
     const [isOpen, setIsOpen] = useState(false)

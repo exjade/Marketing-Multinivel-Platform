@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 const WithdrawalHistory = ({ withdrawals }) => {
   const { t } = useTranslation()
   useEffect(() => {
-    document.title = 'Admin Withdrawal Activation - Artificial '
+    document.title = 'Admin Withdrawal Activation - CapitalTradersBusiness '
   }, [])
 
   return (

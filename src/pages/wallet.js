@@ -6,7 +6,7 @@ import WalletTimeline from '../components/wallet'
 
 const Wallet = () => {
 
-  useEffect(() => { document.title = 'Artificial - Wallet' }, [])
+  useEffect(() => { document.title = 'Welcome | CapitalTradersBusiness' }, [])
 
   const { user } = useUser()
   const { openMenu, toggleOpen, toggleClose } = useMenu()

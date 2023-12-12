@@ -10,7 +10,7 @@ const RightMycards = ({ user }) => {
         <h3></h3>
       </span>
       <div className={`${styles.card}`}>
-        <div className={`${styles.cardWrapper} bg-artificial-text-card-primary`} >
+        <div className={`${styles.cardWrapper} bg-colorSecondary-text-card-primary`} >
           {/* BALANCE & LOGO */}
           <div className='flex flex-row justify-between items-center -full'>
             <span className=' flex flex-col row-5 '>

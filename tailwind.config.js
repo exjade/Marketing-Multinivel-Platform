@@ -114,7 +114,7 @@ module.exports = {
         status: '#D36800',
       },
       //=====================================//
-      artificial: {
+      colorSecondary: {
         theme: {
           dark: {
             primary: "#1E1F21",

@@ -14,26 +14,12 @@ import Error from '../error/error'
 const Timeline = ({
     coins,
     search,
-    // isOpen,
-    // setIsOpen,
     theme,
-    // setTheme,
-    // handleClose
 }) => {
 
     return (
         <main>
-            {/* <Error>
-                <div className={`aside_sidebar  ${theme ? 'bg-black-default' : 'bg-artificial-theme-white-secondary'}`}>
-                    <SidebarComponent
-                        isOpen={isOpen}
-                        setIsOpen={setIsOpen}
-                        handleClose={handleClose}
-                        theme={theme}
-                        setTheme={setTheme}
-                    />
-                </div>
-            </Error> */}
+
             <Error>
                 <SidebarNav />
             </Error>

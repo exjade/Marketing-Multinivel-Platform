@@ -37,7 +37,7 @@ const EarningsOverview = (props) => {
               })}
             </p>
           </div>
-          <div className='flex flex-col items-start justify-around px-8 py-2 w-11/12 sm:w-11/12 h-32 bg-artificial-theme-dark-white rounded-xl'>
+          <div className='flex flex-col items-start justify-around px-8 py-2 w-11/12 sm:w-11/12 h-32 bg-colorSecondary-theme-dark-white rounded-xl'>
             <p className='font-semibold text-lg text-white-primary'>
               Today earnings
             </p>

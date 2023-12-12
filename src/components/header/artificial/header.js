@@ -144,7 +144,7 @@ const Header = () => {
                                                 Network
                                             </a>
                                             <ChevronUpIcon
-                                                className={`h-4 w-4 text-artificial-theme-purple-primary hidden xl:inline`} />
+                                                className={`h-4 w-4 text-colorSecondary-theme-purple-primary hidden xl:inline`} />
                                         </span>
                                     </>
                                 ) : dropdown ?

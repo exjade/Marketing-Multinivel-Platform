@@ -45,7 +45,7 @@ const SidebarShow = (props) => {
                     <div className={`${styles.navigationWrapper}`} >
 
                         <a href={ROUTES.DASHBOARD}
-                            className={`${styles.navigationIcons} bg-artificial-theme-gray-primary`}>
+                            className={`${styles.navigationIcons} bg-colorSecondary-theme-gray-primary`}>
                             <span className={`${styles.navigationIconsWrapper} `}>
                                 <HomeIcon className='w-10 h-10 text-white-normal mb-2 ' />
                                 <p className='font-roboto font-semibold  text-lg capitalize h-full  w-full text-center '>

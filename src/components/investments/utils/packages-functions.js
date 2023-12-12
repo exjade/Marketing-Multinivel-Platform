@@ -113,3 +113,43 @@ export const handlePackageEleven = (investment, packagePrice, packageNames, setI
         packageName: packageNames.package11,
     });
 }
+export const handlePackage12 = (investment, packagePrice, packageNames, setInvestment) => {
+    setInvestment({
+        ...investment,
+        id: investment.id,
+        date: investment.date,
+        amount: packagePrice.package12,
+        usdtAmount: investment.usdtAmount,
+        packageName: packageNames.package12,
+    });
+}
+export const handlePackage13 = (investment, packagePrice, packageNames, setInvestment) => {
+    setInvestment({
+        ...investment,
+        id: investment.id,
+        date: investment.date,
+        amount: packagePrice.package13,
+        usdtAmount: investment.usdtAmount,
+        packageName: packageNames.package13,
+    });
+}
+export const handlePackage14 = (investment, packagePrice, packageNames, setInvestment) => {
+    setInvestment({
+        ...investment,
+        id: investment.id,
+        date: investment.date,
+        amount: packagePrice.package14,
+        usdtAmount: investment.usdtAmount,
+        packageName: packageNames.package14,
+    });
+}
+export const handlePackage15 = (investment, packagePrice, packageNames, setInvestment) => {
+    setInvestment({
+        ...investment,
+        id: investment.id,
+        date: investment.date,
+        amount: packagePrice.package15,
+        usdtAmount: investment.usdtAmount,
+        packageName: packageNames.package15,
+    });
+}

@@ -18,7 +18,7 @@ const ReinvestmentHistory = () => {
     //Loader
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
-        document.title = 'Withdrawal History - Artificial';
+        document.title = 'Withdrawal History - CapitalTradersBusiness';
 
         setTimeout(() => {
             setIsLoading(false);

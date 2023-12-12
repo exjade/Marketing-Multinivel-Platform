@@ -28,7 +28,7 @@ const FastCrypto = ({ coins, search }) => {
                                             <h5 className='uppercase font-bold text-lg'>{coin.name}</h5>
                                             <h5 className='uppercase text-gray-info font-normal'>{coin.symbol}</h5>
                                         </span>
-                                        <span className={`font-lato-500 font-semibold px-2 py-2 rounded-lg  ${coin.price_change_percentage_24h > 0 ? 'bg-artificial-text-additional-blue-secondary' : 'bg-red-warning'}`} >
+                                        <span className={`font-lato-500 font-semibold px-2 py-2 rounded-lg  ${coin.price_change_percentage_24h > 0 ? 'bg-colorSecondary-text-additional-blue-secondary' : 'bg-red-warning'}`} >
                                             <h5 className='uppercase text-white-normal font-normal'>
 
                                                 {
@@ -38,7 +38,7 @@ const FastCrypto = ({ coins, search }) => {
                                             </h5>
                                         </span>
                                     </div>
-                                    <h4 className={`font-lato-500 font-semibold ${coin.price_change_percentage_24h > 0 ? 'text-artificial-text-additional-blue-secondary' : 'text-red-warning'}`} >
+                                    <h4 className={`font-lato-500 font-semibold ${coin.price_change_percentage_24h > 0 ? 'text-colorSecondary-text-additional-blue-secondary' : 'text-red-warning'}`} >
                                         {`${coin.current_price > 0.9999 ? `$ ${coin.current_price?.toFixed(2)}` : `${coin.current_price?.toFixed(2)}`}`}
                                     </h4>
                                 </div>

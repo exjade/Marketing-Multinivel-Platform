@@ -3,12 +3,6 @@ import PropTypes from 'prop-types';
 //stiles
 import '../../styles/sidebar/sidebar.css';
 import styles from './artificial/styles/overview.module.css';
-//components
-// import MiddleCards from './cards' //eslint-disable-next-line 
-// import MonthlyReport from './monthly-report'
-// import FastCrypto from './FastCrypto'
-// import CryptoTracker from './chart/crypto-tracker'
-// import WithdrawalDashboard from './withdrawal-dashboard/withdrawal-dashboard'
 import TotalBalances from './artificial/total-balances';
 // error boundary
 import Error from '../../error/error';
@@ -17,14 +11,11 @@ import useUser from '../../hooks/use-user';
 import EarningsOverview from './artificial/Earnings-overview';
 import { useTranslation } from 'react-i18next';
 import TitleDate from './artificial/title-date';
-// import DashboardOverview from './artificial/overview/dashboard-overview'
-// import RecentReferrals from './artificial/overview/recent-referrals'
-// import MonthlyChartOverview from './artificial/overview/monthly-chart-overview'
+
 import useEarningsOverview from '../../hooks/use-earningsOverview';
 import useAuthListener from '../../hooks/use-auth-listener';
 import useUsers from '../../hooks/use-users';
 import DashboardOverview from './artificial/overview/new-design/dashboard-overview';
-// import MonthlyRevenueChart from './artificial/overview/new-design/monthly-revenue-chart'
 import LatestTransactions from './artificial/table/latest-transactions';
 import ActionSuccess from '../actions-status/success';
 import useActionSuccess from '../../hooks/action-status/action-success';

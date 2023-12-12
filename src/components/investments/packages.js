@@ -31,7 +31,11 @@ import {
     handlePackageEight,
     handlePackageNine,
     handlePackageTeen,
-    handlePackageEleven
+    handlePackageEleven,
+    handlePackage12,
+    handlePackage13,
+    handlePackage14,
+    handlePackage15,
 } from './utils/packages-functions';
 //Firebase
 import { firebase } from '../../lib/firebase'
@@ -118,6 +122,10 @@ const Packages = () => {
         package9: 'Quantitative Investment 9',
         package10: 'Quantitative Investment 10',
         package11: 'Quantitative Investment 11',
+        package12: 'Quantitative Investment 12',
+        package13: 'Quantitative Investment 13',
+        package14: 'Quantitative Investment 14',
+        package15: 'Quantitative Investment 15',
     }
 
     const packagePrice = {
@@ -125,13 +133,17 @@ const Packages = () => {
         package2: 50,
         package3: 100,
         package4: 200,
-        package5: 500,
-        package6: 900,
-        package7: 1000,
-        package8: 3000,
-        package9: 5000,
-        package10: 10000,
-        package11: 50000,
+        package5: 400,
+        package6: 500,
+        package7: 700,
+        package8: 900,
+        package9: 1000,
+        package10: 2000,
+        package11: 3000,
+        package12: 5000,
+        package13: 7000,
+        package14: 9000,
+        package15: 10000,
     }
 
     //NORMAL PAYMENTS
@@ -309,7 +321,7 @@ const Packages = () => {
     }, [payCurrency, user])
 
     useEffect(() => {
-        document.title = 'Investment - Artificial'
+        document.title = 'Investment - CapitalTradersBusiness'
         setTimeout(() => {
             setIsLoading(false)
         }, 1000);
@@ -1070,8 +1082,257 @@ const Packages = () => {
                                 Invest Now
                             </motion.button>
                         </motion.div>
-                    </motion.div>
+                        <motion.div
+                            className={`${styles.package}`}
+                            whileHover={{ scale: 1.03 }}
+                            variants={item}
+                        >
+                            <div className='flex flex-col justify-center gap-2 items-center'>
+                                <span className='flex flex-col  justify-center items-center'>
+                                    <img
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
+                                        alt="package 500"
+                                        className='w-48 h-48 object-contain '
+                                        loading='lazy'
+                                    />
+                                </span>
+                                <h3 className='font-bold text-2xl'>{packageNames.package12}</h3>
+                            </div>
+                            <q className='font-medium italic text-center w-9/12'>
+                            Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
+                            </q>
 
+                            <div className={`${styles.packageContainerInfo}`}>
+                                <span className={`${styles.packageInformation}`}>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package12}</p>
+                                </span>
+                                <span className={`${styles.packageInformation}`}>
+                                    <p>ROI</p>
+                                    <p>7%</p>
+                                </span>
+                            </div>
+
+                            {/*============================= ERROR MESSAGE =============================*/}
+                            {
+                                error && packageNames.package12 === investment.packageName &&
+                                <p className='text-normal text-center'>
+                                    {error}
+                                </p>
+                            }
+                            {successPayment && packagePrice.package12 === investment.amount &&
+                                (<><img
+                                    src="https://cdn-icons-png.flaticon.com/512/148/148767.png"
+                                    alt="success payment"
+                                    className='w-12 h-12 object-contain rounded-full'
+                                />
+                                </>)}
+                            {failedPayment && packageNames.package12 === investment.packageName &&
+                                (<>
+                                    <p className='text-xl text-red-logo'>Try again later</p>
+                                </>)}
+
+                            <motion.button
+                                type='button'
+                                whileTap={{ scale: 0.9 }}
+                                className={`${styles.packageButton}`}
+                                onClick={() => {
+                                    openInvestmentModal()
+                                    handlePackage12(investment, packagePrice, packageNames, setInvestment)
+                                }}
+                            >
+                                Invest Now
+                            </motion.button>
+                        </motion.div>
+                        <motion.div
+                            className={`${styles.package}`}
+                            whileHover={{ scale: 1.03 }}
+                            variants={item}
+                        >
+                            <div className='flex flex-col justify-center gap-2 items-center'>
+                                <span className='flex flex-col  justify-center items-center'>
+                                    <img
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
+                                        alt="package 500"
+                                        className='w-48 h-48 object-contain '
+                                        loading='lazy'
+                                    />
+                                </span>
+                                <h3 className='font-bold text-2xl'>{packageNames.package13}</h3>
+                            </div>
+                            <q className='font-medium italic text-center w-9/12'>
+                            Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
+                            </q>
+
+                            <div className={`${styles.packageContainerInfo}`}>
+                                <span className={`${styles.packageInformation}`}>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package13}</p>
+                                </span>
+                                <span className={`${styles.packageInformation}`}>
+                                    <p>ROI</p>
+                                    <p>7%</p>
+                                </span>
+                            </div>
+
+                            {/*============================= ERROR MESSAGE =============================*/}
+                            {
+                                error && packageNames.package13 === investment.packageName &&
+                                <p className='text-normal text-center'>
+                                    {error}
+                                </p>
+                            }
+                            {successPayment && packagePrice.package13 === investment.amount &&
+                                (<><img
+                                    src="https://cdn-icons-png.flaticon.com/512/148/148767.png"
+                                    alt="success payment"
+                                    className='w-12 h-12 object-contain rounded-full'
+                                />
+                                </>)}
+                            {failedPayment && packageNames.package13 === investment.packageName &&
+                                (<>
+                                    <p className='text-xl text-red-logo'>Try again later</p>
+                                </>)}
+
+                            <motion.button
+                                type='button'
+                                whileTap={{ scale: 0.9 }}
+                                className={`${styles.packageButton}`}
+                                onClick={() => {
+                                    openInvestmentModal()
+                                    handlePackage13(investment, packagePrice, packageNames, setInvestment)
+                                }}
+                            >
+                                Invest Now
+                            </motion.button>
+                        </motion.div>
+                        <motion.div
+                            className={`${styles.package}`}
+                            whileHover={{ scale: 1.03 }}
+                            variants={item}
+                        >
+                            <div className='flex flex-col justify-center gap-2 items-center'>
+                                <span className='flex flex-col  justify-center items-center'>
+                                    <img
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
+                                        alt="package 500"
+                                        className='w-48 h-48 object-contain '
+                                        loading='lazy'
+                                    />
+                                </span>
+                                <h3 className='font-bold text-2xl'>{packageNames.package14}</h3>
+                            </div>
+                            <q className='font-medium italic text-center w-9/12'>
+                            Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
+                            </q>
+
+                            <div className={`${styles.packageContainerInfo}`}>
+                                <span className={`${styles.packageInformation}`}>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package14}</p>
+                                </span>
+                                <span className={`${styles.packageInformation}`}>
+                                    <p>ROI</p>
+                                    <p>7%</p>
+                                </span>
+                            </div>
+
+                            {/*============================= ERROR MESSAGE =============================*/}
+                            {
+                                error && packageNames.package14 === investment.packageName &&
+                                <p className='text-normal text-center'>
+                                    {error}
+                                </p>
+                            }
+                            {successPayment && packagePrice.package14 === investment.amount &&
+                                (<><img
+                                    src="https://cdn-icons-png.flaticon.com/512/148/148767.png"
+                                    alt="success payment"
+                                    className='w-12 h-12 object-contain rounded-full'
+                                />
+                                </>)}
+                            {failedPayment && packageNames.package14 === investment.packageName &&
+                                (<>
+                                    <p className='text-xl text-red-logo'>Try again later</p>
+                                </>)}
+
+                            <motion.button
+                                type='button'
+                                whileTap={{ scale: 0.9 }}
+                                className={`${styles.packageButton}`}
+                                onClick={() => {
+                                    openInvestmentModal()
+                                    handlePackage14(investment, packagePrice, packageNames, setInvestment)
+                                }}
+                            >
+                                Invest Now
+                            </motion.button>
+                        </motion.div>
+                        <motion.div
+                            className={`${styles.package}`}
+                            whileHover={{ scale: 1.03 }}
+                            variants={item}
+                        >
+                            <div className='flex flex-col justify-center gap-2 items-center'>
+                                <span className='flex flex-col  justify-center items-center'>
+                                    <img
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
+                                        alt="package 500"
+                                        className='w-48 h-48 object-contain '
+                                        loading='lazy'
+                                    />
+                                </span>
+                                <h3 className='font-bold text-2xl'>{packageNames.package15}</h3>
+                            </div>
+                            <q className='font-medium italic text-center w-9/12'>
+                            Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
+                            </q>
+
+                            <div className={`${styles.packageContainerInfo}`}>
+                                <span className={`${styles.packageInformation}`}>
+                                    <p>Trade Amount</p>
+                                    <p>${packagePrice.package15}</p>
+                                </span>
+                                <span className={`${styles.packageInformation}`}>
+                                    <p>ROI</p>
+                                    <p>7%</p>
+                                </span>
+                            </div>
+
+                            {/*============================= ERROR MESSAGE =============================*/}
+                            {
+                                error && packageNames.package15 === investment.packageName &&
+                                <p className='text-normal text-center'>
+                                    {error}
+                                </p>
+                            }
+                            {successPayment && packagePrice.package15 === investment.amount &&
+                                (<><img
+                                    src="https://cdn-icons-png.flaticon.com/512/148/148767.png"
+                                    alt="success payment"
+                                    className='w-12 h-12 object-contain rounded-full'
+                                />
+                                </>)}
+                            {failedPayment && packageNames.package15 === investment.packageName &&
+                                (<>
+                                    <p className='text-xl text-red-logo'>Try again later</p>
+                                </>)}
+
+                            <motion.button
+                                type='button'
+                                whileTap={{ scale: 0.9 }}
+                                className={`${styles.packageButton}`}
+                                onClick={() => {
+                                    openInvestmentModal()
+                                    handlePackage15(investment, packagePrice, packageNames, setInvestment)
+                                }}
+                            >
+                                Invest Now
+                            </motion.button>
+                        </motion.div>
+
+
+                    </motion.div>
                 </div>
             </div >
         )

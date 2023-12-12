@@ -7,7 +7,7 @@ import useUser from '../hooks/use-user'
 
 const SuccessfulPayment = () => {
 
-    useEffect(() => { document.title = 'Successful Payment - Artificial' }, [])
+    useEffect(() => { document.title = 'Successful | CapitalTradersBusiness' }, [])
     const { user } = useUser()
     return (
 
@@ -23,7 +23,7 @@ const SuccessfulPayment = () => {
                             <h3 className={styles.h3} >
                                 Successful Payment!
                             </h3>
-                            <span  className={`${styles.span} capitalize`} >Company: Artificial</span>
+                            <span  className={`${styles.span} capitalize`} >Company: CapitalTradersBusiness</span>
                         </div>
                         <div className={`${styles.bottom}`}  >
                             <div className={`${styles.keyvalue} flex flex-col`}  >

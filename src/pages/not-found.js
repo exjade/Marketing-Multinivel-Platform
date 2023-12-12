@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 export default function NotFound() {
   useEffect(() => {
-    document.title = 'Artificial - Not Found'
+    document.title = 'CapitalTradersBusiness - Not Found'
     setTimeout(() => {
       window.history.back()
     }, 2000);

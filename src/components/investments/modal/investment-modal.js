@@ -7,7 +7,7 @@ import {
 import { motion } from 'framer-motion';
 import useMotion from '../../../hooks/use-motion';
 import { QRCodeCanvas } from 'qrcode.react';
-import StakingLoader from '../../wallet/artificial/staking/loader/staking-loader';
+// import StakingLoader from '../../wallet/artificial/staking/loader/staking-loader';
 import ActionSuccess from '../../actions-status/success';
 import useActionSuccess from '../../../hooks/action-status/action-success';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -56,7 +56,7 @@ const SelectQrPayment = ({
                         onClick={() => cancelInvestment()}
                     >
                         <XMarkIcon
-                            className='w-16 h-16 text-artificial-theme-blue-primary   '
+                            className='w-16 h-16 text-colorSecondary-theme-blue-primary   '
                         />
                     </button>
                 </div>
@@ -76,7 +76,7 @@ const SelectQrPayment = ({
                     {
                         pay?.pay_address === undefined ||
                             pay?.pay_address === null ?
-                            (<StakingLoader />)
+                            <></>
                             : (
                                 <div
                                     className='flex flex-col justify-center items-center w-full'
