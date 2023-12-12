@@ -21,7 +21,7 @@ const firestore = getFirestore(firebase)
 
 const WithdrawalTimeline = () => {
 
-    useEffect(() => { document.title = 'Withdrawals - Artificial' }, [])
+    useEffect(() => { document.title = 'Withdrawals - CapitalTradersBusiness' }, [])
     const { user,
         user: {
             userId, fullName,
