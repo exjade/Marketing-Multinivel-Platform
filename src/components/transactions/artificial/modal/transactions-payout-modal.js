@@ -22,16 +22,11 @@ const TransactionsPayoutModal = (props) => {
     >
       <div className={`${styles.PayoutWrapper} flex flex-col mt-0 sm:mt-20 xl:mt-20 lg:mt-20 2xl:mt-20`} >
 
-        {/* Currrency */}
         <form
           className='w-full h-full flex flex-col justify-center items-center gap-6 overflow-x-scroll my-10'
         >
 
-          {
-            props?.tabsWithdrawal?.wallet ?
-              (<h2 className='text-xl sm:text-2xl text-white-normal text-center uppercase hidden sm:inline sm:mt-32'>Transfer request</h2>) :
-              (<h2 className='text-xl sm:text-2xl text-white-normal text-center uppercase hidden sm:inline sm:mt-32'>Withdrawal request</h2>)
-          }
+          (<h2 className='text-xl sm:text-2xl text-white-normal text-center uppercase hidden sm:inline sm:mt-32'>Withdrawa Funds</h2>)
 
           <div className={`${styles.selectContainer} mt-20 sm:mt-0`} >
 
@@ -41,18 +36,6 @@ const TransactionsPayoutModal = (props) => {
 
               <motion.button
                 type='button'
-                className={` ${props?.tabsWithdrawal?.wallet ? `${styles.activeButton}` : `${styles.selectButton}`} `}
-                onClick={() => props.setTabsWithdrawal({
-                  wallet: true,
-                  external: false,
-                })}
-                variants={item}
-              >
-                <CubeTransparentIcon className='hidden w:10 h:10 sm:w-32  sm:h-32 sm:inline' />
-                wallet
-              </motion.button>
-              <motion.button
-                type='button'
                 className={` ${props?.tabsWithdrawal?.external ? `${styles.activeButton}` : `${styles.selectButton}`} `}
                 onClick={() => props.setTabsWithdrawal({
                   wallet: false,
@@ -60,8 +43,7 @@ const TransactionsPayoutModal = (props) => {
                 })}
                 variants={item}
               >
-                <ExclamationTriangleIcon className='hidden w:10 h:10 sm:w-32  sm:h-32 sm:inline' />
-                external
+                Withdraw
               </motion.button>
 
             </div>
@@ -74,11 +56,11 @@ const TransactionsPayoutModal = (props) => {
                 <motion.div
                   variants={item}
                   className='w-full flex flex-col justify-center items-center gap-4'>
-                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Currency</p>
+                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Crypto</p>
                   <input
                     type="text"
-                    placeholder='USDT (TRC20)'
-                    className='bg-black-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
+                    placeholder='USDT (BEP20)'
+                    className='bg-blue-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
                     disabled
                   />
                 </motion.div>
@@ -86,22 +68,22 @@ const TransactionsPayoutModal = (props) => {
                 <motion.div
                   variants={item}
                   className='w-full flex flex-col justify-center items-center gap-4'>
-                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Wallet Address</p>
+                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Wallet</p>
                   <input
                     type="text"
                     placeholder={props?.user?.wallet}
-                    className='bg-black-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-xs sm:text-xl'
+                    className='bg-blue-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-xs sm:text-xl'
                     disabled
                   />
                 </motion.div>
                 <motion.div
                   variants={item}
                   className='w-full flex flex-col justify-center items-center gap-4'>
-                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Withdrawal Amount: ${props.user.Withdrawal.toFixed(2)}</p>
+                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Available: ${props.user.Withdrawal.toFixed(2)}</p>
                   <input
                     type="number"
                     placeholder='Amount to withdrawal'
-                    className='bg-black-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
+                    className='bg-blue-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
                     onChange={(e) => props?.setWithdrawalAmount(e.target.value)}
                   />
                 </motion.div>
@@ -113,11 +95,11 @@ const TransactionsPayoutModal = (props) => {
                 <motion.div
                   variants={item}
                   className='w-full flex flex-col justify-center items-center gap-4'>
-                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Security Pin</p>
+                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Pin</p>
                   <input
                     type="password"
-                    placeholder='Security PIN'
-                    className='bg-black-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
+                    placeholder='PIN'
+                    className='bg-blue-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
                     onChange={(e) => props?.setPin(e.target.value)}
                   />
                 </motion.div>
@@ -147,14 +129,14 @@ const TransactionsPayoutModal = (props) => {
 
                   <button
                     type='button'
-                    className='bg-green-amount text-white-normal w-1/3 sm:w-6/12 h-16  pX-10 rounded-lg'
+                    className='bg-badges-primary text-white-normal w-1/3 sm:w-6/12 h-16  pX-10 rounded-lg'
                     onClick={() => props?.makeWithdrawalRequest()}
                   >
                     Withdrawal
                   </button>
                   <button
                     type='button'
-                    className='border-red-card border-2 border-solid text-white-normal w-1/3 sm:w-6/12 h-16  pX-10 rounded-lg'
+                    className='border-badges-admin border-2 border-solid text-white-normal w-1/3 sm:w-6/12 h-16  pX-10 rounded-lg'
                     onClick={() => props?.closeModal()}
                   >
                     Cancel
@@ -171,11 +153,11 @@ const TransactionsPayoutModal = (props) => {
                 <motion.div
                   variants={item}
                   className='w-full flex flex-col justify-center items-center gap-4'>
-                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Currency</p>
+                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Crypto</p>
                   <input
                     type="text"
-                    placeholder='USDT (TRC20)'
-                    className='bg-black-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
+                    placeholder='USDT (BEP20)'
+                    className='bg-blue-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
                     disabled
                   />
                 </motion.div>
@@ -183,11 +165,11 @@ const TransactionsPayoutModal = (props) => {
                 <motion.div
                   variants={item}
                   className='w-full flex flex-col justify-center items-center gap-4'>
-                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Withdrawal Amount: ${props.user.Withdrawal.toFixed(2)}</p>
+                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Available: ${props.user.Withdrawal.toFixed(2)}</p>
                   <input
                     type="number"
-                    placeholder='Amount to Transfer'
-                    className='bg-black-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
+                    placeholder='Amount'
+                    className='bg-blue-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
                     onChange={(e) => props?.setWithdrawalAmount(e.target.value)}
                   />
                 </motion.div>
@@ -199,11 +181,11 @@ const TransactionsPayoutModal = (props) => {
                 <motion.div
                   variants={item}
                   className='w-full flex flex-col justify-center items-center gap-4'>
-                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Security Pin</p>
+                  <p className='capitalize text-lg sm:text-2xl font-medium text-start w-10/12 text-white-referralList'>Pin</p>
                   <input
                     type="password"
-                    placeholder='Security PIN'
-                    className='bg-black-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
+                    placeholder='PIN'
+                    className='bg-blue-background text-white-normal h-12 sm:h-14 w-10/12 rounded-md text-center text-md sm:text-xl'
                     onChange={(e) => props?.setPin(e.target.value)}
                   />
                 </motion.div>
@@ -233,14 +215,14 @@ const TransactionsPayoutModal = (props) => {
 
                   <button
                     type='button'
-                    className='bg-green-amount text-white-normal w-1/3 sm:w-6/12 h-16  pX-10 rounded-lg'
+                    className='bg-badges-primary text-white-normal w-1/3 sm:w-6/12 h-16  pX-10 rounded-lg'
                     onClick={() => props?.transferAvailable()}
                   >
-                    Withdrawal
+                    Withdraw
                   </button>
                   <button
                     type='button'
-                    className='border-red-card border-2 border-solid text-white-normal w-1/3 sm:w-6/12 h-16  pX-10 rounded-lg'
+                    className='border-badges-admin border-2 border-solid text-white-normal w-1/3 sm:w-6/12 h-16  pX-10 rounded-lg'
                     onClick={() => props?.closeModal()}
                   >
                     Cancel

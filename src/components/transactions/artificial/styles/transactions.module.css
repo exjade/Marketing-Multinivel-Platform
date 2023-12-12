@@ -255,21 +255,26 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: #141212b9;
+    background: #0F172A;
     align-content: center;
 }
 
 .PayoutWrapper {
-    background: #222223;
+    background: #0F172A;
     z-index: 9999;
     position: fixed;
     display: flex;
-    flex-direction: col;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 80%;
     height: auto;
+    background-size: cover;
     bottom: 2rem;
+    background-color: transparent;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-top.svg?alt=media&token=19bcb82e-3b7f-4ecb-9a48-19521e5bc882);
     top: 2rem;
     align-content: center;
     border-radius: 10px;
@@ -314,12 +319,32 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+    background: transparent;
 }
 
 .selectButton {
     color: white;
     border-width: 1px;
     border-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 19rem;
+    width: 19rem;
+    padding: 1rem;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+.selectButton:hover {
+    color: white;
+    border-width: 1px;
+    border-color: gray;
+    background: #A855F7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -512,7 +537,7 @@
     }
 
     .PayoutWrapper {
-        background: #222223;
+        background: #0F172A;
         z-index: 9999;
         position: fixed;
         display: flex;
@@ -529,11 +554,35 @@
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+        background-size: cover;
+        background-color: transparent;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-top.svg?alt=media&token=19bcb82e-3b7f-4ecb-9a48-19521e5bc882);
     }
 
     .selectButton {
         color: white;
         border-width: 1px;
+        border-color: gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        height: 4rem;
+        width: 10rem;
+        padding: 1rem;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+    }
+    .selectButton:hover {
+        color: white;
+        border-width: 1px;
+        background: #A855F7;
         border-color: gray;
         display: flex;
         flex-direction: column;

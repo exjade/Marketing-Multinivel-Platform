@@ -1876,6 +1876,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(168 85 247 / var(--tw-border-opacity));
 }
+.border-badges-admin {
+  --tw-border-opacity: 1;
+  border-color: rgb(141 23 23 / var(--tw-border-opacity));
+}
 .bg-black-default {
   --tw-bg-opacity: 1;
   background-color: rgb(16 16 16 / var(--tw-bg-opacity));
