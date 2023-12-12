@@ -43,9 +43,9 @@ html {
 
 body {
     background: #0F172A;
-    font-family: poppins, sans-serif;
+    font-family: Roboto Mono, sans-serif;
     min-height: 100vh;
-    color: var(--color-dark)
+    color: white;
 }
 
 img {
@@ -138,14 +138,20 @@ small {
     display: flex;
     gap: 2rem;
     width: 100%;
-    background: #272729;
+    /* background: #0F172A; */
+    background-color: aqua;
+    background-origin: content-box;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fglow-bottom.svg?alt=media&token=7696150a-dc9e-4e02-aaa4-e54a490ff873);
     flex-direction: column;
 }
 
 .section {
     display: grid;
     gap: 1rem;
-    background: #272729;
+    background: #0F172A;
 }
 
 .container {

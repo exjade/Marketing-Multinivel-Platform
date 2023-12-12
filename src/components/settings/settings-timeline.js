@@ -57,37 +57,34 @@ const SettingsTimeline = ({
 
     const updateUserInformation = async () => {
         try {
-            if (infoUser.secretWord === user?.secretWord) {
-                const userRef = doc(firestore, 'users', user?.docId)
-                await updateDoc(userRef, { bankInformationTether: bankInformation.tether })
+            const userRef = doc(firestore, 'users', user?.docId)
+            await updateDoc(userRef, { bankInformationTether: bankInformation.tether })
 
-                if (infoUser.fullName !== '') { await updateDoc(userRef, { fullName: infoUser.fullName }) }
-                if (infoUser.email !== '') { await updateDoc(userRef, { email: infoUser.email }) }
-                if (infoUser.street !== '') { await updateDoc(userRef, { street: infoUser.street }) }
-                if (infoUser.city !== '') { await updateDoc(userRef, { city: infoUser.city }) }
-                if (infoUser.state !== '') { await updateDoc(userRef, { state: infoUser.state }) }
-                if (infoUser.country !== '') {
-                    await updateDoc(userRef, {
-                        profile: {
-                            ...user?.profile,
-                            location: infoUser.country
-                        }
-                    })
-                }
-                if (infoUser.zip !== '') { await updateDoc(userRef, { zip: infoUser.zip }) }
-                if (infoUser.wallet !== '') { await updateDoc(userRef, { wallet: infoUser.wallet }) }
-                if (infoUser.pin !== '') { await updateDoc(userRef, { pin: infoUser.pin }) }
-
-
-                setSuccess(t('User information updated successfully'))
-                setTimeout(() => {
-                    setSuccess(null)
-                    history.push(ROUTES.PROFILE)
-                    history.push(ROUTES.SETTINGS)
-                }, 2000)
-            } else {
-                setSecretWordtxt('Please try again. You misspelled your secret word')
+            if (infoUser.fullName !== '') { await updateDoc(userRef, { fullName: infoUser.fullName }) }
+            if (infoUser.email !== '') { await updateDoc(userRef, { email: infoUser.email }) }
+            if (infoUser.street !== '') { await updateDoc(userRef, { street: infoUser.street }) }
+            if (infoUser.city !== '') { await updateDoc(userRef, { city: infoUser.city }) }
+            if (infoUser.state !== '') { await updateDoc(userRef, { state: infoUser.state }) }
+            if (infoUser.country !== '') {
+                await updateDoc(userRef, {
+                    profile: {
+                        ...user?.profile,
+                        location: infoUser.country
+                    }
+                })
             }
+            if (infoUser.zip !== '') { await updateDoc(userRef, { zip: infoUser.zip }) }
+            if (infoUser.wallet !== '') { await updateDoc(userRef, { wallet: infoUser.wallet }) }
+            if (infoUser.pin !== '') { await updateDoc(userRef, { pin: infoUser.pin }) }
+
+
+            setSuccess(t('User information updated'))
+            setTimeout(() => {
+                setSuccess(null)
+                history.push(ROUTES.PROFILE)
+                history.push(ROUTES.SETTINGS)
+            }, 2000)
+
         } catch (error) {
             console.log(error)
             setError(t('Error updating user information'))
@@ -120,10 +117,6 @@ const SettingsTimeline = ({
 
                 <Error>
                     <div></div>
-                    {/* <SidebarComponent
-                    isOpen={isOpen}
-                    setIsOpen={setIsOpen}
-                /> */}
                 </Error>
                 <section className={`${styles.section}`} >
                     {/* <Settings theme={theme} /> */}

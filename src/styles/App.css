@@ -2022,6 +2022,14 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(37 37 48 / var(--tw-bg-opacity));
 }
+.bg-badges-admin {
+  --tw-bg-opacity: 1;
+  background-color: rgb(141 23 23 / var(--tw-bg-opacity));
+}
+.bg-blue-input {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 41 125 / var(--tw-bg-opacity));
+}
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
 }
@@ -2711,6 +2719,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(37 150 130 / var(--tw-text-opacity));
 }
+.text-badges-admin {
+  --tw-text-opacity: 1;
+  color: rgb(141 23 23 / var(--tw-text-opacity));
+}
 .underline {
   text-decoration-line: underline;
 }
@@ -3112,6 +3124,10 @@ video {
   .dark\:text-black-textBg {
     --tw-text-opacity: 1;
     color: rgb(18 23 23 / var(--tw-text-opacity));
+  }
+  .dark\:text-white-placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(227 227 227 / var(--tw-text-opacity));
   }
   .dark\:hover\:bg-gray-branding:hover {
     --tw-bg-opacity: 1;
