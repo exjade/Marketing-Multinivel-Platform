@@ -180,6 +180,7 @@ small {
         flex-direction: column;
         background: white;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -196,20 +197,53 @@ small {
         background: white;
     }
 
+    .main {
+        display: flex;
+        gap: 2rem;
+        height: 100%;
+        width: 100%;
+        justify-items: center;
+        background: #0F172A;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        align-content: center;
+    }
+
+
 }
 
 @media (max-width: 480px) {
     .section {
         display: flex;
         /* gap: 5rem; */
-        width: 80%;
+        width: 100%;
         height: 100%;
-        margin-top: 12rem;
+        margin-top: 3rem;
         justify-content: center;
         align-items: center;
         justify-items: center;
         flex-direction: column;
         background: white;
+    }
+
+    .main {
+        display: flex;
+        gap: 2rem;
+        height: 100%;
+        width: 100%;
+        justify-items: center;
+        background: #0F172A;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        align-content: center;
+    }
+    body {
+        background: white;
+        font-family: Roboto Mono, sans-serif;
+        min-height: 100vh;
+        color: var(--color-dark)
     }
 
     ::-webkit-scrollbar {
@@ -220,15 +254,35 @@ small {
 @media (max-width: 390px) {
     .section {
         display: flex;
-        width: 98%;
+        width: 100%;
         height: 100%;
         justify-content: center;
         align-items: center;
         justify-items: center;
         flex-direction: column;
         background: white;
+        margin-top: 2rem;
     }
 
+    .main {
+        display: flex;
+        gap: 2rem;
+        height: 100%;
+        width: 100%;
+        justify-items: center;
+        background: #0F172A;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        align-content: center;
+    }
+    body {
+        background: white;
+        font-family: Roboto Mono, sans-serif;
+        min-height: 100vh;
+        color: var(--color-dark)
+    }
+    
     ::-webkit-scrollbar {
         display: none;
     }

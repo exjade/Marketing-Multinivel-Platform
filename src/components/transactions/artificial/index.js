@@ -167,9 +167,9 @@ const ArtificialTransactionsWithdrawal = () => {
                 setLoaderError('')
                 setWithdrawalAmountError('')
                 setLoader(false)
-                setTimeout(() => {
-                    window.location.reload()
-                }, 50)
+                // setTimeout(() => {
+                //     window.location.reload()
+                // }, 50)
             }, 1000)
         } catch (err) {
             console.log(err)

@@ -7,7 +7,6 @@ import TransactionTimeline from '../components/transactions/transaction-timeline
 import Menu from '../components/header/menu'
 //hooks
 import useTheme from '../hooks/use-theme'
-import useCoin from '../hooks/use-coin'
 import useTransactions from '../hooks/use-transactions'
 import useMenu from '../hooks/use-menu'
 //Proptypes
@@ -18,9 +17,8 @@ import Header from '../components/header/artificial/header'
 
 const Transaction = () => {
 
-    useEffect(() => { document.title = 'Balances - Artificial' }, []) //eslint-disable-line
+    useEffect(() => { document.title = 'Balances - CapitalTradersBusiness' }, []) //eslint-disable-line
     const { theme, setTheme } = useTheme()
-    const { setSearch } = useCoin()
     const { transactionSearch, setTransactionSearch } = useTransactions()
     // menu functionality
     const [isOpen, setIsOpen] = useState(false)
@@ -35,7 +33,6 @@ const Transaction = () => {
                 exit={{ opacity: 0 }}
             >
                 <Header
-                    setSearch={setSearch}
                     handleOpen={handleOpen}
                     theme={theme}
                     setTheme={setTheme}

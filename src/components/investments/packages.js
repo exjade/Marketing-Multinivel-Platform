@@ -145,7 +145,6 @@ const Packages = () => {
         divisas: '',
         currency: ''
     })
-    console.log(investment)
 
     const priceAmount = investment.amount
     const orderId = shortid.generate().trim();
@@ -155,7 +154,6 @@ const Packages = () => {
         priceAmount,
         payCurrency
     })
-    console.log(pay)
 
 
     const packageInformation = {

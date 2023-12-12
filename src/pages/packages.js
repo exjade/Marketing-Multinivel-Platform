@@ -7,7 +7,6 @@ import PackageTimeline from '../components/investments/packages-timeline'
 import Menu from '../components/header/menu'
 //hooks
 import useTheme from '../hooks/use-theme'
-import useCoin from '../hooks/use-coin'
 import useMenu from '../hooks/use-menu'
 //Proptypes
 import PropTypes from 'prop-types'
@@ -17,9 +16,8 @@ import Header from '../components/header/artificial/header'
 
 const Packages = () => {
 
-    useEffect(() => { document.title = 'Packages - Artificial' }, []) //eslint-disable-line
+    useEffect(() => { document.title = 'Packages - CapitalTradersBusiness' }, []) //eslint-disable-line
     const { theme, setTheme } = useTheme()
-    const { setSearch } = useCoin()
     // menu functionality
     const [isOpen, setIsOpen] = useState(false)
     const handleOpen = () => setIsOpen(true)
@@ -33,7 +31,6 @@ const Packages = () => {
                 exit={{ opacity: 0 }}
             >
                 <Header
-                    setSearch={setSearch}
                     handleOpen={handleOpen}
                     theme={theme}
                     setTheme={setTheme}

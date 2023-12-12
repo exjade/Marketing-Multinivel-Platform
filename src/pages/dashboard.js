@@ -7,7 +7,6 @@ import styles from '../styles/landing/landing.module.css'
 import Timeline from '../components/timeline';
 import Menu from '../components/header/menu';
 //hooks
-import useCoin from '../hooks/use-coin';
 import useTheme from '../hooks/use-theme';
 import useRefferal from '../hooks/use-referral';
 //Proptypes
@@ -19,7 +18,6 @@ import Header from '../components/header/artificial/header';
 const Dashboard = () => {
 
   useEffect(() => { document.title = 'Dashboard - CapitalTradersBusiness' }, []) //eslint-disable-line
-  const { coins, search, setSearch } = useCoin()
   const { theme, setTheme } = useTheme()
   //eslint-disable-next-line no-unused-vars
   const { users: referralUsers } = useRefferal()
@@ -45,7 +43,6 @@ const Dashboard = () => {
         >
           <Error>
             <Header
-              setSearch={setSearch}
               theme={theme}
               setTheme={setTheme}
               toggleOpen={toggleOpen}
@@ -64,8 +61,6 @@ const Dashboard = () => {
           }
           <Error>
             <Timeline
-              coins={coins}
-              search={search}
               isOpen={isOpen}
               setIsOpen={setIsOpen}
               theme={theme}

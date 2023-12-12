@@ -189,6 +189,7 @@
     align-items: center;
     width: 100%;
     margin-bottom: 8rem;
+    background: white;
 }
 
 .TransactionsHistorialWrapper {
@@ -280,7 +281,7 @@
 
 
 .TransactionsHistorialTableBody {
-    color: white;
+    color: black;
 }
 
 
@@ -460,7 +461,7 @@
         justify-content: center;
         align-items: center;
         height: 100%;
-        margin-top: 3rem;
+        margin-top: 6rem;
     }
 
 }
@@ -493,7 +494,7 @@
     }
 
     .TransactionsHistorialTableBody {
-        color: white;
+        color: black;
         margin-bottom: 2rem;
         border-bottom-color: rgb(255, 255, 255);
         border-bottom-style: dotted;

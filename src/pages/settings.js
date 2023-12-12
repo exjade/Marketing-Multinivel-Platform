@@ -8,7 +8,6 @@ import Menu from '../components/header/menu'
 import SettingsTimeline from '../components/settings/settings-timeline'
 //hooks
 import useTheme from '../hooks/use-theme'
-import useCoin from '../hooks/use-coin'
 import useMenu from '../hooks/use-menu'
 //Proptypes
 import PropTypes from 'prop-types'
@@ -18,9 +17,8 @@ import Header from '../components/header/artificial/header'
 
 const AccountSettings = () => {
 
-    useEffect(() => { document.title = 'Account Settings - Artificial' }, []) //eslint-disable-line
+    useEffect(() => { document.title = 'Account Settings - CapitalTradersBusiness' }, []) //eslint-disable-line
     const { theme, setTheme } = useTheme()
-    const { setSearch } = useCoin()
     // menu functionality
     const [isOpen, setIsOpen] = useState(false)
     const handleOpen = () => setIsOpen(true)
@@ -34,7 +32,6 @@ const AccountSettings = () => {
                 exit={{ opacity: 0 }}
             >
                 <Header
-                    setSearch={setSearch}
                     handleOpen={handleOpen}
                     theme={theme}
                     setTheme={setTheme}

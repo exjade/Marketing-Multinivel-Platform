@@ -18,24 +18,24 @@ const CoinList = () => {
     const { watchList, deleteCoin } = useContext(WatchListContext)
     const [isLoading, setIsLoading] = useState(false)
 
-    useEffect(() => {
-        const fetchCoinList = async () => {
-            setIsLoading(true)
-            const response = await coinGecko.get('/coins/markets', {
-                params: {
-                    vs_currency: 'usd',
-                    ids: watchList.join(','),
-                },
-            })
-            setCoins(response.data)
-            setIsLoading(false)
-        }
-        if (watchList.length > 0) {
-            fetchCoinList()
-        } else {
-            setCoins([])
-        }
-    }, [watchList])
+    // useEffect(() => {
+    //     const fetchCoinList = async () => {
+    //         setIsLoading(true)
+    //         const response = await coinGecko.get('/coins/markets', {
+    //             params: {
+    //                 vs_currency: 'usd',
+    //                 ids: watchList.join(','),
+    //             },
+    //         })
+    //         setCoins(response.data)
+    //         setIsLoading(false)
+    //     }
+    //     if (watchList.length > 0) {
+    //         fetchCoinList()
+    //     } else {
+    //         setCoins([])
+    //     }
+    // }, [watchList])
 
     const renderCoins = () => {
         if (isLoading) {
