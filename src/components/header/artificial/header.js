@@ -34,7 +34,7 @@ const Header = () => {
     }
 
 
-    const walletBalance = user?.topupBalance;
+    const walletBalance = user?.Withdrawal;
     const accountValue = walletBalance;
 
 
@@ -196,7 +196,7 @@ const Header = () => {
                     <motion.span
                         className={styles.userInfo}
                         variants={item}>
-                        <p className='text-white-normal text-xl sm:text-2sl'>
+                        <p className='text-white-normal text-xl sm:text-md sm:text-2sl'>
                             {
                                 isNaN(accountValue) ? (
                                     <p className='animate-pulse text-gray-loader'>...</p>
