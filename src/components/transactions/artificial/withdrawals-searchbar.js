@@ -17,7 +17,7 @@ const TransactionsSearchbar = ({ setSearchWithdrawal }) => {
                     type="search"
                     name="Search"
                     placeholder="Search..."
-                    className="w-44 h-12 py-2 pl-10 text-sm rounded-md sm:w-72 focus:outline-none bg-black-normal text-white-normal focus:bg-gray-info focus:border-indigo-600"
+                    className="w-72 h-12 py-2 pl-10 text-sm rounded-md   focus:outline-none bg-blue-background text-white-normal focus:bg-gray-info focus:border-indigo-600"
                     onChange={e => setSearchWithdrawal(e.target.value)}
                 />
             </div>

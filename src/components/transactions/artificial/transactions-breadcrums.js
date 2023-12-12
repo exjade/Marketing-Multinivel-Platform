@@ -10,7 +10,7 @@ const TransactionsBreadCrums = ({ setTabs, tabs }) => {
                 <div className='flex flex-row w-full justify-between items-center h-16'>
                     <motion.button
                         type='button'
-                        className={`${tabs.deposits && 'bg-gray-adminParagraph text-white-normal '} w-1/2 py-4 rounded-sm flex flex-col justify-center items-center`}
+                        className={`${tabs.deposits && 'bg-blue-background text-white-normal '} w-1/2 py-4 rounded-sm flex flex-col justify-center items-center`}
                         onClick={() => setTabs({
                             deposits: true,
                             withdrawals: false,
@@ -20,16 +20,14 @@ const TransactionsBreadCrums = ({ setTabs, tabs }) => {
                         whileTap={{ scale: 0.9 }}
                     >
                         <div>
-                            <span className="material-symbols-sharp">
-                                account_balance
-                            </span>
+                           
                             <p className={`${tabs.deposits ? 'text-white-normal' : 'hidden'} text-md font-medium`}>Deposits</p>
                         </div>
                     </motion.button>
 
                     <motion.button
                         type='button'
-                        className={`${tabs.withdrawals && 'bg-gray-adminParagraph text-white-normal  '} w-1/2 py-4 rounded-sm flex flex-col justify-center items-center`}
+                        className={`${tabs.withdrawals && 'bg-blue-background text-white-normal  '} w-1/2 py-4 rounded-sm flex flex-col justify-center items-center`}
                         onClick={() => setTabs({
                             deposits: false,
                             withdrawals: true,
@@ -39,31 +37,10 @@ const TransactionsBreadCrums = ({ setTabs, tabs }) => {
                         whileTap={{ scale: 0.9 }}
                     >
                         <div>
-                            <span className="material-symbols-sharp">
-                                currency_exchange
-                            </span>
+                           
                             <p className={`${tabs.withdrawals ? 'text-white-normal' : 'hidden'} text-md font-medium`}>Withdrawals</p>
                         </div>
 
-                    </motion.button>
-
-                    <motion.button
-                        type='button'
-                        className={`${tabs.wallet && 'bg-gray-adminParagraph text-white-normal  '} w-1/2 py-4 rounded-sm flex flex-col justify-center items-center`}
-                        onClick={() => setTabs({
-                            deposits: false,
-                            withdrawals: false,
-                            wallet: true,
-                            staking: false,
-                        })}
-                        whileTap={{ scale: 0.9 }}
-                    >
-                        <div>
-                            <span className="material-symbols-sharp">
-                                wallet
-                            </span>
-                            <p className={`${tabs.wallet ? 'text-white-normal' : 'hidden'} text-md font-medium `}>Wallet</p>
-                        </div>
                     </motion.button>
                 </div>
             </div>

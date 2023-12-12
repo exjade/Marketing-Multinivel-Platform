@@ -223,9 +223,6 @@ const ArtificialTransactionsWithdrawal = () => {
 
     return (
         <>
-            {/* <Header
-                user={user}
-            /> */}
             <TransactionsCards
                 user={user}
                 staking={staking}

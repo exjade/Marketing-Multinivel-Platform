@@ -3230,6 +3230,9 @@ video {
   .sm\:w-\[20\%\] {
     width: 20%;
   }
+  .sm\:w-44 {
+    width: 11rem;
+  }
   .sm\:max-w-md {
     max-width: 28rem;
   }
@@ -3389,9 +3392,6 @@ video {
   .md\:mx-2 {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-  }
-  .md\:inline {
-    display: inline;
   }
   .md\:flex {
     display: flex;

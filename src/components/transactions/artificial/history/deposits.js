@@ -22,15 +22,9 @@ const Deposits = ({
     <div className={`${styles.TransactionsHistorialContainer}`} >
       <div className={`${styles.TransactionsHistorialWrapper}`} >
         <div className={`${styles.TransactionsHistorialHeader} mb-16 `}>
-          {/* titulo */}
-          <h2 className='text-2xl font-bold hidden sm:inline text-white-normal'>
-            Deposits table
-          </h2>
-          {/* barra de busqueda */}
-          <TransactionsSearchbar
+           <TransactionsSearchbar
             setSearchTransaction={setSearchTransaction}
           />
-          {/* botón de payout */}
           <button
             type='button'
             className={`${styles.TransactionsHistorialPayout}`}
@@ -45,7 +39,6 @@ const Deposits = ({
           tabs={tabs}
         />
 
-        {/* Tabla de datos */}
         <table className={`${styles.TransactionsHistorialTable}`} >
           <thead className={`${styles.TransactionsHistorialTableTitle}`}>
             <tr className={`${styles.TransactionsHistorialTableTitle}`}>

@@ -10,7 +10,7 @@ html {
 
 body {
     background: #0F172A;
-    font-family: poppins, sans-serif;
+    font-family: Roboto Mono, sans-serif;
     min-height: 100vh;
     color: var(--color-dark)
 }
@@ -46,7 +46,7 @@ h6 {
 
 p {
     font-size: 0.86rem;
-    color: var(--color-gray-dark);
+    color: white;
 }
 
 small {
@@ -101,7 +101,6 @@ small {
 }
 
 /* ================ PACKAGES ================ */
-body {}
 
 .main {
     display: flex;
@@ -126,70 +125,113 @@ body {}
 } */
 
 .section {
-    display: grid;
+    display: flex;
     /* gap: 5rem; */
+    width: 50%;
     height: 100%;
-    margin-top: 15rem;
+    margin-top: 12rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    background: white;
 }
 
 @media screen and (min-device-width:7641px), screen and (max-width:1641px) {
     .section {
-        display: grid;
+        display: flex;
         /* gap: 5rem; */
+        width: 50%;
         height: 100%;
-        margin-top: 15rem;
+        margin-top: 12rem;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        background: white;
     }
 }
 
 @media screen and (min-device-width:1640px), screen and (max-width:1024px) {
     .section {
-        display: grid;
+        display: flex;
         /* gap: 5rem; */
+        width: 50%;
         height: 100%;
-        margin-top: 15rem;
+        margin-top: 12rem;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        background: white;
     }
 }
 
 @media (max-width: 980px) {
     .section {
-        display: grid;
+        display: flex;
         /* gap: 5rem; */
+        width: 85%;
         height: 100%;
-        margin-top: 15rem;
+        margin-top: 12rem;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        background: white;
     }
 }
 
 @media (max-width: 600px) {
     .section {
-        display: grid;
+        display: flex;
         /* gap: 5rem; */
+        width: 85%;
         height: 100%;
-        margin-top: 15rem;
+        margin-top: 12rem;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        background: white;
     }
 
 }
 
 @media (max-width: 480px) {
     .section {
-        display: grid;
+        display: flex;
         /* gap: 5rem; */
+        width: 80%;
         height: 100%;
-        margin-top: 15rem;
+        margin-top: 12rem;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        background: white;
     }
+
     ::-webkit-scrollbar {
         display: none;
-        }
+    }
 }
+
 @media (max-width: 390px) {
     .section {
-        display: grid;
-        /* gap: 5rem; */
+        display: flex;
+        width: 98%;
         height: 100%;
-        margin-top: 15rem;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        background: white;
     }
+
     ::-webkit-scrollbar {
         display: none;
-        }
+    }
 }
 
 .container {

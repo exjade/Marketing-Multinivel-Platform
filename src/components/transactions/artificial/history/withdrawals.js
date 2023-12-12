@@ -25,15 +25,11 @@ const Withdrawals = ({
 
 
         <div className={`${styles.TransactionsHistorialHeader} mb-16 `}>
-          {/* titulo */}
-          <h2 className='text-2xl font-bold hidden sm:inline text-white-normal'>
-            Payout table
-          </h2>
-          {/* barra de busqueda */}
+         
           <TransactionsSearchbar
             setSearchWithdrawal={setSearchWithdrawal}
           />
-          {/* botón de payout */}
+
           <button
             type='button'
             className={`${styles.TransactionsHistorialPayout}`}
@@ -48,7 +44,6 @@ const Withdrawals = ({
           tabs={tabs}
         />
 
-        {/* Tabla de datos */}
         <table className={`${styles.TransactionsHistorialTable}`} >
           <thead className={`${styles.TransactionsHistorialTableTitle}`}>
             <tr className={`${styles.TransactionsHistorialTableTitle}`}>

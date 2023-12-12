@@ -49,7 +49,7 @@
     justify-content: center;
     align-items: center;
     height: 15rem;
-    margin-bottom: 6rem
+    margin-bottom: 6rem;
 }
 
 .transactionsCardsContainer>span {
@@ -74,7 +74,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 90%;
 }
@@ -86,7 +86,15 @@
     align-content: center;
     justify-content: space-between;
     align-items: center;
+    border-radius: 10px;
     width: 90%;
+    background: #2D394C;
+    padding: 3rem;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fauth-illustration.svg?alt=media&token=b65343c8-6ab1-4c33-98dc-6b72c3e9728f);
+    background-size: auto;
+    background-origin: content-box;
+    background-position: center;
+    background-repeat: repeat;
 }
 
 .transactionsCardsStaking {
@@ -118,27 +126,20 @@
 
 
 .transactionsCardsBalance {
-    background: #FF5645;
-    border-radius: 15px;
-    width: 30%;
-    height: 12rem;
-    border-width: 1px;
-    border-color: #c5bbbb87;
-    border-style: dotted;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: flex-start;
+        border-radius: 15px;
+        width: 48%;
+        height: 12rem;
+        border-width: 5px;
+        border-color: #C6CCD5;
+        border-style: groove;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
 }
 
-.transactionsCardsBalance>span:first-child {
-    padding-left: 2em;
-    padding-top: 2em;
-    height: 100%;
-    width: 50%;
-    height: 100%;
-}
+
 
 .transactionsCardsBalance>span:nth-child(2) {
     display: flex;
@@ -151,27 +152,19 @@
 }
 
 .transactionsCardWithdrawal {
-    background: #222223;
-    /* padding: 2em; */
     border-radius: 15px;
-    width: 30%;
+    width: 48%;
     height: 12rem;
-    border-width: 1px;
-    border-color: #c5bbbb87;
-    border-style: dotted;
+    border-width: 5px;
+    border-color: #C6CCD5;
+    border-style: groove;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
-.transactionsCardWithdrawal>span:first-child {
-    padding-left: 2em;
-    padding-top: 2em;
-    height: 100%;
-    width: 50%;
-}
 
 .transactionsCardWithdrawal>span:nth-child(2) {
     height: 100%;
@@ -217,11 +210,11 @@
 }
 
 .TransactionsHistorialPayout {
-    background: #222223;
+    background: #A855F7;
     padding: 1rem;
-    padding-left: 4rem;
+    padding-left: 7rem;
     color: white;
-    padding-right: 4rem;
+    padding-right: 7rem;
     border-radius: 15px;
 }
 
@@ -392,8 +385,9 @@
         align-content: center;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
+        width: 100%;
         gap: 1rem;
+        padding: 0rem;
     }
 
     .transactionsCardsStaking {
@@ -412,23 +406,33 @@
     }
 
     .transactionsCardsBalance {
-        background: #FF5645;
         border-radius: 15px;
-        width: 90%;
+        width: 70%;
         height: 12rem;
-        border-width: 1px;
-        border-color: #c5bbbb87;
-        border-style: dotted;
+        margin-top: 2rem;
+        border-width: 5px;
+        border-color: #C6CCD5;
+        border-style: groove;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .transactionsCardWithdrawal {
-        background: #222223;
         border-radius: 15px;
-        width: 90%;
+        width: 70%;
+        margin-bottom: 2rem;
         height: 12rem;
-        border-width: 1px;
-        border-color: #c5bbbb87;
-        border-style: dotted;
+        border-width: 5px;
+        border-color: #C6CCD5;
+        border-style: groove;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
     }
 
     .transactionsHeaderContainer {
@@ -455,8 +459,8 @@
         align-content: center;
         justify-content: center;
         align-items: center;
-        height: 15rem;
-        margin-bottom: 16rem
+        height: 100%;
+        margin-top: 3rem;
     }
 
 }
@@ -574,9 +578,37 @@
     .activeButton>svg>path {
         fill: transparent !important;
         stroke: rgba(255, 255, 255, 1);
+        
+        
         stroke-width: 1px;
     }
 
+    .transactionsCardsBalance {
+        border-radius: 15px;
+        width: 95%;
+        border-width: 0px;
+        border-color: #C6CCD5;
+        border-style: groove;
+        display: flex;
+        flex-direction: row;
+        
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .transactionsCardWithdrawal{
+        border-radius: 15px;
+        width: 95%;
+        height: 12rem;
+        border-width: 0px;
+        border-color: #C6CCD5;
+        border-style: groove;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (min-device-width:7641px), screen and (max-width:1641px) {
