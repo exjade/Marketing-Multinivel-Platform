@@ -102,18 +102,6 @@ const SelectQrPayment = ({
 
 
                 <div className={`${styles.qramount}`}>
-                    {/* <motion.span className={`${styles.address}`} variants={item}>
-                        {
-                            pay?.pay_address === undefined ?
-                                (
-                                    <p className='animate-pulse opacity-95'>...</p>
-                                )
-                                :
-                                (
-                                    <p className={`${styles.address} cursor-pointer`}>{pay?.pay_address}</p>
-                                )
-                        }
-                    </motion.span> */}
                     {
                         pay?.pay_amount === undefined ?
                             (
@@ -123,12 +111,12 @@ const SelectQrPayment = ({
                             )
                             :
                             (
-                                <span className='flex flex-col '>
-                                    <p className='text-lg font-semibold uppercase'>{pay?.pay_currency}:</p>
+                                <span className='flex flex-col justify-center items-center '>
+                                    <p className='text-lg font-semibold uppercase'><b className='text-bold'>SEND</b> {pay?.pay_currency} + GAS FEE:</p>
                                     <p className={`${styles.amount}`}>
                                         {pay?.pay_amount?.toFixed(4)}
                                     </p>
-                                    <p className='text-lg font-semibold uppercase'>USD:</p>
+                                    <p className='text-lg font-semibold uppercase'>Investment:</p>
                                     <p className={`${styles.amount}`}>
                                         ${pay_amount?.toLocaleString('en-US', {
                                             style: 'currency',
