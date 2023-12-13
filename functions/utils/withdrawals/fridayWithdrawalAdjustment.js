@@ -4,7 +4,7 @@ const db = admin.firestore();
 
 // =================================== FRIDAY WITHDRAWAL: STARTER ================================================ //
 exports.FridayWithdrawalAdjustmentStarter = functions.pubsub
-    .schedule('5 4 * * FRI') //“At 04:05 on Friday.” 
+    .schedule('5 2 * * *') //“At 04:05 Every day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
         const _data = []
@@ -15,8 +15,8 @@ exports.FridayWithdrawalAdjustmentStarter = functions.pubsub
                 .then(snapshot => {
                     snapshot.forEach(doc => {
                         const user = doc.data();
-                        //Limite del 200%
-                        const limitContract = user?.Applied >= 1 && user?.Applied < 50 && user?.Profit < user?.Applied * 200 / 100;
+                        //Limite del 300%
+                        const limitContract = user?.Applied >= 1 && user?.Applied < 50 && user?.Profit < user?.Applied * 300 / 100;
                         // El balance debe tener más del 12% 
                         const batch = db.batch();
                         // La inversión y el balance es mayor 
@@ -46,7 +46,7 @@ exports.FridayWithdrawalAdjustmentStarter = functions.pubsub
     });
 // =================================== FRIDAY WITHDRAWAL: INITIAL ================================================ //
 exports.FridayWithdrawalAdjustmentInitial = functions.pubsub
-    .schedule('15 4 * * FRI') //“At 04:15 on Friday.” 
+    .schedule('15 2 * * *') //“At 04:15 Every day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
         const _data = []
@@ -57,8 +57,8 @@ exports.FridayWithdrawalAdjustmentInitial = functions.pubsub
                 .then(snapshot => {
                     snapshot.forEach(doc => {
                         const user = doc.data();
-                        //Limite del 200%
-                        const limitContract = user?.Applied >= 50 && user?.Applied < 100 && user?.Profit < user?.Applied * 200 / 100;
+                        //Limite del 300%
+                        const limitContract = user?.Applied >= 50 && user?.Applied < 100 && user?.Profit < user?.Applied * 300 / 100;
                         // El balance debe tener más del 12% 
                         const batch = db.batch();
                         // La inversión y el balance es mayor 
@@ -88,7 +88,7 @@ exports.FridayWithdrawalAdjustmentInitial = functions.pubsub
     });
 // =================================== FRIDAY WITHDRAWAL: TAIL =================================================== //
 exports.FridayWithdrawalAdjustmentTail = functions.pubsub
-    .schedule('25 4 * * FRI') //“At 07:25 on Friday.” 
+    .schedule('25 2 * * *') //“At 07:25 Every day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
         const _data = []
@@ -99,8 +99,8 @@ exports.FridayWithdrawalAdjustmentTail = functions.pubsub
                 .then(snapshot => {
                     snapshot.forEach(doc => {
                         const user = doc.data();
-                        //Limite del 200%
-                        const limitContract = user?.Applied >= 100 && user?.Applied < 250 && user?.Profit < user?.Applied * 200 / 100;
+                        //Limite del 300%
+                        const limitContract = user?.Applied >= 100 && user?.Applied < 250 && user?.Profit < user?.Applied * 300 / 100;
                         // El balance debe tener más del 12% 
                         const batch = db.batch();
                         // La inversión y el balance es mayor 
@@ -130,7 +130,7 @@ exports.FridayWithdrawalAdjustmentTail = functions.pubsub
     });
 // =================================== FRIDAY WITHDRAWAL: GOLD =================================================== //
 exports.FridayWithdrawalAdjustmentGold = functions.pubsub
-    .schedule('35 4 * * FRI') //“At 04:35 on Friday.” 
+    .schedule('35 2 * * *') //“At 04:35 Every day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
         const _data = []
@@ -141,8 +141,8 @@ exports.FridayWithdrawalAdjustmentGold = functions.pubsub
                 .then(snapshot => {
                     snapshot.forEach(doc => {
                         const user = doc.data();
-                        //Limite del 200%
-                        const limitContract = user?.Applied >= 250 && user?.Applied < 1000 && user?.Profit < user?.Applied * 200 / 100;
+                        //Limite del 300%
+                        const limitContract = user?.Applied >= 250 && user?.Applied < 1000 && user?.Profit < user?.Applied * 300 / 100;
                         // El balance debe tener más del 12% 
                         const batch = db.batch();
                         // La inversión y el balance es mayor 
@@ -173,7 +173,7 @@ exports.FridayWithdrawalAdjustmentGold = functions.pubsub
 // =================================== FRIDAY WITHDRAWAL: PREMIUM =================================================== //
 
 exports.FridayWithdrawalAdjustmentPremium = functions.pubsub
-    .schedule('45 4 * * FRI') //“At 04:45 on Friday.” 
+    .schedule('45 2 * * *') //“At 04:45 Every day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
         const _data = []
@@ -184,8 +184,8 @@ exports.FridayWithdrawalAdjustmentPremium = functions.pubsub
                 .then(snapshot => {
                     snapshot.forEach(doc => {
                         const user = doc.data();
-                        //Limite del 200%
-                        const limitContract = user?.Applied >= 1000 && user?.Applied < 10000 && user?.Profit < user?.Applied * 200 / 100;
+                        //Limite del 300%
+                        const limitContract = user?.Applied >= 1000 && user?.Applied < 10000 && user?.Profit < user?.Applied * 300 / 100;
                         // El balance debe tener más del 12% 
                         const batch = db.batch();
                         // La inversión y el balance es mayor 
@@ -215,7 +215,7 @@ exports.FridayWithdrawalAdjustmentPremium = functions.pubsub
     });
 // =================================== FRIDAY WITHDRAWAL: Diamond =================================================== //
 exports.FridayWithdrawalAdjustmentDiamond = functions.pubsub
-    .schedule('55 4 * * FRI') //“At 04:55 on Friday.” 
+    .schedule('55 2 * * *') //“At 04:55 Every day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
         const _data = []
@@ -226,8 +226,8 @@ exports.FridayWithdrawalAdjustmentDiamond = functions.pubsub
                 .then(snapshot => {
                     snapshot.forEach(doc => {
                         const user = doc.data();
-                        //Limite del 200%
-                        const limitContract = user?.Applied >= 10000 && user?.Applied < 100000 && user?.Profit < user?.Applied * 200 / 100;
+                        //Limite del 300%
+                        const limitContract = user?.Applied >= 10000 && user?.Applied < 100000 && user?.Profit < user?.Applied * 300 / 100;
                         // El balance debe tener más del 12% 
                         const batch = db.batch();
                         // La inversión y el balance es mayor 
