@@ -61,9 +61,6 @@ const TransactionTimeline = () => {
   const completedTransactions = deposits?.filter(transaction => transaction.amount > 0)
   const transactionsInPlatform = AllDeposits?.filter(transaction => transaction.amount > 0)
 
-
-  console.log(transactionsInPlatform)
-
   const filterTransactions = transactionsInPlatform?.filter((search) =>
     search.id?.toLowerCase().includes(transactionSearch.toLowerCase()) ||
     search.status?.toLowerCase().includes(transactionSearch.toLowerCase()) ||
