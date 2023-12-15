@@ -300,7 +300,7 @@ const Packages = () => {
                         currency: '',
                     });
                 }, 1500)
-                // return newCustomDoc()
+                return newCustomDoc()
             } else {
                 setSuccessPayment(true)
                 // newCustomDoc()
