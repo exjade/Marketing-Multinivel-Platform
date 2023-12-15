@@ -85,7 +85,8 @@ const TransactionsAdmin = ({
                                     filterTransactions?.length > 0 ? (
                                         <>
                                             {
-                                                filterTransactions?.slice(0, 20).map((item, i) => (
+                                                filterTransactions?.slice(0, 20).map((item, i) => 
+                                                (
                                                     <tbody className="bg-black" key={i}>
                                                         <tr>
                                                             <td className="px-6 py-4 blackspace-no-wrap border-b border-gray-button">
@@ -97,9 +98,9 @@ const TransactionsAdmin = ({
                                                             </td>
                                                             {
                                                                 item?.nowpayments[0]?.payment_id !== undefined ? (
-                                                                    <td className="px-6 py-4 blackspace-no-wrap border-b text-black-normal  border-gray-500 text-sm leading-5">{item?.nowpayments[0]?.payment_id}</td>
+                                                                    <td className="px-6 py-4 blackspace-no-wrap border-b text-black-normal  border-gray-500 text-sm leading-5">{item?.nowpayments?.payment_id}</td>
                                                                 ) : (<>
-                                                                    <td className="px-6 py-4 blackspace-no-wrap border-b text-black-normal  border-gray-500 text-sm leading-5">{item?.nowpayments[0]?.payment_id}</td>
+                                                                    <td className="px-6 py-4 blackspace-no-wrap border-b text-black-normal  border-gray-500 text-sm leading-5">{item?.nowpayments?.payment_id}</td>
                                                                 </>)
                                                             }
                                                             <td className="px-6 py-4 blackspace-no-wrap border-b border-gray-500">
