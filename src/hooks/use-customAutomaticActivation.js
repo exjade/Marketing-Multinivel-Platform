@@ -24,7 +24,7 @@ export default function useCustomAutomaticActivation() {
             const res = await axios.get(process.env.REACT_APP_NOWPAYMENTS_TKN)
             localStorage.setItem('token', res.data.token);
         }
-        getToken()
+        // getToken()
     }, [user])
 
 

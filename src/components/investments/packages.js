@@ -82,14 +82,7 @@ const Packages = () => {
             crypto: false,
         })
     }
-    const cancelInvestment = () => {
-        setSelectPage({
-            walletBalance: false,
-            qrpayment: false,
-            paymentOptions: true,
-            crypto: false,
-        })
-    }
+
     const closePaymentOptions = () => {
         setSelectPage({
             walletBalance: false,
@@ -146,6 +139,8 @@ const Packages = () => {
         package15: 10000,
     }
 
+
+
     //NORMAL PAYMENTS
     const [isLoading, setIsLoading] = useState(true);
     const [investment, setInvestment] = useState({
@@ -157,15 +152,15 @@ const Packages = () => {
         divisas: '',
         currency: ''
     })
-
-    const priceAmount = investment.amount
-    const orderId = shortid.generate().trim();
-    const payCurrency = investment.currency
-    const { pay } = useCreatePayment({
-        orderId,
-        priceAmount,
-        payCurrency
-    })
+    const PackagePaymentsInformation = {
+        paymentId: uuidv4(),
+        currency: 'USDT (TRC20)',
+        amount: parseFloat(investment?.amount),
+        date: Date.now(),
+        userId: user?.userId,
+        username: user?.username,
+        status: 'NEW',
+    }
 
 
     const packageInformation = {
@@ -177,19 +172,104 @@ const Packages = () => {
     }
 
 
-    // ======================================= CREATE PAYMENTS =========================================== // 
 
-    const PackagePaymentsInformation = {
-        paymentId: uuidv4(),
-        currency: 'USDT (TRC20)',
-        amount: parseFloat(investment?.amount),
-        date: Date.now(),
-        userId: user?.userId,
-        username: user?.username,
-        status: 'NEW',
+    const priceAmount = investment.amount
+    const orderId = shortid.generate().trim();
+    const payCurrency = investment.currency
+    const { pay } = useCreatePayment({
+        orderId,
+        priceAmount,
+        payCurrency,
+        PackagePaymentsInformation,
+        setInvestment,
+        setError,
+        packageInformation,
+        investment,
+        sendInvestmentData,
+    })
+
+
+
+    // ======================================= CREATE PAYMENTS =========================================== // 
+    const cancelInvestment = () => {
+        setSelectPage({
+            walletBalance: false,
+            qrpayment: false,
+            paymentOptions: true,
+            crypto: false,
+        })
+        setTimeout(() => {
+            setTimeout(() => {
+                setError('')
+                setInvestment({
+                    ...investment,
+                    id: '',
+                    date: Date.now(),
+                    amount: 0,
+                    usdtAmount: 'USDT (TRC20)',
+                    packageName: '',
+                    divisas: '',
+                    currency: '',
+                });
+            }, 1500)
+        }, [1000])
     }
 
-    const insuficientBalance = investment.amount > user?.topupBalance
+    const conditicion = parseFloat(investment?.amount) >= 25 && payCurrency !== undefined;
+
+    const newCustomDoc = async () => {
+        try {
+            if (conditicion) {
+                await sendInvestmentData()
+                //eslint-disable-next-line
+                const docRef = await addDoc(collection(firestore, 'deposits'), {
+                    paymentId: PackagePaymentsInformation.paymentId,
+                    currency: PackagePaymentsInformation.currency,
+                    amount: parseFloat(investment?.amount),
+                    date: Date.now(),
+                    userId: PackagePaymentsInformation.userId,
+                    username: PackagePaymentsInformation.username,
+                    id: PackagePaymentsInformation.paymentId,
+                    status: PackagePaymentsInformation.status,
+                    packageInformation,
+                    nowpayments: pay || null,
+                });
+
+            } else {
+                //eslint-disable-next-line
+                const docRef = await addDoc(collection(firestore, 'failed-Payment'), {
+                    paymentId: PackagePaymentsInformation.paymentId,
+                    currency: PackagePaymentsInformation.currency,
+                    amount: parseFloat(investment?.amount),
+                    date: Date.now(),
+                    userId: PackagePaymentsInformation.userId,
+                    username: PackagePaymentsInformation.username,
+                    id: PackagePaymentsInformation.paymentId,
+                    status: PackagePaymentsInformation.status,
+                    packageInformation,
+                    nowpayments: pay || null,
+                    error: 'Write an amount',
+                });
+                setError('Try again, minimun amount is 25')
+            }
+
+        } catch (error) {
+            console.log(error)
+            setError('Please, Try again later')
+        }
+
+    }
+
+    useEffect(() => {
+        if (payCurrency !== undefined && priceAmount >= 25 && parseFloat(investment?.amount)) {
+            if (pay[0]?.pay_address !== undefined || pay[0]?.pay_address !== null) {
+                setTimeout(() => {
+                    newCustomDoc()
+                }, [3000])
+            }
+        }
+    }, [pay])
+
 
     // Find my parent node ( user who invited me )
     const filterNodeRoot = users?.filter((u) => user?.referral?.referrerBy.includes(u.referral.referralCode))
@@ -235,90 +315,6 @@ const Packages = () => {
         }
     }
 
-
-
-    useEffect(() => {
-        const newCustomDoc = async () => {
-            if (investment.amount < 0) return;
-            try {
-                if (!insuficientBalance) {
-                    await sendInvestmentData()
-                    //eslint-disable-next-line
-                    const docRef = await addDoc(collection(firestore, 'investment-payments'), {
-                        paymentId: PackagePaymentsInformation.paymentId,
-                        currency: PackagePaymentsInformation.currency,
-                        amount: parseFloat(investment?.amount),
-                        date: Date.now(),
-                        userId: PackagePaymentsInformation.userId,
-                        username: PackagePaymentsInformation.username,
-                        id: PackagePaymentsInformation.paymentId,
-                        status: PackagePaymentsInformation.status,
-                        packageInformation,
-                        nowpayments: pay || null,
-                    });
-                    const userRef = doc(firestore, 'users', user?.docId);
-                    await updateDoc(userRef, {
-                        Applied: user?.Applied + investment.amount,
-                        topupBalance: user?.topupBalance - investment.amount,
-                    })
-
-                } else {
-                    //eslint-disable-next-line
-                    const docRef = await addDoc(collection(firestore, 'failed-Payment'), {
-                        paymentId: PackagePaymentsInformation.paymentId,
-                        currency: PackagePaymentsInformation.currency,
-                        amount: parseFloat(investment?.amount),
-                        date: Date.now(),
-                        userId: PackagePaymentsInformation.userId,
-                        username: PackagePaymentsInformation.username,
-                        id: PackagePaymentsInformation.paymentId,
-                        status: PackagePaymentsInformation.status,
-                        packageInformation,
-                        nowpayments: pay || null,
-                        error: 'Insufficient funds for the investment',
-                    });
-                    setError('Insufficient funds for the investment')
-                }
-            } catch (error) {
-                console.log(error)
-                setError('Please, Try again later')
-            }
-        }
-        if (investment?.amount > 0 ) {
-            if (insuficientBalance) {
-                setError('Insufficient funds for the investment')
-                setTimeout(() => {
-                    setError('')
-                    setInvestment({
-                        ...investment,
-                        id: uuidv4(),
-                        date: Date.now(),
-                        amount: 0,
-                        usdtAmount: 'USDT (TRC20)',
-                        packageName: '',
-                        divisas: '',
-                        currency: '',
-                    });
-                }, 1500)
-                return newCustomDoc()
-            } else {
-                setSuccessPayment(true)
-                // newCustomDoc()
-                setTimeout(() => {
-                    setInvestment({
-                        ...investment,
-                        id: uuidv4(),
-                        date: Date.now(),
-                        amount: 0,
-                        usdtAmount: 'USDT (TRC20)',
-                        packageName: '',
-                        divisas: '',
-                        currency: '',
-                    });
-                }, 2000)
-            }
-        }
-    }, [payCurrency, user])
 
     useEffect(() => {
         document.title = 'Investment - CapitalTradersBusiness'
@@ -402,7 +398,7 @@ const Packages = () => {
 
 
                             <q className='font-medium italic text-center w-9/12'>
-                            In quantitative trading, emotions are replaced by algorithms, enabling objective decision-making based on data
+                                In quantitative trading, emotions are replaced by algorithms, enabling objective decision-making based on data
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -441,7 +437,7 @@ const Packages = () => {
                                 className={`${styles.packageButton}`}
                                 onClick={() => {
                                     openInvestmentModal()
-                                    handlePackageOne(investment, packagePrice, packageNames, setInvestment)
+                                    handlePackageOne(investment, packagePrice, packageNames, setInvestment,)
                                 }}
                             >
                                 Invest now
@@ -465,7 +461,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package2}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            The ability to analyze large amounts of data in real-time is key to success in quantitative trading
+                                The ability to analyze large amounts of data in real-time is key to success in quantitative trading
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -527,7 +523,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package3}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Automation in quantitative trading allows for 24/7 strategy execution, seizing opportunities in the global market at any time
+                                Automation in quantitative trading allows for 24/7 strategy execution, seizing opportunities in the global market at any time
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -591,7 +587,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package4}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Quantitative trading aims to identify patterns and trends in historical data to predict future movements in asset prices
+                                Quantitative trading aims to identify patterns and trends in historical data to predict future movements in asset prices
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -655,7 +651,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package5}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Diversifying strategies in quantitative trading helps mitigate risks and provides stability over time
+                                Diversifying strategies in quantitative trading helps mitigate risks and provides stability over time
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -719,7 +715,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package6}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Discipline and consistency in applying quantitative models are essential for long-term success in trading
+                                Discipline and consistency in applying quantitative models are essential for long-term success in trading
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -783,7 +779,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package7}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Quantitative trading is based on logic and statistics, enabling informed decision-making backed by empirical evidence
+                                Quantitative trading is based on logic and statistics, enabling informed decision-making backed by empirical evidence
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -847,7 +843,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package8}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Speed of execution and adaptability are critical in quantitative trading, where markets can change in seconds
+                                Speed of execution and adaptability are critical in quantitative trading, where markets can change in seconds
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -910,7 +906,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package9}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Quantitative strategies can identify arbitrage opportunities and exploit inefficiencies in asset prices
+                                Quantitative strategies can identify arbitrage opportunities and exploit inefficiencies in asset prices
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -974,7 +970,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package10}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Continuous improvement of models and algorithms is crucial in quantitative trading to stay ahead in a dynamic market environment
+                                Continuous improvement of models and algorithms is crucial in quantitative trading to stay ahead in a dynamic market environment
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -1037,7 +1033,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package11}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
+                                Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -1099,7 +1095,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package12}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
+                                Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -1161,7 +1157,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package13}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
+                                Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -1223,7 +1219,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package14}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
+                                Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>
@@ -1285,7 +1281,7 @@ const Packages = () => {
                                 <h3 className='font-bold text-2xl'>{packageNames.package15}</h3>
                             </div>
                             <q className='font-medium italic text-center w-9/12'>
-                            Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
+                                Transparency in quantitative processes provides investors with confidence in understanding decision-making and risk management
                             </q>
 
                             <div className={`${styles.packageContainerInfo}`}>

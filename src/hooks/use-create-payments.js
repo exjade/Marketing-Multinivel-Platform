@@ -1,10 +1,26 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
+//Firebase
+import { firebase } from '../lib/firebase'
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+} from 'firebase/firestore'
+const firestore = getFirestore(firebase)
+
 
 export default function useCreatePayment({
     priceAmount,
     orderId,
-    payCurrency
+    payCurrency,
+    PackagePaymentsInformation,
+    setError,
+    setInvestment,
+    packageInformation,
+    investment,
+    sendInvestmentData,
 }) {
 
     const [pay, setPay] = useState([])
@@ -16,7 +32,7 @@ export default function useCreatePayment({
             const res = await axios.get(process.env.REACT_APP_NOWPAYMENTS_TKN)
             localStorage.setItem('token', res.data.token);
         }
-        getToken()
+        // getToken()
     }, [])
 
     const tkn = localStorage.getItem('token')
@@ -58,10 +74,16 @@ export default function useCreatePayment({
     }
 
     useEffect(() => {
-        if (payCurrency !== undefined || priceAmount) {
+        if (payCurrency !== undefined && priceAmount >= 25 && parseFloat(investment?.amount)) {
             getPaymentData()
         }
     }, [payCurrency])
+
+
+   
+   
+
+
 
     return { pay }
 

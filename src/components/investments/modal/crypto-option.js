@@ -11,6 +11,7 @@ const CryptoInput = ({
     setTokenList,
     investment,
     setSelectPage,
+    newCustomDoc,
 }) => {
 
     const { container, item } = useMotion()
@@ -47,6 +48,7 @@ const CryptoInput = ({
                                     setTokenList={setTokenList}
                                     handleTokenList={handleTokenList}
                                     setSelectPage={setSelectPage}
+                                    newCustomDoc={newCustomDoc}
                                 />
                             </div>
                         </div>
@@ -62,6 +64,7 @@ export default CryptoInput
 CryptoInput.propTypes = {
     setInvestment: PropTypes.func,
     setSelectPage: PropTypes.func,
+    newCustomDoc: PropTypes.object,
     setTokenList: PropTypes.func,
     tokenList: PropTypes.bool,
     investment: PropTypes.object,

@@ -61,6 +61,9 @@ const TransactionTimeline = () => {
   const completedTransactions = deposits?.filter(transaction => transaction.amount > 0)
   const transactionsInPlatform = AllDeposits?.filter(transaction => transaction.amount > 0)
 
+
+  console.log(transactionsInPlatform)
+
   const filterTransactions = transactionsInPlatform?.filter((search) =>
     search.id?.toLowerCase().includes(transactionSearch.toLowerCase()) ||
     search.status?.toLowerCase().includes(transactionSearch.toLowerCase()) ||
@@ -69,6 +72,8 @@ const TransactionTimeline = () => {
     search.userId?.toLowerCase().includes(transactionSearch.toLowerCase()) ||
     search.depositBalance[0]?.payment_id?.toLowerCase().includes(transactionSearch.toLowerCase())
   )
+
+
 
   //eslint-disable-next-line no-unused-vars
   const orderByDate = filterTransactions?.sort((a, b) => {
@@ -95,8 +100,8 @@ const TransactionTimeline = () => {
       // Update user balance information
       if (select.packageName === 'TETHER') {
         await updateDoc(docRef, {
-          topupBalance: parseFloat(select.packagePrice) + docSnap.data().topupBalance,
-          topupBalanceDate: Date.now(),
+          Applied: parseFloat(select.packagePrice) + docSnap.data().Applied,
+          AppliedeDate: Date.now(),
         })
       }
 
