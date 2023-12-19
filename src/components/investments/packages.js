@@ -408,7 +408,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>3%</p>
                                 </span>
                             </div>
 
@@ -471,7 +471,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>3%</p>
                                 </span>
                             </div>
 
@@ -533,7 +533,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>3%</p>
                                 </span>
                             </div>
 
@@ -597,7 +597,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>3%</p>
                                 </span>
                             </div>
 
@@ -661,7 +661,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>4%</p>
                                 </span>
                             </div>
 
@@ -725,7 +725,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>4%</p>
                                 </span>
                             </div>
 
@@ -789,7 +789,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>4%</p>
                                 </span>
                             </div>
 
@@ -853,7 +853,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>4%</p>
                                 </span>
                             </div>
 
@@ -916,7 +916,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>5%</p>
                                 </span>
                             </div>
 
@@ -980,7 +980,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>5%</p>
                                 </span>
                             </div>
 
@@ -1043,7 +1043,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>5%</p>
                                 </span>
                             </div>
 
@@ -1105,7 +1105,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>6%</p>
                                 </span>
                             </div>
 
@@ -1167,7 +1167,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>6%</p>
                                 </span>
                             </div>
 
@@ -1229,7 +1229,7 @@ const Packages = () => {
                                 </span>
                                 <span className={`${styles.packageInformation}`}>
                                     <p>ROI</p>
-                                    <p>7%</p>
+                                    <p>6%</p>
                                 </span>
                             </div>
 
