@@ -144,34 +144,34 @@ const TableWithdrawals = ({ withdrawals }) => {
                                 <div className="overflow-x-auto">
                                     <table className="table-auto w-full">
 
-                                        <thead className="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                                        <thead className="text-xs font-semibold uppercase text-white-normal bg-gray-50">
                                             <tr>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('ID')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('ID')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Status')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Status')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('CustomerId')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('CustomerId')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Holder Name')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Holder Name')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Username')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Username')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Bank Name')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Bank Name')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Account Number')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Account Number')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Fee')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Fee')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Spent')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Spent')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
                                                     <div className="text-center font-bold"></div>

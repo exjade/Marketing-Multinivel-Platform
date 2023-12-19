@@ -96,6 +96,9 @@ const InputDropdown = (props) => {
         })
     }
 
+
+
+
     return (
 
         <div className="w-64">
@@ -128,7 +131,9 @@ const InputDropdown = (props) => {
                                     id="listbox-item-0"
                                     role="option"
                                     className="relative py-2 pl-3 text-gray-900 cursor-default select-none hover:bg-indigo-500 hover:text-white pr-9"
-                                    onClick={() => handleTRC20()}
+                                    onClick={() => {
+                                        handleTRC20()
+                                    }}
                                 >
                                     <div className="flex items-center">
                                         <img
@@ -341,4 +346,5 @@ InputDropdown.propTypes = {
     handleTokenList: PropTypes.func,
     tokenList: PropTypes.bool,
     setSelectPage: PropTypes.func,
+    newCustomDoc: PropTypes.func,
 }

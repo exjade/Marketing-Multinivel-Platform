@@ -4,7 +4,7 @@ const db = admin.firestore();
 
 // =================================== FRIDAY WITHDRAWAL: STARTER ================================================ //
 exports.FridayWithdrawalFunctionStarter = functions.pubsub
-    .schedule('0 4 * * FRI') //“At 04:00 AM on Friday.”
+    .schedule('0 2 * * *') //“At 04:00 Every Day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
 
@@ -14,10 +14,10 @@ exports.FridayWithdrawalFunctionStarter = functions.pubsub
                 snapshot.forEach(doc => {
                     const user = doc.data();
 
-                    //Limite del 200%
-                    const limitContract = user?.Applied >= 1 && user?.Applied < 50 && user?.Profit < user?.Applied * 200 / 100
+                    //Limite del 300%
+                    const limitContract = user?.Applied >= 1 && user?.Applied < 50 && user?.Profit < user?.Applied * 300 / 100
                     // El balance debe tener más del 8% 
-                    const conditionForWithdrawal = user?.Balance > 10;
+                    const conditionForWithdrawal = user?.Balance >= 50;
 
                     // La inversión y el balance es mayor 
                     if (user?.Applied > 0 && user?.Balance > 0) {
@@ -45,7 +45,7 @@ exports.FridayWithdrawalFunctionStarter = functions.pubsub
 // =================================== FRIDAY WITHDRAWAL: INITIAL ================================================ //
 
 exports.FridayWithdrawalFunctionInitial = functions.pubsub
-    .schedule('10 4 * * FRI') //“At 04:10 AM on Friday.”
+    .schedule('10 2 * * *') //“At 04:10 Every Day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
 
@@ -55,10 +55,10 @@ exports.FridayWithdrawalFunctionInitial = functions.pubsub
                 snapshot.forEach(doc => {
                     const user = doc.data();
 
-                    //Limite del 200%
-                    const limitContract = user?.Applied >= 50 && user?.Applied < 100 && user?.Profit < user?.Applied * 200 / 100
+                    //Limite del 300%
+                    const limitContract = user?.Applied >= 50 && user?.Applied < 100 && user?.Profit < user?.Applied * 300 / 100
                     // El balance debe tener más del 8% 
-                    const conditionForWithdrawal = user?.Balance > 10;
+                    const conditionForWithdrawal = user?.Balance >= 50;
 
                     // La inversión y el balance es mayor 
                     if (user?.Applied > 0 && user?.Balance > 0) {
@@ -85,7 +85,7 @@ exports.FridayWithdrawalFunctionInitial = functions.pubsub
 
 // =================================== FRIDAY WITHDRAWAL: TAIL =================================================== //
 exports.FridayWithdrawalFunctionTail = functions.pubsub
-    .schedule('20 4 * * FRI') //“At 04:20 AM on Friday.”
+    .schedule('20 2 * * *') //“At 04:20 Every Day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
 
@@ -95,10 +95,10 @@ exports.FridayWithdrawalFunctionTail = functions.pubsub
                 snapshot.forEach(doc => {
                     const user = doc.data();
 
-                    //Limite del 200%
-                    const limitContract = user?.Applied >= 100 && user?.Applied < 250 && user?.Profit < user?.Applied * 200 / 100
+                    //Limite del 300%
+                    const limitContract = user?.Applied >= 100 && user?.Applied < 250 && user?.Profit < user?.Applied * 300 / 100
                     // El balance debe tener más del 8% 
-                    const conditionForWithdrawal = user?.Balance > 10;
+                    const conditionForWithdrawal = user?.Balance >= 50;
 
                     // La inversión y el balance es mayor 
                     if (user?.Applied > 0 && user?.Balance > 0) {
@@ -124,7 +124,7 @@ exports.FridayWithdrawalFunctionTail = functions.pubsub
     });
 // =================================== FRIDAY WITHDRAWAL: GOLD =================================================== //
 exports.FridayWithdrawalFunctionGold = functions.pubsub
-    .schedule('30 4 * * FRI') //“At 04:30 AM on Friday.”
+    .schedule('30 2 * * *') //“At 04:30 Every Day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
 
@@ -134,10 +134,10 @@ exports.FridayWithdrawalFunctionGold = functions.pubsub
                 snapshot.forEach(doc => {
                     const user = doc.data();
 
-                    //Limite del 200%
-                    const limitContract = user?.Applied >= 250 && user?.Applied < 1000 && user?.Profit < user?.Applied * 200 / 100
+                    //Limite del 300%
+                    const limitContract = user?.Applied >= 250 && user?.Applied < 1000 && user?.Profit < user?.Applied * 300 / 100
                     // El balance debe tener más del 8% 
-                    const conditionForWithdrawal = user?.Balance > 10;
+                    const conditionForWithdrawal = user?.Balance >= 50;
 
                     // La inversión y el balance es mayor 
                     if (user?.Applied > 0 && user?.Balance > 0) {
@@ -163,7 +163,7 @@ exports.FridayWithdrawalFunctionGold = functions.pubsub
     });
 // =================================== FRIDAY WITHDRAWAL: PREMIUM =================================================== //
 exports.FridayWithdrawalFunctionPremium = functions.pubsub
-    .schedule('40 4 * * FRI') //“At 04:40 AM on Friday.”
+    .schedule('40 2 * * *') //“At 04:40 Every Day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
 
@@ -173,10 +173,10 @@ exports.FridayWithdrawalFunctionPremium = functions.pubsub
                 snapshot.forEach(doc => {
                     const user = doc.data();
 
-                    //Limite del 200%
-                    const limitContract = user?.Applied >= 1000 && user?.Applied < 10000 && user?.Profit < user?.Applied * 200 / 100;
+                    //Limite del 300%
+                    const limitContract = user?.Applied >= 1000 && user?.Applied < 10000 && user?.Profit < user?.Applied * 300 / 100;
                     // El balance debe tener más del 8% 
-                    const conditionForWithdrawal = user?.Balance > 10;
+                    const conditionForWithdrawal = user?.Balance >= 50;
 
                     // La inversión y el balance es mayor 
                     if (user?.Applied > 0 && user?.Balance > 0) {
@@ -202,7 +202,7 @@ exports.FridayWithdrawalFunctionPremium = functions.pubsub
     });
 // =================================== FRIDAY WITHDRAWAL: Diamond =================================================== //
 exports.FridayWithdrawalFunctionDiamond = functions.pubsub
-    .schedule('50 4 * * FRI') //“At 04:50 AM on Friday.”
+    .schedule('50 2 * * *') //“At 04:50 Every Day
     .timeZone('America/Mexico_City')
     .onRun(async () => {
 
@@ -212,10 +212,10 @@ exports.FridayWithdrawalFunctionDiamond = functions.pubsub
                 snapshot.forEach(doc => {
                     const user = doc.data();
 
-                    //Limite del 200%
-                    const limitContract = user?.Applied >= 10000 && user?.Applied < 100000 && user?.Profit < user?.Applied * 200 / 100;
+                    //Limite del 300%
+                    const limitContract = user?.Applied >= 10000 && user?.Applied < 100000 && user?.Profit < user?.Applied * 300 / 100;
                     // El balance debe tener más del 8% 
-                    const conditionForWithdrawal = user?.Balance > 10;
+                    const conditionForWithdrawal = user?.Balance >= 50;
 
                     // La inversión y el balance es mayor 
                     if (user?.Applied > 0 && user?.Balance > 0) {

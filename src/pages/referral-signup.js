@@ -284,8 +284,8 @@ const ReferralSignUp = () => {
 
                                 <input
                                     type="text"
-                                    aria-label="Enter your usdt (trc20) - REQUIRED"
-                                    placeholder={t('Wallet - (TRC20)')}
+                                    aria-label="Enter your usdt (BEP20) - REQUIRED"
+                                    placeholder={t('Wallet - (BEP20)')}
                                     className={styles['login-form-input']}
                                     onChange={({ target }) => setWallet(target.value)}
                                     value={wallet}

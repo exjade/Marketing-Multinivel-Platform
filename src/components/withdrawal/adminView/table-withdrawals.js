@@ -146,31 +146,31 @@ const TableWithdrawals = ({ withdrawals }) => {
                                         <thead className="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                                             <tr>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('ID')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('ID')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Status')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Status')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('CustomerId')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('CustomerId')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Holder Name')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Holder Name')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Username')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Username')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Bank Name')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Bank Name')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Account Number')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Account Number')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Fee')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Fee')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
-                                                    <div className="text-left font-bold text-base">{t('Spent')}</div>
+                                                    <div className="text-left font-bold text-base text-white-normal">{t('Spent')}</div>
                                                 </th>
                                                 <th className="p-2 whitespace-nowrap">
                                                     <div className="text-center font-bold"></div>
@@ -185,7 +185,7 @@ const TableWithdrawals = ({ withdrawals }) => {
                                                         <tr className='divide-y divide-gray'>
                                                             <td className="p-2 whitespace-nowrap">
                                                                 <div className="flex items-center">
-                                                                    <div className="font-bold text-gray-login_input_bg">{withdrawal.WithdrawalId}</div>
+                                                                    <div className="font-bold text-white-normal">{withdrawal.WithdrawalId}</div>
                                                                 </div>
                                                             </td>
                                                             {/* REINVESTMENT */}
@@ -217,25 +217,25 @@ const TableWithdrawals = ({ withdrawals }) => {
                                                             }
 
                                                             <td className="p-2 whitespace-nowrap">
-                                                                <div className="text-left font-semibold">{withdrawal.CustomerId}</div>
+                                                                <div className="text-left font-semibold text-white-normal">{withdrawal.CustomerId}</div>
                                                             </td>
                                                             <td className="p-2 whitespace-nowrap">
                                                                 <div className="flex items-center">
-                                                                    <div className="font-medium text-gray-800">{withdrawal?.CustomerName}</div>
+                                                                    <div className="font-medium text-white-normal">{withdrawal?.CustomerName}</div>
                                                                 </div>
                                                             </td>
                                                             <td className="p-2 whitespace-nowrap">
-                                                                <div className="text-left font-semibold">{withdrawal.WithdrawalInformation?.tether?.AccountName}</div>
+                                                                <div className="text-left font-semibold text-white-normal">{withdrawal.WithdrawalInformation?.tether?.AccountName}</div>
                                                             </td>
                                                             <td className="p-2 whitespace-nowrap">
-                                                                <div className="text-left font-semibold">{withdrawal.WithdrawalInformation?.tether?.BankName}</div>
+                                                                <div className="text-left font-semibold text-white-normal">{withdrawal.WithdrawalInformation?.tether?.BankName}</div>
                                                             </td>
                                                             <td className="p-2 whitespace-nowrap">
-                                                                <div className="text-left font-semibold">{withdrawal.WithdrawalInformation?.tether?.AccountNumber}</div>
+                                                                <div className="text-left font-semibold text-white-normal">{withdrawal.WithdrawalInformation?.tether?.AccountNumber}</div>
                                                             </td>
 
                                                             <td className="p-2 whitespace-nowrap">
-                                                                <div className="text-left font-extrabold text-xl text-black-normal">
+                                                                <div className="text-left font-extrabold text-xl text-white-normal">
                                                                     {`${parseFloat(withdrawal?.WithdrawalFee).toLocaleString('en-US', {
                                                                         style: 'currency',
                                                                         currency: 'USD',
@@ -243,7 +243,7 @@ const TableWithdrawals = ({ withdrawals }) => {
                                                                 </div>
                                                             </td>
                                                             <td className="p-2 whitespace-nowrap">
-                                                                <div className="text-left font-extrabold text-xl text-black-normal">
+                                                                <div className="text-left font-extrabold text-xl text-white-normal">
                                                                     {`${parseFloat(withdrawal?.WithdrawalAmount).toLocaleString('en-US', {
                                                                         style: 'currency',
                                                                         currency: 'USD',
