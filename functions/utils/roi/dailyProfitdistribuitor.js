@@ -23,7 +23,7 @@ exports.DailyProfitMondayToFridayStarter = functions.pubsub
                         var sfRef = db.collection('users')
                             .doc(doc.id);
                         batch.update(sfRef, {
-                            Profit: user.Profit + (7 / 100 * parseInt(applied)),
+                            Profit: user.Profit + (3 / 100 * parseInt(applied)),
                             lastProfitUpdate: Date.now()
                         });
                        
@@ -50,7 +50,7 @@ exports.DailyProfitMondayToFridayStarter = functions.pubsub
                     let applied = user.Applied;
                     let profit = user.Profit;
 
-                    const limitContract = applied >= 100 && applied < 250 && profit < 200 / 100 * parseInt(applied)
+                    const limitContract = applied >= 100 && applied < 300 && profit < 200 / 100 * parseInt(applied)
 
                     const batch = db.batch();
 
@@ -58,7 +58,7 @@ exports.DailyProfitMondayToFridayStarter = functions.pubsub
                         var sfRef = db.collection('users')
                             .doc(doc.id);
                         batch.update(sfRef, {
-                            Profit: user.Profit + (7 / 100 * parseInt(applied)),
+                            Profit: user.Profit + (3 / 100 * parseInt(applied)),
                             lastProfitUpdate: Date.now()
                         });
                        
@@ -85,7 +85,7 @@ exports.DailyProfitMondayToFridayStarter = functions.pubsub
                     let applied = user.Applied;
                     let profit = user.Profit;
 
-                    const limitContract = applied >= 250 && applied < 1000 && profit < 200 / 100 * parseInt(applied)
+                    const limitContract = applied >= 300 && applied < 1000 && profit < 200 / 100 * parseInt(applied)
 
                     const batch = db.batch();
 
@@ -93,7 +93,7 @@ exports.DailyProfitMondayToFridayStarter = functions.pubsub
                         var sfRef = db.collection('users')
                             .doc(doc.id);
                         batch.update(sfRef, {
-                            Profit: user.Profit + (7 / 100 * parseInt(applied)),
+                            Profit: user.Profit + (4 / 100 * parseInt(applied)),
                             lastProfitUpdate: Date.now()
                         });
                        
@@ -129,7 +129,7 @@ exports.DailyProfitMondayToFridayStarter = functions.pubsub
                         var sfRef = db.collection('users')
                             .doc(doc.id);
                         batch.update(sfRef, {
-                            Profit: user.Profit + (7 / 100 * parseInt(applied)),
+                            Profit: user.Profit + (5 / 100 * parseInt(applied)),
                             lastProfitUpdate: Date.now()
                         });
                        
@@ -165,7 +165,7 @@ exports.DailyProfitMondayToFridayPremium = functions.pubsub
                     var sfRef = db.collection('users')
                         .doc(doc.id);
                     batch.update(sfRef, {
-                        Profit: user.Profit + (7 / 100 * parseInt(applied)),
+                        Profit: user.Profit + (6 / 100 * parseInt(applied)),
                         lastProfitUpdate: Date.now()
                     });
                    

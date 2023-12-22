@@ -24,7 +24,7 @@ exports.DailyBalanceMondayToFridayStarter = functions.pubsub
                         var sfRef = db.collection('users')
                             .doc(doc.id);
                         batch.update(sfRef, {
-                            Balance: user?.Balance + (7 / 100 * parseInt(applied)),
+                            Balance: user?.Balance + (3 / 100 * parseInt(applied)),
                             lastBalanceUpdate: Date.now()
                         });
 
@@ -52,14 +52,14 @@ exports.DailyBalanceMondayToFridayInitial = functions.pubsub
                     let user = doc.data();
                     let applied = user.Applied;
                     let profit = user.Profit;
-                    const limitContract = applied >= 100 && applied < 250 && parseInt(profit) < 300 / 100 * parseInt(applied)
+                    const limitContract = applied >= 100 && applied < 300 && parseInt(profit) < 300 / 100 * parseInt(applied)
 
                     const batch = db.batch();
                     if (limitContract) {
                         var sfRef = db.collection('users')
                             .doc(doc.id);
                         batch.update(sfRef, {
-                            Balance: user?.Balance + (7 / 100 * parseInt(applied)),
+                            Balance: user?.Balance + (3 / 100 * parseInt(applied)),
                             lastBalanceUpdate: Date.now()
                         });
 
@@ -89,14 +89,14 @@ exports.DailyBalanceMondayToFridayTall = functions.pubsub
                     let user = doc.data();
                     let applied = user.Applied;
                     let profit = user.Profit;
-                    const limitContract = applied >= 250 && applied < 1000 && parseInt(profit) < 300 / 100 * parseInt(applied)
+                    const limitContract = applied >= 300 && applied < 1000 && parseInt(profit) < 300 / 100 * parseInt(applied)
 
                     const batch = db.batch();
                     if (limitContract) {
                         var sfRef = db.collection('users')
                             .doc(doc.id);
                         batch.update(sfRef, {
-                            Balance: user?.Balance + (7 / 100 * parseInt(applied)),
+                            Balance: user?.Balance + (4 / 100 * parseInt(applied)),
                             lastBalanceUpdate: Date.now()
                         });
 
@@ -135,7 +135,7 @@ exports.DailyBalanceMondayToFridayGold = functions.pubsub
                         var sfRef = db.collection('users')
                             .doc(doc.id);
                         batch.update(sfRef, {
-                            Balance: user?.Balance + (7 / 100 * parseInt(applied)),
+                            Balance: user?.Balance + (5 / 100 * parseInt(applied)),
                             lastBalanceUpdate: Date.now()
                         });
 
@@ -173,7 +173,7 @@ exports.DailyBalanceMondayToFridayPremium = functions.pubsub
                         var sfRef = db.collection('users')
                             .doc(doc.id);
                         batch.update(sfRef, {
-                            Balance: user?.Balance + (7 / 100 * parseInt(applied)),
+                            Balance: user?.Balance + (6 / 100 * parseInt(applied)),
                             lastBalanceUpdate: Date.now()
                         });
 
