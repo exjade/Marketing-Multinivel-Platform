@@ -34,7 +34,7 @@ const SelectPayment = ({
                         >
                             <XMarkIcon className='w-10 h-10 text-red-card' />
                         </button>
-                        <h1 className={`${styles.title}`} >Select Payment Option</h1>
+                        <h1 className={`${styles.title}`} >Investment Option</h1>
                     </span>
 
                     <div className={`${styles.SelecPaymentOptions}`}>
@@ -48,7 +48,7 @@ const SelectPayment = ({
                                 crypto: true
                             })}
                         >
-                            QR Payment
+                            QR Method
                         </motion.button>
                     </div>
 

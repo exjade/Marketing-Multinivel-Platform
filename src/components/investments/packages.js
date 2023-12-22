@@ -21,6 +21,7 @@ import CryptoInput from './modal/crypto-option';
 import useCreatePayment from '../../hooks/use-create-payments';
 import useMotion from '../../hooks/use-motion';
 import {
+    handleCustomPackage,
     handlePackageOne,
     handlePackageTwo,
     handlePackageThree,
@@ -39,7 +40,7 @@ import {
 } from './utils/packages-functions';
 //Firebase
 import { firebase } from '../../lib/firebase'
-
+import CustomRoi from './table/customRoi';
 import {
     getFirestore,
     collection,
@@ -104,6 +105,7 @@ const Packages = () => {
 
 
     const packageNames = {
+        customPackage: 'Custom investment',
         package1: 'Quantitative Investment 1',
         package2: 'Quantitative Investment 2',
         package3: 'Quantitative Investment 3',
@@ -171,7 +173,16 @@ const Packages = () => {
         packageName: investment.packageName,
     }
 
+    const handleOnChange = (e) => {
+        setInvestment(
+            {
+                ...investment,
+                [e.target.name]: e.target.value
+            }
+        )
+    }
 
+    const investmentIdEqualToZero = investment.amount < 10;
 
     const priceAmount = investment.amount
     const orderId = shortid.generate().trim();
@@ -215,7 +226,7 @@ const Packages = () => {
         }, [1000])
     }
 
-    const conditicion = parseFloat(investment?.amount) >= 25 && payCurrency !== undefined;
+    const conditicion = parseFloat(investment?.amount) >= 10 && payCurrency !== undefined;
 
     const newCustomDoc = async () => {
         try {
@@ -250,7 +261,7 @@ const Packages = () => {
                     nowpayments: pay || null,
                     error: 'Write an amount',
                 });
-                setError('Try again, minimun amount is 25')
+                setError('Try again, minimun amount is 10')
             }
 
         } catch (error) {
@@ -261,7 +272,7 @@ const Packages = () => {
     }
 
     useEffect(() => {
-        if (payCurrency !== undefined && priceAmount >= 25 && parseFloat(investment?.amount)) {
+        if (payCurrency !== undefined && priceAmount >= 10 && parseFloat(investment?.amount)) {
             if (pay[0]?.pay_address !== undefined || pay[0]?.pay_address !== null) {
                 setTimeout(() => {
                     newCustomDoc()
@@ -323,6 +334,10 @@ const Packages = () => {
         }, 1000);
     }, [])
 
+
+
+
+
     const loader = () => { return <FallBackLoader /> };
     if (isLoading) { return loader(); }
     else {
@@ -372,6 +387,7 @@ const Packages = () => {
                         )
                     }
 
+
                     <motion.div
                         className={`${styles.packages} grid grid-cols-3`}
                         variants={container}
@@ -379,6 +395,9 @@ const Packages = () => {
                         animate="visible"
                     >
 
+
+
+                        {/* ========================= INVESTMENT OPTIONS=========================  */}
                         <motion.div
                             className={`${styles.package}`}
                             whileHover={{ scale: 1.03 }}
@@ -1324,6 +1343,84 @@ const Packages = () => {
                                 }}
                             >
                                 Invest Now
+                            </motion.button>
+                        </motion.div>
+
+                        {/* ============ ==============CUSTOM INVESTMENT============ ============== */}
+
+                        <motion.div
+                            className={`${styles.package}`}
+                            whileHover={{ scale: 1.03 }}
+                            variants={item}
+                        >
+                            <div className='flex flex-col justify-center gap-2 items-center'>
+                                <span className='flex flex-col  justify-center items-center'>
+                                    <img
+                                        src="https://firebasestorage.googleapis.com/v0/b/capitaltraderscorp.appspot.com/o/images%2Fquantitative-trading.png.webp?alt=media&token=282e3684-2140-4525-a1a0-1ac795b05e13"
+                                        alt="package 500"
+                                        className='w-48 h-48 object-contain '
+                                        loading='lazy'
+                                    />
+                                </span>
+                                <h3 className='font-bold text-2xl'>{packageNames.customPackage}</h3>
+                            </div>
+
+
+                            <q className='font-medium italic text-center w-9/12'>
+                            Minimum investment of $10 USD
+                            </q>
+
+                            <div className={`${styles.packageContainerInfoCustom}`}>
+                                <span className={`${styles.packageInformationCustom}`}>
+                                    <p>Trade Amount</p>
+                                    <div className={`${styles.packageCustomInput}`}>
+                                        <span className="material-symbols-sharp">
+                                            attach_money
+                                        </span>
+                                        <input
+                                            type="number"
+                                            name="amount"
+                                            id="amount"
+                                            value={investment.amount}
+                                            onChange={handleOnChange}
+                                        />
+                                    </div>
+                                </span>
+                                <span className={`${styles.packageInformationCustom}`}>
+                                    <CustomRoi />
+                                </span>
+                            </div>
+
+                            {/*============================= ERROR MESSAGE =============================*/}
+                            {
+                                error && packageNames.package1 === investment.packageName &&
+                                <p className='text-normal text-center'>
+                                    {error}
+                                </p>
+                            }
+                            {successPayment && packagePrice.package1 === investment.amount &&
+                                (<><img
+                                    src="https://cdn-icons-png.flaticon.com/512/148/148767.png"
+                                    alt="success payment"
+                                    className='w-12 h-12 object-contain rounded-full'
+                                />
+                                </>)}
+                            {failedPayment && packageNames.package1 === investment.packageName &&
+                                (<>
+                                    <p className='text-xl text-red-logo'>Try again later</p>
+                                </>)}
+
+                            <motion.button
+                                type='button'
+                                whileTap={{ scale: 0.9 }}
+                                className={`${investmentIdEqualToZero ? `${styles.packageButtonNotAllowed} cursor-not-allowed` : `${styles.packageButton}`}`}
+                                onClick={() => {
+                                    openInvestmentModal()
+                                    handleCustomPackage(investment, packagePrice, packageNames, setInvestment,)
+                                }}
+                                disabled={investmentIdEqualToZero}
+                            >
+                                Invest now
                             </motion.button>
                         </motion.div>
 

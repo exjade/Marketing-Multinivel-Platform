@@ -1,3 +1,14 @@
+export const handleCustomPackage = (investment, packagePrice, packageNames, setInvestment) => {
+    setInvestment({
+        ...investment,
+        id: investment.id,
+        date: investment.date,
+        amount: investment.amount,
+        usdtAmount: investment.usdtAmount,
+        packageName: packageNames.customPackage,
+    });
+}
+
 
 export const handlePackageOne = (investment, packagePrice, packageNames, setInvestment) => {
     setInvestment({

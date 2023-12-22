@@ -47,7 +47,7 @@ export default function useCreatePayment({
         'price_amount': priceAmount,
         'price_currency': 'usd',
         'pay_currency': payCurrency,
-        'ipn_callback_url': 'https://capitaltradersbusiness.com/investment',
+        'ipn_callback_url': 'https://capitaltraderscorp.com/investment',
         'order_id': orderId,
         'order_description': 'Capital Traders Business',
     });
@@ -74,7 +74,7 @@ export default function useCreatePayment({
     }
 
     useEffect(() => {
-        if (payCurrency !== undefined && priceAmount >= 25 && parseFloat(investment?.amount)) {
+        if (payCurrency !== undefined && priceAmount >= 10 && parseFloat(investment?.amount)) {
             getPaymentData()
         }
     }, [payCurrency])

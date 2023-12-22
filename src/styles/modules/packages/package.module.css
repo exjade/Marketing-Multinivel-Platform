@@ -257,6 +257,17 @@ small {
     align-items: center;
 }
 
+.packageButtonNotAllowed {
+    background: #ff0000;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 .packageButton {
     background: #2D394C;
     color: white;
@@ -309,6 +320,62 @@ small {
     font-weight: 700;
     font-stretch: condensed;
 }
+
+
+/* CUSTOM OPTIONS */
+
+.packageContainerInfoCustom {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.packageInformationCustom {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #131C2F;
+    border-style: inherit;
+    border-width: 5px;
+    border-color: #131C2F;
+    padding: 1rem;
+}
+
+.packageInformationCustom>input {
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    font-size: small;
+    font-weight: 900;
+    text-align: center;
+    padding: 0;
+}
+.packageInformationCustom>p {
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-stretch: condensed;
+}
+
+.packageCustomInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    color: black;
+    font-family: Roboto Mono,;
+}
+
+
 
 /* =================== MEDIA QUERIES FOR TABLETS  =================== */
 @media screen and (max-width: 1248px) {
